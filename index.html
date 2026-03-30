@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>nexus.dev — Zamieniamy chaos w system, który zarabia</title>
+  <meta name="description" content="nexus.dev — poukładam Ci ofertę, sprzedaż, obsługę klienta i liczby. Przestań gasić pożary, zacznij budować system.">
+  <meta name="author" content="Patrycja Duk">
+  <meta property="og:title" content="nexus.dev — Od chaosu do systemu">
+  <meta property="og:description" content="Poukładam Ci ofertę, sprzedaż, obsługę klienta i liczby — żebyś przestał/a gasić pożary i zaczął/a budować.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- ═══ PAGE LOADER ═══ -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo">nexus<span>.dev</span></div>
+  </div>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#" class="logo">nexus<span>.dev</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#for-whom" data-i18n="nav.home" onclick="closeNav()">Strona główna</a></li>
+        <li><a href="#modules" data-i18n="nav.services" onclick="closeNav()">Usługi</a></li>
+        <li><a href="#cases" data-i18n="nav.cases" onclick="closeNav()">Realizacje</a></li>
+        <li><a href="#about" data-i18n="nav.about" onclick="closeNav()">O mnie</a></li>
+        <li><a href="#pricing" data-i18n="nav.pricing" onclick="closeNav()">Cennik</a></li>
+        <li><a href="#faq" data-i18n="nav.blog" onclick="closeNav()">FAQ</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn active" data-lang="pl">PL</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ua">UA</button>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-arrow" data-i18n="nav.cta">
+          Wyceń swój brief
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="hero">
+    <!-- Animated Clouds -->
+    <div class="hero-clouds">
+      <div class="cloud-layer cloud-layer-1"></div>
+      <div class="cloud-layer cloud-layer-2"></div>
+      <div class="cloud-layer cloud-layer-3"></div>
+      <div class="cloud-layer cloud-layer-4"></div>
+    </div>
+
+    <div class="hero-grid"></div>
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+
+    <div class="hero-content container">
+      <div class="hero-badge" data-i18n="hero.badge">
+        Dla firm, które chcą w końcu ogarnąć biznes
+      </div>
+      <h1>
+        <span data-i18n="hero.h1_line1">Zamieniamy chaos</span><br>
+        <span data-i18n="hero.h1_line2">w Twojej firmie</span><br>
+        <span class="highlight" data-i18n="hero.h1_highlight">w system, który zarabia.</span>
+      </h1>
+      <p class="hero-subtitle" data-i18n="hero.subtitle">
+        Poukładam Ci ofertę, sprzedaż, obsługę klienta i liczby — żebyś przestał/a gasić pożary i zaczął/a budować.
+      </p>
+      <div class="hero-ctas">
+        <a href="#contact" class="btn btn-primary btn-arrow" data-i18n="hero.cta_primary">
+          Wyceń swój brief
+        </a>
+        <a href="#process" class="btn btn-secondary" data-i18n="hero.cta_secondary">
+          Zobacz, jak pracuję
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOR WHOM ═══ -->
+  <section class="section" id="for-whom">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 data-i18n="forWhom.h2">Rozpoznajesz się w tym?</h2>
+        <p data-i18n="forWhom.intro">nexus.dev nie jest dla każdego. Pracuję z firmami, które mają konkretny problem do rozwiązania.</p>
+      </div>
+      <div class="cards-grid cards-grid-4" id="forWhomCards">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══ MODULES / SERVICES ═══ -->
+  <section class="section" id="modules">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 data-i18n="modules.h2">Dobieram moduły do Twojej sytuacji</h2>
+        <p data-i18n="modules.intro">Nie mam jednego „pakietu dla wszystkich". Mam zestaw modułów — dobieram je do tego, co u Ciebie naprawdę wymaga naprawy.</p>
+      </div>
+      <div class="cards-grid cards-grid-3" id="modulesCards">
+        <!-- Filled by JS -->
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <a href="#pricing" class="btn btn-secondary btn-arrow" data-i18n="modules.cta">
+          Zobacz pełną ofertę
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FULL SERVICES CATALOG ═══ -->
+  <section class="section" id="services-full" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 data-i18n="servicesFull.h2">Pełna lista usług — od A do Z</h2>
+        <p data-i18n="servicesFull.intro">Nie mam jednego pakietu dla wszystkich. Poniżej znajdziesz pełną listę modułów — dobieram je do tego, co w Twojej firmie naprawdę wymaga naprawy.</p>
+      </div>
+      <div id="servicesFullGrid">
+        <!-- Filled by JS - 6 categories with modules -->
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <a href="#contact" class="btn btn-primary btn-arrow" data-i18n="servicesFull.cta">
+          Wyceń swój projekt →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PROCESS ═══ -->
+  <section class="section" id="process" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 data-i18n="process.h2">4 kroki od chaosu do systemu</h2>
+        <p data-i18n="process.intro">Każda współpraca zaczyna się od briefu. Nie sprzedaję nic na siłę — najpierw rozumiem, potem proponuję.</p>
+      </div>
+      <div class="process-timeline" id="processTimeline">
+        <!-- Filled by JS -->
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <a href="#contact" class="btn btn-primary btn-arrow" data-i18n="process.cta">
+          Wyślij swój brief
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CASE STUDIES ═══ -->
+  <section class="section" id="cases">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 data-i18n="cases.h2">Co się zmienia, gdy chaos zamienia się w system</h2>
+        <p data-i18n="cases.intro">Każda firma jest inna. Ale wzorzec jest podobny: przychodzą z bałaganem, wychodzą z planem i narzędziami, które działają.</p>
+      </div>
+      <div class="cases-grid" id="casesGrid">
+        <!-- Filled by JS -->
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <a href="#contact" class="btn btn-primary btn-arrow" data-i18n="cases.cta">
+          Chcesz podobne wyniki? Wyślij brief
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIALS ═══ -->
+  <section class="section" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 data-i18n="testimonials.h2">Co mówią ci, z którymi pracowałam</h2>
+      </div>
+      <div class="testimonials-grid" id="testimonialsGrid">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ═══ WHY NEXUS ═══ -->
+  <section class="section" id="why-nexus">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 data-i18n="whyNexus.h2">Dlaczego ja, a nie kolejna „agencja od wszystkiego"</h2>
+      </div>
+      <div class="cards-grid cards-grid-4" id="whyCards">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PRICING / PACKAGES ═══ -->
+  <section class="section" id="pricing" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 id="pricing-h2">Gotowe zestawy na start</h2>
+        <p id="pricing-intro">Nie wiesz, od czego zacząć? Wybierz pakiet dopasowany do Twojej sytuacji.</p>
+      </div>
+      <div class="pricing-grid" id="pricingGrid">
+        <!-- Package 1 -->
+        <div class="pricing-card reveal reveal-delay-1">
+          <div class="pricing-name" id="pkg1-name">🟢 START Z GWARANCJĄ</div>
+          <div class="pricing-price" id="pkg1-price">2 299 zł</div>
+          <span class="pricing-old" id="pkg1-old">3 397 zł</span>
+          <ul class="pricing-features" id="pkg1-features">
+            <li id="pkg1-f1">Strona wizytówka firmowa</li>
+            <li id="pkg1-f2">10 postów social media</li>
+            <li id="pkg1-f3">Audyt procesów</li>
+            <li id="pkg1-f4">1 automatyzacja</li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary btn-arrow form-submit" id="pkg1-cta" onclick="selectPackage('🟢 START Z GWARANCJĄ')">Wybieram ten pakiet</a>
+        </div>
+
+        <!-- Package 2 (featured) -->
+        <div class="pricing-card featured reveal reveal-delay-2">
+          <div class="pricing-badge" id="pkg2-badge">NAJPOPULARNIEJSZY</div>
+          <div class="pricing-name" id="pkg2-name">🔵 SYSTEM LEADÓW</div>
+          <div class="pricing-price" id="pkg2-price">2 999 zł</div>
+          <span class="pricing-old" id="pkg2-old">4 497 zł</span>
+          <ul class="pricing-features" id="pkg2-features">
+            <li id="pkg2-f1">Landing page sprzedażowy</li>
+            <li id="pkg2-f2">Meta Ads setup</li>
+            <li id="pkg2-f3">Automatyzacja leadów</li>
+            <li id="pkg2-f4">Dashboard leadów</li>
+            <li id="pkg2-f5">5 rolek reklamowych</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-arrow form-submit" id="pkg2-cta" onclick="selectPackage('🔵 SYSTEM LEADÓW')">Wybieram ten pakiet</a>
+        </div>
+
+        <!-- Package 3 -->
+        <div class="pricing-card reveal reveal-delay-3">
+          <div class="pricing-name" id="pkg3-name">🟣 PEŁNA AUTOMATYZACJA</div>
+          <div class="pricing-price" id="pkg3-price">3 499 zł</div>
+          <span class="pricing-old" id="pkg3-old">4 896 zł</span>
+          <ul class="pricing-features" id="pkg3-features">
+            <li id="pkg3-f1">2 automatyzacje procesów</li>
+            <li id="pkg3-f2">Bot AI na stronę</li>
+            <li id="pkg3-f3">Dashboard zarządzający</li>
+            <li id="pkg3-f4">Szablon biznesowy Excel</li>
+            <li id="pkg3-f5">1 miesiąc retainer</li>
+          </ul>
+          <a href="#contact" class="btn btn-secondary btn-arrow form-submit" id="pkg3-cta" onclick="selectPackage('🟣 PEŁNA AUTOMATYZACJA')">Wybieram ten pakiet</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FAQ ═══ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 data-i18n="faq.h2">Najczęstsze pytania</h2>
+      </div>
+      <div class="faq-list" id="faqList">
+        <!-- Filled by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section class="section" id="about" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 data-i18n="about.h2">Nie sprzedaję narzędzi. Pomagam ogarnąć firmę.</h2>
+      </div>
+
+      <div style="max-width:750px; margin:0 auto;">
+        <div class="reveal" id="aboutParagraphs">
+          <!-- Filled by JS -->
+        </div>
+
+        <!-- Founder card -->
+        <div class="card reveal" style="margin-top:48px; display:flex; gap:24px; align-items:center; flex-wrap:wrap;">
+          <div class="testimonial-avatar" style="width:64px; height:64px; font-size:1.4rem; flex-shrink:0;">PD</div>
+          <div>
+            <div style="font-weight:700; font-size:1.1rem;" data-i18n="about.founder.name" id="founderName">Patrycja Duk</div>
+            <div style="color:var(--accent-light); font-size:0.9rem; margin-bottom:8px;" data-i18n="about.founder.role" id="founderRole">Founder, nexus.dev</div>
+            <p style="font-size:0.95rem;" data-i18n="about.founder.bio" id="founderBio">Strateg biznesowy, projektantka systemów i procesów. Pomagam firmom przejść od chaosu do porządku.</p>
+          </div>
+        </div>
+
+        <!-- Values -->
+        <h3 style="margin-top:60px; margin-bottom:24px;" class="reveal" data-i18n="about.values_title" id="valuesTitle">Czym się kieruję</h3>
+        <div id="valuesList">
+          <!-- Filled by JS -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT / BRIEF FORM ═══ -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left: Info -->
+        <div class="contact-info reveal">
+          <h2 data-i18n="contact.h2">Wyceń swój projekt — wypełnij brief</h2>
+          <p data-i18n="contact.intro">Wypełnij krótki brief, a przygotujemy dla Ciebie indywidualną wycenę. Im więcej napiszesz, tym dokładniejszą propozycję dostaniesz.</p>
+
+          <p style="font-weight:600; color:var(--text-primary); margin-bottom:12px;" data-i18n="contact.steps_title">Co się stanie po wysłaniu briefu:</p>
+          <ol class="contact-steps" id="contactSteps">
+            <!-- Filled by JS -->
+          </ol>
+
+          <div class="contact-details" id="contactDetails">
+            <!-- Filled by JS -->
+          </div>
+
+          <div style="margin-top:32px; padding:20px; background:var(--bg-card); border-radius:var(--radius-md); border:1px solid var(--border);">
+            <p style="font-weight:600; color:var(--text-primary); margin-bottom:4px;" data-i18n="contact.alt_cta">Wolisz po prostu napisać?</p>
+            <p style="font-size:0.9rem;" data-i18n="contact.alt_desc">Wyślij maila na nextlevelaipoland@gmail.com z krótkim opisem sytuacji.</p>
+          </div>
+        </div>
+
+        <!-- Right: Brief Form -->
+        <div class="contact-form reveal reveal-delay-2" id="contactFormWrap">
+          <form id="contactForm" action="https://formspree.io/f/xwpkbjvl" method="POST">
+            <input type="hidden" name="_language" id="formLang" value="pl">
+            <input type="hidden" name="_subject" value="[nexus.dev] Nowy brief od klienta">
+
+            <!-- Brief form header -->
+            <div class="brief-form-header">
+              <h3 data-i18n="contact.form.header">📋 Brief projektowy</h3>
+              <p data-i18n="contact.form.header_desc">Im więcej wypełnisz, tym dokładniejszą wycenę otrzymasz.</p>
+            </div>
+
+            <!-- Section: Dane kontaktowe -->
+            <div class="form-section-label" data-i18n="contact.form.section_contact">👤 Dane kontaktowe</div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label data-i18n="contact.form.name" for="name">Imię i nazwisko *</label>
+                <input type="text" id="name" name="name" required placeholder="Jan Kowalski">
+              </div>
+              <div class="form-group">
+                <label data-i18n="contact.form.email" for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="jan@firma.pl">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label data-i18n="contact.form.company" for="company">Nazwa firmy</label>
+                <input type="text" id="company" name="company" placeholder="Opcjonalnie">
+              </div>
+              <div class="form-group">
+                <label data-i18n="contact.form.phone" for="phone">Telefon</label>
+                <input type="tel" id="phone" name="phone" placeholder="Opcjonalnie">
+              </div>
+            </div>
+
+            <!-- Section: O firmie -->
+            <div class="form-section-label" data-i18n="contact.form.section_business">🏢 O Twojej firmie</div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label data-i18n="contact.form.industry" for="industry">Branża</label>
+                <select id="industry" name="industry">
+                  <!-- Filled by JS -->
+                </select>
+              </div>
+              <div class="form-group">
+                <label data-i18n="contact.form.team_size" for="teamSize">Wielkość zespołu</label>
+                <select id="teamSize" name="team_size">
+                  <!-- Filled by JS -->
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label data-i18n="contact.form.website" for="website">Adres obecnej strony (jeśli masz)</label>
+              <input type="url" id="website" name="website" placeholder="https://twojastrona.pl">
+            </div>
+
+            <!-- Section: Potrzeby -->
+            <div class="form-section-label" data-i18n="contact.form.section_needs">🎯 Czego potrzebujesz?</div>
+
+            <div class="form-group">
+              <label data-i18n="contact.form.services_label">Zaznacz, co Cię interesuje (możesz wybrać kilka):</label>
+              <div class="form-checkboxes" id="servicesCheckboxes">
+                <!-- Filled by JS -->
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label data-i18n="contact.form.budget" for="budget">Orientacyjny budżet</label>
+                <select id="budget" name="budget">
+                  <!-- Filled by JS -->
+                </select>
+              </div>
+              <div class="form-group">
+                <label data-i18n="contact.form.timeline" for="timeline">Kiedy chcesz wystartować?</label>
+                <select id="timeline" name="timeline">
+                  <!-- Filled by JS -->
+                </select>
+              </div>
+            </div>
+
+            <!-- Section: Szczegóły -->
+            <div class="form-section-label" data-i18n="contact.form.section_details">💬 Szczegóły</div>
+
+            <div class="form-group">
+              <label data-i18n="contact.form.message" for="message">Opisz krótko swoją sytuację — co Cię boli, czego szukasz? *</label>
+              <textarea id="message" name="message" required placeholder="Np. Mamy stronę, ale nie generuje leadów. Chcielibyśmy ułożyć ofertę i zautomatyzować pozyskiwanie klientów..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label data-i18n="contact.form.source" for="source">Jak nas znalazłeś/aś?</label>
+              <select id="source" name="source">
+                <!-- Filled by JS -->
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-arrow form-submit" data-i18n="contact.form.submit">
+              Wyślij brief i otrzymaj wycenę
+            </button>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <div class="form-success-icon">✅</div>
+            <h3 data-i18n="contact.form.success" id="successMsg">Dziękuję! Odezwę się w ciągu 24h z wyceną.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER CTA ═══ -->
+  <section class="footer-cta">
+    <div class="container reveal">
+      <h2 data-i18n="footerCta.h2">Jeden brief może zmienić to, jak prowadzisz firmę.</h2>
+      <p data-i18n="footerCta.subtitle">Opisz swoją sytuację, a ja powiem Ci, co bym z tym zrobiła. Zero zobowiązań.</p>
+      <a href="#contact" class="btn btn-primary btn-arrow" data-i18n="footerCta.cta">
+        Wyceń swój brief
+      </a>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <a href="#" class="logo" style="margin-bottom:8px;">nexus<span>.dev</span></a>
+        <p class="footer-text" data-i18n="footer.copyright">© 2026 nexus.dev — Wszystkie prawa zastrzeżone.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="#" data-i18n="footer.links.privacy">Polityka prywatności</a></li>
+        <li><a href="#" data-i18n="footer.links.terms">Regulamin</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <script src="js/translations.js?v=4"></script>
+  <script src="js/main.js?v=4"></script>
+</body>
+</html>
