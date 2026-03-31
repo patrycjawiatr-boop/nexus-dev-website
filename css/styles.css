@@ -1510,17 +1510,34 @@ p {
   .nav-links {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centered modal style */
+    width: 90%;
+    max-width: 400px;
     flex-direction: column;
-    background: #050507; /* Fully opaque black for maximum contrast */
+    background: #0b0b0f; /* Solid dark background */
+    border: 1px solid rgba(108, 92, 231, 0.5); /* Glowing border */
+    border-radius: 24px;
     padding: 60px 30px;
-    gap: 32px;
-    z-index: 999;
+    gap: 24px;
+    z-index: 2000; /* Above everything */
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.8), 0 0 40px rgba(108, 92, 231, 0.2);
     align-items: center;
-    justify-content: center; /* Center links vertically for better focus */
+    justify-content: center;
+  }
+
+  /* Overlay behind the modal */
+  .nav-links::before {
+    content: '';
+    position: fixed;
+    top: -100vh;
+    left: -100vw;
+    width: 300vw;
+    height: 300vh;
+    background: rgba(0, 0, 0, 0.85); /* Darken the rest of the page */
+    z-index: -1;
+    backdrop-filter: blur(8px);
   }
 
   .nav-links.open {
@@ -1528,12 +1545,18 @@ p {
   }
 
   .nav-links a {
-    font-size: 1.8rem; /* Larger font size */
-    font-weight: 700;
-    padding: 16px 0;
-    color: #ffffff !important; /* Pure white for readability */
-    text-shadow: 0 0 30px rgba(108, 92, 231, 0.3); /* Subtle glow */
-    text-transform: capitalize;
+    font-size: 1.35rem; /* Balanced size */
+    font-weight: 600;
+    padding: 12px 0;
+    color: #ffffff !important;
+    text-shadow: none;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .nav-links li:last-child a {
+    border-bottom: none;
   }
 
   .nav-links a:active {
