@@ -117,6 +117,7 @@ function renderDynamicContent() {
   renderFormSelects();
   renderAbout();
   renderServicesFull(currentLang);
+  renderPortfolioItems(currentLang);
 }
 
 // ── FOR WHOM CARDS ───────────────────────────────────────
@@ -634,4 +635,71 @@ function selectPackage(packageName) {
     formWrap.style.boxShadow = '0 0 40px rgba(108, 92, 231, 0.4)';
     setTimeout(() => { formWrap.style.boxShadow = ''; }, 2000);
   }
+}
+
+// ── PORTFOLIO ITEMS ──────────────────────────────────────
+function renderPortfolioItems(lang) {
+  const container = document.getElementById('portfolioList');
+  const items = translations.portfolioItems?.[lang];
+  if (!container || !items) return;
+
+  const labels = {
+    pl: { challenge: "Wyzwanie", solution: "Rozwiązanie", result: "Wynik" },
+    en: { challenge: "Challenge", solution: "Solution", result: "Result" },
+    ua: { challenge: "Виклик", solution: "Рiшення", result: "Результат" }
+  };
+  const l = labels[lang] || labels.pl;
+
+  container.innerHTML = `
+    <div class="portfolio-grid">
+      ${items.map((item, i) => `
+        <div class="portfolio-item reveal">
+          <img src="${item.img}" alt="${item.title}" class="portfolio-img">
+          <div class="portfolio-content">
+            <span class="portfolio-category">${item.category}</span>
+            <h2 class="portfolio-title">${item.title}</h2>
+            
+            <div style="margin-bottom: 20px;">
+              <strong style="color:var(--accent-light);">${l.challenge}:</strong>
+              <p style="margin-top:8px;">${item.challenge}</p>
+            </div>
+
+            <div style="margin-bottom: 20px;">
+              <strong style="color:var(--accent-light);">${l.solution}:</strong>
+              <p style="margin-top:8px;">${item.solution}</p>
+            </div>
+
+            <div class="portfolio-stats">
+              ${item.result.stats.map(stat => `
+                <div class="stat-item">
+                  <span class="stat-val">${stat.val}</span>
+                  <span class="stat-label">${stat.label}</span>
+                </div>
+              `).join('')}
+            </div>
+            
+            <div style="color:#51cf66; font-weight:700; font-size:1.1rem;">
+              🚀 ${item.result.desc}: ${item.result.perc}
+            </div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+
+  observeNewElements(container);
+}
+
+function observeNewElements(container) {
+  const reveals = container.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+  
+  reveals.forEach(el => observer.observe(el));
 }

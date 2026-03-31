@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realizacje i Case Studies — nexus.dev</title>
+  <meta name="description" content="Zobacz, jak nexus.dev pomaga firmom zamieniać chaos w zyskowne systemy. Autentyczne historie wdrożeń, wyniki i procesy.">
+  <meta name="author" content="Patrycja Duk">
+  <link rel="canonical" href="https://nexus.dev/portfolio">
+  <link rel="alternate" hreflang="pl" href="https://nexus.dev/portfolio">
+  <link rel="alternate" hreflang="en" href="https://nexus.dev/portfolio">
+  <link rel="alternate" hreflang="uk" href="https://nexus.dev/portfolio">
+
+  <meta property="og:title" content="Realizacje i Case Studies — nexus.dev">
+  <meta property="og:description" content="Zobacz konkretne efekty naszych wdrożeń automatyzacji, AI i procesów biznesowych.">
+  <meta property="og:image" content="https://nexus.dev/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="stylesheet" href="css/styles.css?v=11">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <style>
+    .subpage-hero {
+      padding: 140px 0 80px;
+      text-align: center;
+      background: var(--bg-primary);
+      position: relative;
+      overflow: hidden;
+    }
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 60px;
+      margin-top: 60px;
+    }
+    .portfolio-item {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 40px;
+      background: var(--bg-secondary);
+      border-radius: 32px;
+      overflow: hidden;
+      border: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+    .portfolio-item:nth-child(even) {
+      direction: rtl;
+    }
+    .portfolio-item:nth-child(even) .portfolio-content {
+      direction: ltr;
+    }
+    .portfolio-img {
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      object-fit: cover;
+      border-right: 1px solid var(--border-color);
+    }
+    .portfolio-item:nth-child(even) .portfolio-img {
+      border-right: none;
+      border-left: 1px solid var(--border-color);
+    }
+    .portfolio-content {
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .portfolio-category {
+      display: inline-block;
+      padding: 6px 16px;
+      background: rgba(108, 92, 231, 0.1);
+      color: var(--accent-light);
+      border-radius: 100px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .portfolio-title {
+      font-size: 2rem;
+      margin-bottom: 24px;
+    }
+    .portfolio-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 30px 0;
+      padding: 24px;
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 16px;
+    }
+    .stat-item .stat-val {
+      display: block;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--accent-light);
+    }
+    .stat-item .stat-label {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 991px) {
+      .portfolio-item { grid-template-columns: 1fr; }
+      .portfolio-item:nth-child(even) { direction: ltr; }
+      .portfolio-img { height: 300px; min-height: auto; border-right: none; border-bottom: 1px solid var(--border-color); }
+      .portfolio-content { padding: 30px; }
+      .portfolio-title { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ PAGE LOADER ═══ -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo">nexus<span>.dev</span></div>
+  </div>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">nexus<span>.dev</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="nav.home" onclick="closeNav()">Strona główna</a></li>
+        <li><a href="services.html" data-i18n="nav.services" onclick="closeNav()">Usługi</a></li>
+        <li><a href="portfolio.html" class="active" data-i18n="nav.cases" onclick="closeNav()">Realizacje</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about" onclick="closeNav()">O mnie</a></li>
+        <li><a href="index.html#pricing" data-i18n="nav.pricing" onclick="closeNav()">Cennik</a></li>
+        <li><a href="index.html#faq" data-i18n="nav.blog" onclick="closeNav()">FAQ</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" data-lang="pl">PL</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ua">UA</button>
+        </div>
+        <a href="brief.html" class="btn btn-primary btn-arrow" data-i18n="nav.cta">
+          Wyceń swój brief
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="subpage-hero">
+    <div class="container">
+      <div class="hero-badge" data-i18n="portfolioPage.badge">Case Studies</div>
+      <h1 data-i18n="portfolioPage.h1">Nasze Realizacje</h1>
+      <p class="hero-subtitle" data-i18n="portfolioPage.subtitle">Zobacz konkretne efekty wdrożeń systemów i automatyzacji AI w firmach naszych klientów.</p>
+    </div>
+  </section>
+
+  <!-- ═══ PORTFOLIO GRID ═══ -->
+  <section class="section">
+    <div class="container" id="portfolioList">
+      <!-- Dynamicznie wypełniane przez JS -->
+    </div>
+  </section>
+
+  <!-- ═══ BOTTOM CTA ═══ -->
+  <section class="section" style="background:var(--bg-secondary);">
+    <div class="container" style="text-align:center;">
+      <h2 data-i18n="footerCta.h2">Jeden brief może zmienić to, jak prowadzisz firmę.</h2>
+      <div style="margin-top:30px;">
+        <a href="brief.html" class="btn btn-primary btn-large btn-arrow" data-i18n="footerCta.cta">Wyceń swój brief</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div class="copyright" data-i18n="footer.copyright">© 2026 nexus.dev - Wszystkie prawa zastrzeżone.</div>
+        <div class="footer-links">
+          <a href="privacy-policy.html" data-i18n="footer.links.privacy">Polityka prywatności</a>
+          <a href="terms-of-service.html" data-i18n="footer.links.terms">Regulamin</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cookies.js"></script>
+</body>
+</html>

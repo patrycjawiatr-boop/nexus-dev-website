@@ -35,6 +35,7 @@
     { "source": "/privacy", "destination": "/privacy.html" },
     { "source": "/terms", "destination": "/terms.html" },
     { "source": "/services", "destination": "/services.html" },
-    { "source": "/brief", "destination": "/brief.html" }
+    { "source": "/brief", "destination": "/brief.html" },
+    { "source": "/portfolio", "destination": "/portfolio.html" }
   ]
 }
