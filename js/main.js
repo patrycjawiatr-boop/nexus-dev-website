@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollReveal();
   initContactForm();
   renderDynamicContent();
+  initLeadMagnet();
   setLanguage(currentLang);
 });
 
@@ -702,4 +703,31 @@ function observeNewElements(container) {
   }, { threshold: 0.1 });
   
   reveals.forEach(el => observer.observe(el));
+}
+
+// ── LEAD MAGNET ──────────────────────────────────────────
+function initLeadMagnet() {
+  const form = document.getElementById('leadMagnetForm');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const emailField = document.getElementById('leadEmail');
+    const email = emailField.value;
+    const submitBtn = document.getElementById('leadSubmit');
+    const successMsg = document.getElementById('leadSuccess');
+
+    if (!email) return;
+
+    submitBtn.disabled = true;
+    const originalText = submitBtn.innerHTML;
+    submitBtn.textContent = '...';
+
+    // Mock sending (integrates with Formspree easily if needed)
+    setTimeout(() => {
+      form.style.display = 'none';
+      successMsg.classList.remove('hidden');
+      console.log(`Lead captured: ${email}. Sending checklist...`);
+    }, 1500);
+  });
 }

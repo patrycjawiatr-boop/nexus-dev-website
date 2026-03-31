@@ -584,7 +584,35 @@ const translations = {
   footer: {
     pl: { copyright: "2026 nexus.dev - Wszystkie prawa zastrzeżone.", links: { privacy: "Polityka prywatności", terms: "Regulamin" } },
     en: { copyright: "2026 nexus.dev - All rights reserved.", links: { privacy: "Privacy Policy", terms: "Terms & Conditions" } },
-    ua: { copyright: "2026 nexus.dev - Усi права захищенi.", links: { privacy: "Полiтика конфiденцiйностi", terms: "Умови використання" } }
+    ua: { copyright: "2026 nexus.dev - Усi права захищенi.", links: { privacy: "Полiтика конфiденцiйностi", terms: "Умови використання" } },
+    tagline: {
+      pl: "Zamieniamy chaos w system, który zarabia.",
+      en: "Turning chaos into a system that earns.",
+      ua: "Перетворюємо хаос на систему, яка заробляє."
+    }
+  },
+  leadMagnet: {
+    pl: {
+      badge: "Darmowy zasób",
+      h2: "Pobierz Checklistę: 5 Kroków do Automatyzacji Twojej Firmy",
+      desc: "Dowiedz się, od czego zacząć wdrażanie AI i automatyzacji, aby odzyskać nawet 15 godzin tygodniowo. Konkretne narzędzia i procesy.",
+      cta: "Odbierz checklistę",
+      success: "Dziękujemy! Checklista została wysłana na Twój e-mail."
+    },
+    en: {
+      badge: "Free Resource",
+      h2: "Download Checklist: 5 Steps to Automate Your Business",
+      desc: "Learn where to start with AI and automation to reclaim up to 15 hours per week. Concrete tools and processes.",
+      cta: "Get the checklist",
+      success: "Thank you! The checklist has been sent to your email."
+    },
+    ua: {
+      badge: "Безкоштовний ресурс",
+      h2: "Завантажте чек-лист: 5 крокiв до автоматизацiї вашого бiзнесу",
+      desc: "Дiзнайтеся, з чого почати впровадження AI та автоматизацiї, щоб повернути до 15 годин на тиждень.",
+      cta: "Отримати чек-лист",
+      success: "Дякуємо! Чек-лист надіслано на вашу електронну пошту."
+    }
   },
   portfolioPage: {
     pl: { badge: "Nasze Realizacje", h1: "Od Chaosu do Systemu", subtitle: "Poniżej znajdziesz wybrane projekty, w których wdrożyliśmy rozwiązania oszczędzające czas i zwiększające zyski naszych klientów." },
