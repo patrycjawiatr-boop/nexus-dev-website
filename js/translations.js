@@ -597,21 +597,21 @@ const translations = {
       h2: "Pobierz Checklistę: 5 Kroków do Automatyzacji Twojej Firmy",
       desc: "Dowiedz się, od czego zacząć wdrażanie AI i automatyzacji, aby odzyskać nawet 15 godzin tygodniowo. Konkretne narzędzia i procesy.",
       cta: "Odbierz checklistę",
-      success: "Dziękujemy! Checklista została wysłana na Twój e-mail."
+      success: "Sukces! Checklista została wysłana na Twój e-mail. Sprawdź folder odebrane (lub spam)."
     },
     en: {
       badge: "Free Resource",
       h2: "Download Checklist: 5 Steps to Automate Your Business",
       desc: "Learn where to start with AI and automation to reclaim up to 15 hours per week. Concrete tools and processes.",
       cta: "Get the checklist",
-      success: "Thank you! The checklist has been sent to your email."
+      success: "Success! The checklist has been sent to your email. Please check your inbox (or spam)."
     },
     ua: {
       badge: "Безкоштовний ресурс",
       h2: "Завантажте чек-лист: 5 крокiв до автоматизацiї вашого бiзнесу",
       desc: "Дiзнайтеся, з чого почати впровадження AI та автоматизацiї, щоб повернути до 15 годин на тиждень.",
       cta: "Отримати чек-лист",
-      success: "Дякуємо! Чек-лист надіслано на вашу електронну пошту."
+      success: "Успіх! Чек-лист надіслано на вашу електронну пошту. Перевірте вхідні повідомлення."
     }
   },
   portfolioPage: {
