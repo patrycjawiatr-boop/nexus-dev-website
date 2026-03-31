@@ -719,15 +719,26 @@ function initLeadMagnet() {
 
     if (!email) return;
 
+    // Visual feedback
     submitBtn.disabled = true;
     const originalText = submitBtn.innerHTML;
-    submitBtn.textContent = '...';
+    submitBtn.innerHTML = '<span class="loading-spinner"></span>'; // Assumes a spinner exists or just text
 
-    // Mock sending (integrates with Formspree easily if needed)
+    // Mock sending (easily swap for Formspree endpoint)
     setTimeout(() => {
-      form.style.display = 'none';
+      // 1. Hide form
+      form.classList.add('hidden');
+      
+      // 2. Show success message
       successMsg.classList.remove('hidden');
-      console.log(`Lead captured: ${email}. Sending checklist...`);
-    }, 1500);
+      
+      console.log(`Lead captured: ${email}. Redirecting to checklist...`);
+
+      // 3. Optional: Auto-redirect to the checklist after 2 seconds
+      setTimeout(() => {
+        window.location.href = 'checklist-nexus-dev.html';
+      }, 2000);
+      
+    }, 1200);
   });
 }
