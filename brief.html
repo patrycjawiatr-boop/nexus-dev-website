@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wyceń swój projekt — nexus.dev</title>
+  <meta name="description" content="Wypełnij krótki brief projektowy i otrzymaj indywidualną wycenę od nexus.dev w ciągu 24h.">
+  <meta name="author" content="Patrycja Duk">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+
+  <link rel="canonical" href="https://nexus.dev/brief">
+  <link rel="alternate" hreflang="pl" href="https://nexus.dev/brief">
+  <link rel="alternate" hreflang="en" href="https://nexus.dev/brief">
+  <link rel="alternate" hreflang="uk" href="https://nexus.dev/brief">
+
+  <meta property="og:title" content="Wyceń swój projekt — nexus.dev">
+  <meta property="og:description" content="Wypełnij krótki brief projektowy i otrzymaj wycenę.">
+  <meta property="og:image" content="https://nexus.dev/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    .subpage-hero {
+      padding: 140px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--bg-primary);
+    }
+    .subpage-hero::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120%;
+      height: 100%;
+      background: var(--gradient-hero);
+      pointer-events: none;
+    }
+    .subpage-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    .subpage-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 16px;
+    }
+    .subpage-hero p {
+      font-size: 1.125rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .brief-section {
+      padding: var(--section-pad) 0;
+      background: var(--bg-secondary);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ PAGE LOADER ═══ -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo">nexus<span>.dev</span></div>
+  </div>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">nexus<span>.dev</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="nav.home" onclick="closeNav()">Strona główna</a></li>
+        <li><a href="services.html" data-i18n="nav.services" onclick="closeNav()">Usługi</a></li>
+        <li><a href="index.html#cases" data-i18n="nav.cases" onclick="closeNav()">Realizacje</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about" onclick="closeNav()">O mnie</a></li>
+        <li><a href="index.html#pricing" data-i18n="nav.pricing" onclick="closeNav()">Cennik</a></li>
+        <li><a href="index.html#faq" data-i18n="nav.blog" onclick="closeNav()">FAQ</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn active" data-lang="pl">PL</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ua">UA</button>
+        </div>
+        <a href="brief.html" class="btn btn-primary btn-arrow" data-i18n="nav.cta" style="color:#fff; pointer-events:none; opacity:0.7;">
+          Wyceń swój brief
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="subpage-hero">
+    <div class="container">
+      <h1 id="briefHeroTitle">Wyceń swój projekt — wypełnij brief</h1>
+      <p id="briefHeroDesc">Wypełnij krótki brief, a przygotujemy dla Ciebie indywidualną wycenę. Im więcej napiszesz, tym dokładniejszą propozycję dostaniesz.</p>
+    </div>
+  </section>
+
+  <!-- ═══ BRIEF FORM SECTION ═══ -->
+  <section class="brief-section" id="contact">
+    <div class="container">
+      <div class="contact-grid">
+        <!-- Left: Info -->
+        <div class="contact-info reveal">
+          <p style="font-weight:600; color:var(--text-primary); margin-bottom:12px;" data-i18n="contact.steps_title">Co się stanie po wysłaniu briefu:</p>
+          <ol class="contact-steps" id="contactSteps">
+            <!-- Filled by JS -->
+          </ol>
+
+          <div class="contact-details" id="contactDetails">
+            <!-- Filled by JS -->
+          </div>
+
+          <div style="margin-top:32px; padding:20px; background:var(--bg-card); border-radius:var(--radius-md); border:1px solid var(--border);">
+            <p style="font-weight:600; color:var(--text-primary); margin-bottom:4px;" data-i18n="contact.alt_cta">Wolisz po prostu napisać?</p>
+            <p style="font-size:0.9rem;" data-i18n="contact.alt_desc">Wyślij maila na nextlevelaipoland@gmail.com z krótkim opisem sytuacji.</p>
+          </div>
+        </div>
+
+        <!-- Right: Brief Form -->
+        <div class="contact-form reveal reveal-delay-2" id="contactFormWrap">
+          <form id="contactForm" action="https://formspree.io/f/mlgobknr" method="POST">
+            <input type="hidden" name="_language" id="formLang" value="pl">
+            <input type="hidden" name="_subject" value="[nexus.dev] Nowy brief od klienta">
+
+            <!-- Brief form header -->
+            <div class="brief-form-header">
+              <h3 data-i18n="contact.form.header">📋 Brief projektowy</h3>
+              <p data-i18n="contact.form.header_desc">Im więcej wypełnisz, tym dokładniejszą wycenę otrzymasz.</p>
+            </div>
+
+            <!-- Section: Dane kontaktowe -->
+            <div class="form-section-label" data-i18n="contact.form.section_contact">👤 Dane kontaktowe</div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label data-i18n="contact.form.name" for="name">Imię i nazwisko *</label>
+                <input type="text" id="name" name="name" required placeholder="Jan Kowalski">
+              </div>
+              <div class="form-group">
+                <label data-i18n="contact.form.email" for="email">Email *</label>
+                <input type="email" id="email" name="email" required placeholder="jan@firma.pl">
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label data-i18n="contact.form.company" for="company">Nazwa firmy</label>
+                <input type="text" id="company" name="company" placeholder="Opcjonalnie">
+              </div>
+              <div class="form-group">
+                <label data-i18n="contact.form.phone" for="phone">Telefon</label>
+                <input type="tel" id="phone" name="phone" placeholder="Opcjonalnie">
+              </div>
+            </div>
+
+            <!-- Section: O firmie -->
+            <div class="form-section-label" data-i18n="contact.form.section_business">🏢 O Twojej firmie</div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label data-i18n="contact.form.industry" for="industry">Branża</label>
+                <select id="industry" name="industry">
+                  <!-- Filled by JS -->
+                </select>
+              </div>
+              <div class="form-group">
+                <label data-i18n="contact.form.team_size" for="teamSize">Wielkość zespołu</label>
+                <select id="teamSize" name="team_size">
+                  <!-- Filled by JS -->
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label data-i18n="contact.form.website" for="website">Adres obecnej strony (jeśli masz)</label>
+              <input type="url" id="website" name="website" placeholder="https://twojastrona.pl">
+            </div>
+
+            <!-- Section: Potrzeby -->
+            <div class="form-section-label" data-i18n="contact.form.section_needs">🎯 Czego potrzebujesz?</div>
+
+            <div class="form-group">
+              <label data-i18n="contact.form.services_label">Zaznacz, co Cię interesuje (możesz wybrać kilka):</label>
+              <div class="form-checkboxes" id="servicesCheckboxes">
+                <!-- Filled by JS -->
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label data-i18n="contact.form.budget" for="budget">Orientacyjny budżet</label>
+                <select id="budget" name="budget">
+                  <!-- Filled by JS -->
+                </select>
+              </div>
+              <div class="form-group">
+                <label data-i18n="contact.form.timeline" for="timeline">Kiedy chcesz wystartować?</label>
+                <select id="timeline" name="timeline">
+                  <!-- Filled by JS -->
+                </select>
+              </div>
+            </div>
+
+            <!-- Section: Szczegóły -->
+            <div class="form-section-label" data-i18n="contact.form.section_details">💬 Szczegóły</div>
+
+            <div class="form-group">
+              <label data-i18n="contact.form.message" for="message">Opisz krótko swoją sytuację — co Cię boli, czego szukasz? *</label>
+              <textarea id="message" name="message" required placeholder="Np. Mamy stronę, ale nie generuje leadów. Chcielibyśmy ułożyć ofertę i zautomatyzować pozyskiwanie klientów..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label data-i18n="contact.form.source" for="source">Jak nas znalazłeś/aś?</label>
+              <select id="source" name="source">
+                <!-- Filled by JS -->
+              </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-arrow form-submit" data-i18n="contact.form.submit">
+              Wyślij brief i otrzymaj wycenę
+            </button>
+          </form>
+
+          <div class="form-success" id="formSuccess">
+            <div class="form-success-icon">✅</div>
+            <h3 data-i18n="contact.form.success" id="successMsg">Dziękuję! Odezwę się w ciągu 24h z wyceną.</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <a href="index.html" class="logo" style="margin-bottom:8px;">nexus<span>.dev</span></a>
+        <p class="footer-text">© 2026 nexus.dev — Wszystkie prawa zastrzeżone.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="privacy.html">Polityka prywatności</a></li>
+        <li><a href="terms.html">Regulamin</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ═══ COOKIE CONSENT ═══ -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-text" id="cookieText">
+      Ta strona korzysta z plików cookies w celu zapewnienia najlepszej jakości usług.
+      <a href="privacy.html" id="cookieLink">Polityka prywatności</a>
+    </div>
+    <div class="cookie-actions">
+      <button class="btn btn-secondary cookie-btn" id="cookieCustomize" onclick="showCookieSettings()">Dostosuj</button>
+      <button class="btn btn-secondary cookie-btn" id="cookieReject" onclick="setCookieConsent(false)">Odrzuć</button>
+      <button class="btn btn-primary cookie-btn" id="cookieAccept" onclick="setCookieConsent(true)">Akceptuję</button>
+    </div>
+  </div>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <script src="js/translations.js?v=5"></script>
+  <script src="js/cookies.js?v=1"></script>
+  <script>
+    let currentLang = localStorage.getItem('nexus-lang') || 'pl';
+
+    // Page loader
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('pageLoader').classList.add('hidden');
+      }, 400);
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initLanguage();
+      initNavbar();
+      initMobileNav();
+      initContactForm();
+      setLanguage(currentLang);
+
+      // Check URL params for pre-selected package
+      const params = new URLSearchParams(window.location.search);
+      const pkg = params.get('package');
+      if (pkg) {
+        const messageField = document.getElementById('message');
+        if (messageField && !messageField.value) {
+          messageField.value = `Interesuje mnie pakiet: ${decodeURIComponent(pkg)}\n\n`;
+        }
+      }
+    });
+
+    function initLanguage() {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === currentLang);
+        btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+      });
+    }
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('nexus-lang', lang);
+      const langMap = { pl: 'pl', en: 'en', ua: 'uk' };
+      document.documentElement.lang = langMap[lang] || 'pl';
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+
+      // Update i18n elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const parts = key.split('.');
+        if (parts.length >= 2) {
+          let val = translations[parts[0]]?.[lang];
+          for (const p of parts.slice(1)) {
+            if (val == null) break;
+            val = val[p];
+          }
+          if (val != null && typeof val === 'string') {
+            if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+              el.placeholder = val;
+            } else {
+              el.textContent = val;
+            }
+          }
+        }
+      });
+
+      // Update page title & hero
+      updatePageText(lang);
+      renderContactSteps();
+      renderContactDetails();
+      renderFormSelects();
+
+      // Update form language field
+      const formLang = document.getElementById('formLang');
+      if (formLang) formLang.value = lang;
+
+      initCookieConsent(lang);
+    }
+
+    function updatePageText(lang) {
+      const data = translations.contact?.[lang];
+      if (!data) return;
+      document.getElementById('briefHeroTitle').textContent = data.h2;
+      document.getElementById('briefHeroDesc').textContent = data.intro;
+      document.title = data.h2 + ' — nexus.dev';
+    }
+
+    // ── CONTACT STEPS ──
+    function renderContactSteps() {
+      const container = document.getElementById('contactSteps');
+      const data = translations.contact[currentLang];
+      if (!container || !data) return;
+      container.innerHTML = data.steps.map(step => `<li>${step}</li>`).join('');
+    }
+
+    // ── CONTACT DETAILS ──
+    function renderContactDetails() {
+      const container = document.getElementById('contactDetails');
+      const data = translations.contact[currentLang];
+      if (!container || !data) return;
+      container.innerHTML = `
+        <div class="contact-detail"><span class="contact-detail-icon">📧</span><a href="mailto:${data.info.email}">${data.info.email}</a></div>
+        <div class="contact-detail"><span class="contact-detail-icon">📍</span><span>${data.info.location}</span></div>
+        <div class="contact-detail"><span class="contact-detail-icon">⏰</span><span>${data.info.response}</span></div>
+      `;
+    }
+
+    // ── FORM SELECTS ──
+    function renderFormSelects() {
+      const data = translations.contact[currentLang];
+      if (!data) return;
+
+      const fillSelect = (id, options) => {
+        const el = document.getElementById(id);
+        if (!el) return;
+        const currentVal = el.value;
+        el.innerHTML = options.map((opt, i) => `
+          <option value="${i === 0 ? '' : opt}" ${i === 0 ? 'disabled selected' : ''}>${opt}</option>
+        `).join('');
+        if (currentVal && Array.from(el.options).some(o => o.value === currentVal)) el.value = currentVal;
+      };
+
+      fillSelect('industry', data.form.industry_options);
+      fillSelect('budget', data.form.budget_options);
+      fillSelect('source', data.form.source_options);
+      if (data.form.team_size_options) fillSelect('teamSize', data.form.team_size_options);
+      if (data.form.timeline_options) fillSelect('timeline', data.form.timeline_options);
+
+      const checkboxContainer = document.getElementById('servicesCheckboxes');
+      if (checkboxContainer && data.form.services_checkboxes) {
+        checkboxContainer.innerHTML = data.form.services_checkboxes.map(svc => `
+          <label class="form-checkbox"><input type="checkbox" name="services[]" value="${svc}"><span>${svc}</span></label>
+        `).join('');
+      }
+    }
+
+    // ── CONTACT FORM ──
+    function initContactForm() {
+      const form = document.getElementById('contactForm');
+      if (!form) return;
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const checkedServices = Array.from(form.querySelectorAll('input[name="services[]"]:checked')).map(cb => cb.value);
+        formData.set('services', checkedServices.join(', '));
+        formData.delete('services[]');
+
+        const submitBtn = form.querySelector('[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = '...';
+        submitBtn.disabled = true;
+
+        try {
+          const response = await fetch(form.action, {
+            method: 'POST', body: formData,
+            headers: { 'Accept': 'application/json' },
+          });
+          if (response.ok) {
+            form.style.display = 'none';
+            document.getElementById('formSuccess').classList.add('show');
+          } else {
+            openMailto(formData);
+            form.style.display = 'none';
+            document.getElementById('formSuccess').classList.add('show');
+          }
+        } catch (err) {
+          openMailto(formData);
+          form.style.display = 'none';
+          document.getElementById('formSuccess').classList.add('show');
+        }
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      });
+    }
+
+    function openMailto(formData) {
+      const name = formData.get('name') || '';
+      const email = formData.get('email') || '';
+      const phone = formData.get('phone') || '';
+      const company = formData.get('company') || '';
+      const industry = formData.get('industry') || '';
+      const teamSize = formData.get('team_size') || '';
+      const website = formData.get('website') || '';
+      const services = formData.get('services') || '';
+      const budget = formData.get('budget') || '';
+      const timeline = formData.get('timeline') || '';
+      const message = formData.get('message') || '';
+      const source = formData.get('source') || '';
+      const subject = encodeURIComponent(`[nexus.dev] Nowy brief od ${name}`);
+      const body = encodeURIComponent(
+        `Imię: ${name}\nEmail: ${email}\nTelefon: ${phone}\nFirma: ${company}\nBranża: ${industry}\nZespół: ${teamSize}\nStrona: ${website}\nUsługi: ${services}\nBudżet: ${budget}\nTimeline: ${timeline}\nŹródło: ${source}\n\nOpis sytuacji:\n${message}`
+      );
+      window.open(`mailto:nextlevelaipoland@gmail.com?subject=${subject}&body=${body}`, '_blank');
+    }
+
+    // ── NAV ──
+    function initNavbar() {
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.pageYOffset > 50);
+      });
+    }
+
+    function initMobileNav() {
+      const toggle = document.getElementById('mobileToggle');
+      const links = document.getElementById('navLinks');
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        links.classList.toggle('open');
+        document.body.style.overflow = links.classList.contains('open') ? 'hidden' : '';
+      });
+    }
+
+    function closeNav() {
+      document.getElementById('mobileToggle').classList.remove('active');
+      document.getElementById('navLinks').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    // ── SCROLL REVEAL ──
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

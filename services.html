@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pełna oferta usług — nexus.dev</title>
+  <meta name="description" content="Pełna lista usług nexus.dev — od strategii oferty, przez procesy sprzedaży, strony WWW, automatyzacje AI, po kampanie reklamowe.">
+  <meta name="author" content="Patrycja Duk">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  
+  <link rel="canonical" href="https://nexus.dev/services">
+  <link rel="alternate" hreflang="pl" href="https://nexus.dev/services">
+  <link rel="alternate" hreflang="en" href="https://nexus.dev/services">
+  <link rel="alternate" hreflang="uk" href="https://nexus.dev/services">
+  
+  <meta property="og:title" content="Pełna oferta usług — nexus.dev">
+  <meta property="og:description" content="Pełna lista usług nexus.dev — od strategii oferty po automatyzacje AI.">
+  <meta property="og:image" content="https://nexus.dev/img/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    .subpage-hero {
+      padding: 140px 0 60px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      background: var(--bg-primary);
+    }
+    .subpage-hero::before {
+      content: '';
+      position: absolute;
+      top: -30%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 120%;
+      height: 100%;
+      background: var(--gradient-hero);
+      pointer-events: none;
+    }
+    .subpage-hero .container {
+      position: relative;
+      z-index: 2;
+    }
+    .subpage-hero h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 16px;
+    }
+    .subpage-hero p {
+      font-size: 1.125rem;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+    .services-section {
+      padding: var(--section-pad) 0;
+      background: var(--bg-secondary);
+    }
+    .services-bottom-cta {
+      text-align: center;
+      margin-top: 60px;
+    }
+    .services-bottom-cta h3 {
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+    .services-bottom-cta p {
+      margin-bottom: 24px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ PAGE LOADER ═══ -->
+  <div class="page-loader" id="pageLoader">
+    <div class="loader-logo">nexus<span>.dev</span></div>
+  </div>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">nexus<span>.dev</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="nav.home" onclick="closeNav()">Strona główna</a></li>
+        <li><a href="services.html" data-i18n="nav.services" onclick="closeNav()" style="color:var(--accent-light);">Usługi</a></li>
+        <li><a href="index.html#cases" data-i18n="nav.cases" onclick="closeNav()">Realizacje</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about" onclick="closeNav()">O mnie</a></li>
+        <li><a href="index.html#pricing" data-i18n="nav.pricing" onclick="closeNav()">Cennik</a></li>
+        <li><a href="index.html#faq" data-i18n="nav.blog" onclick="closeNav()">FAQ</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn active" data-lang="pl">PL</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ua">UA</button>
+        </div>
+        <a href="brief.html" class="btn btn-primary btn-arrow" data-i18n="nav.cta">
+          Wyceń swój brief
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="subpage-hero">
+    <div class="container">
+      <h1 id="servicesHeroTitle">Pełna lista usług — od A do Z</h1>
+      <p id="servicesHeroDesc">Nie mamy jednego pakietu dla wszystkich. Poniżej znajdziesz pełną listę modułów — dobieramy je do tego, co w Twojej firmie naprawdę wymaga naprawy.</p>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICES CATALOG ═══ -->
+  <section class="services-section">
+    <div class="container">
+      <div id="servicesFullGrid">
+        <!-- Filled by JS -->
+      </div>
+
+      <div class="services-bottom-cta">
+        <h3 id="servicesCtaTitle">Nie wiesz, od czego zacząć?</h3>
+        <p id="servicesCtaDesc">Opisz swoją sytuację, a przygotujemy indywidualną propozycję.</p>
+        <a href="brief.html" class="btn btn-primary btn-arrow" id="servicesCtaBtn">
+          Wyceń swój projekt →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <a href="index.html" class="logo" style="margin-bottom:8px;">nexus<span>.dev</span></a>
+        <p class="footer-text">© 2026 nexus.dev — Wszystkie prawa zastrzeżone.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="privacy.html">Polityka prywatności</a></li>
+        <li><a href="terms.html">Regulamin</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- ═══ COOKIE CONSENT ═══ -->
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-text" id="cookieText">
+      Ta strona korzysta z plików cookies w celu zapewnienia najlepszej jakości usług.
+      <a href="privacy.html" id="cookieLink">Polityka prywatności</a>
+    </div>
+    <div class="cookie-actions">
+      <button class="btn btn-secondary cookie-btn" id="cookieCustomize" onclick="showCookieSettings()">Dostosuj</button>
+      <button class="btn btn-secondary cookie-btn" id="cookieReject" onclick="setCookieConsent(false)">Odrzuć</button>
+      <button class="btn btn-primary cookie-btn" id="cookieAccept" onclick="setCookieConsent(true)">Akceptuję</button>
+    </div>
+  </div>
+
+  <!-- ═══ SCRIPTS ═══ -->
+  <script src="js/translations.js?v=5"></script>
+  <script src="js/cookies.js?v=1"></script>
+  <script>
+    let currentLang = localStorage.getItem('nexus-lang') || 'pl';
+
+    // Page loader
+    window.addEventListener('load', () => {
+      setTimeout(() => {
+        document.getElementById('pageLoader').classList.add('hidden');
+      }, 400);
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initLanguage();
+      initNavbar();
+      initMobileNav();
+      setLanguage(currentLang);
+    });
+
+    function initLanguage() {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === currentLang);
+        btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
+      });
+    }
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      localStorage.setItem('nexus-lang', lang);
+      const langMap = { pl: 'pl', en: 'en', ua: 'uk' };
+      document.documentElement.lang = langMap[lang] || 'pl';
+
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+
+      // Update i18n elements
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        const parts = key.split('.');
+        if (parts.length >= 2) {
+          let val = translations[parts[0]]?.[lang];
+          for (const p of parts.slice(1)) {
+            if (val == null) break;
+            val = val[p];
+          }
+          if (val != null && typeof val === 'string') el.textContent = val;
+        }
+      });
+
+      // Render services
+      renderServicesFull(lang);
+      updatePageText(lang);
+      initCookieConsent(lang);
+    }
+
+    function updatePageText(lang) {
+      const data = translations.servicesFull?.[lang];
+      if (!data) return;
+
+      document.getElementById('servicesHeroTitle').textContent = data.h2;
+      document.getElementById('servicesHeroDesc').textContent = data.intro;
+
+      const ctaTexts = {
+        pl: { title: 'Nie wiesz, od czego zacząć?', desc: 'Opisz swoją sytuację, a przygotujemy indywidualną propozycję.', btn: 'Wyceń swój projekt →' },
+        en: { title: "Don't know where to start?", desc: "Describe your situation, and we'll prepare a custom proposal.", btn: 'Get a Quote →' },
+        ua: { title: 'Не знаєте, з чого почати?', desc: 'Опишiть свою ситуацiю, i ми пiдготуємо iндивiдуальну пропозицiю.', btn: 'Оцiнити проєкт →' }
+      };
+      const t = ctaTexts[lang] || ctaTexts.pl;
+      document.getElementById('servicesCtaTitle').textContent = t.title;
+      document.getElementById('servicesCtaDesc').textContent = t.desc;
+      document.getElementById('servicesCtaBtn').textContent = t.btn;
+      document.title = data.h2 + ' — nexus.dev';
+    }
+
+    function renderServicesFull(lang) {
+      var grid = document.getElementById("servicesFullGrid");
+      if (!grid || !translations.servicesFull) return;
+      var data = translations.servicesFull[lang];
+      if (!data || !data.categories) return;
+      var html = "";
+      for (var i = 0; i < data.categories.length; i++) {
+        var cat = data.categories[i];
+        var mods = "";
+        for (var j = 0; j < cat.modules.length; j++) {
+          var m = cat.modules[j];
+          mods += '<div class="service-module-card"><div class="service-module-header"><h4>' + m.title + '</h4><div class="service-module-meta"><span class="service-time">' + m.time + '</span><span class="service-price">' + m.price + '</span></div></div><p>' + m.desc + '</p></div>';
+        }
+        html += '<div class="service-category"><h3 class="service-category-name">' + cat.name + '</h3><div class="service-modules-list">' + mods + '</div></div>';
+      }
+      grid.innerHTML = html;
+    }
+
+    function initNavbar() {
+      const navbar = document.getElementById('navbar');
+      window.addEventListener('scroll', () => {
+        navbar.classList.toggle('scrolled', window.pageYOffset > 50);
+      });
+    }
+
+    function initMobileNav() {
+      const toggle = document.getElementById('mobileToggle');
+      const links = document.getElementById('navLinks');
+      toggle.addEventListener('click', () => {
+        toggle.classList.toggle('active');
+        links.classList.toggle('open');
+        document.body.style.overflow = links.classList.contains('open') ? 'hidden' : '';
+      });
+    }
+
+    function closeNav() {
+      const toggle = document.getElementById('mobileToggle');
+      const links = document.getElementById('navLinks');
+      toggle.classList.remove('active');
+      links.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  </script>
+
+</body>
+</html>
