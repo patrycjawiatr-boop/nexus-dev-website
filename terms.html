@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regulamin — nexus.dev</title>
+  <meta name="description" content="Regulamin korzystania z serwisu nexus.dev i warunki świadczenia usług.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <style>
+    .legal-page {
+      padding-top: 120px;
+      padding-bottom: var(--section-pad);
+      min-height: 100vh;
+    }
+    .legal-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .legal-header h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 12px;
+    }
+    .legal-header .legal-date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .legal-content {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .legal-content h2 {
+      font-size: 1.3rem;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      color: var(--accent-light);
+    }
+    .legal-content h3 {
+      font-size: 1.1rem;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+    .legal-content p,
+    .legal-content li {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .legal-content ul,
+    .legal-content ol {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    .legal-content ul li {
+      list-style: disc;
+      margin-bottom: 6px;
+    }
+    .legal-content ol li {
+      margin-bottom: 6px;
+    }
+    .legal-content a {
+      color: var(--accent-light);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.3s;
+    }
+    .legal-content a:hover {
+      color: var(--cyan);
+    }
+    .legal-content .highlight-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin: 24px 0;
+    }
+    .legal-content .highlight-box p {
+      margin-bottom: 0;
+    }
+    .legal-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-light);
+      font-weight: 500;
+      font-size: 0.9rem;
+      margin-bottom: 40px;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .legal-back:hover {
+      color: var(--cyan);
+      transform: translateX(-4px);
+    }
+    .legal-back::before {
+      content: '←';
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">nexus<span>.dev</span></a>
+      <div class="nav-right">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn active" data-lang="pl" onclick="switchTermsLang('pl')">PL</button>
+          <button class="lang-btn" data-lang="en" onclick="switchTermsLang('en')">EN</button>
+          <button class="lang-btn" data-lang="ua" onclick="switchTermsLang('ua')">UA</button>
+        </div>
+        <a href="index.html#contact" class="btn btn-primary btn-arrow">Wyceń swój brief</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ TERMS OF SERVICE ═══ -->
+  <section class="legal-page">
+    <div class="container">
+      <a href="index.html" class="legal-back" id="backLink">Wróć na stronę główną</a>
+
+      <div class="legal-header">
+        <h1 id="termsTitle">Regulamin</h1>
+        <p class="legal-date" id="termsDate">Ostatnia aktualizacja: 31 marca 2026</p>
+      </div>
+
+      <div class="legal-content" id="termsContent">
+        <!-- Content rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <a href="index.html" class="logo" style="margin-bottom:8px;">nexus<span>.dev</span></a>
+        <p class="footer-text">© 2026 nexus.dev — Wszystkie prawa zastrzeżone.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="privacy.html">Polityka prywatności</a></li>
+        <li><a href="terms.html" style="color:var(--accent-light);">Regulamin</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const termsData = {
+      pl: {
+        back: "Wróć na stronę główną",
+        title: "Regulamin",
+        date: "Ostatnia aktualizacja: 31 marca 2026",
+        cta: "Wyceń swój brief",
+        content: `
+          <div class="highlight-box">
+            <p><strong>Usługodawca:</strong> Patrycja Duk, prowadząca działalność pod marką nexus.dev<br>
+            <strong>Kontakt:</strong> <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a><br>
+            <strong>Adres:</strong> Zdalnie, Polska</p>
+          </div>
+
+          <h2>§ 1. Postanowienia ogólne</h2>
+          <ol>
+            <li>Niniejszy Regulamin określa zasady korzystania z serwisu internetowego dostępnego pod adresem nexus.dev (dalej „Serwis") oraz zasady świadczenia usług przez Usługodawcę.</li>
+            <li>Korzystanie z Serwisu oznacza akceptację niniejszego Regulaminu.</li>
+            <li>Regulamin jest udostępniony nieodpłatnie na stronie internetowej nexus.dev w sposób umożliwiający jego pobranie, utrwalenie i wydrukowanie.</li>
+          </ol>
+
+          <h2>§ 2. Definicje</h2>
+          <ul>
+            <li><strong>Usługodawca</strong> — Patrycja Duk, prowadząca działalność pod marką nexus.dev</li>
+            <li><strong>Użytkownik</strong> — każda osoba fizyczna, prawna lub jednostka organizacyjna korzystająca z Serwisu</li>
+            <li><strong>Klient</strong> — Użytkownik, który zlecił wykonanie usługi</li>
+            <li><strong>Usługa</strong> — usługa świadczona drogą elektroniczną lub zdalnie przez Usługodawcę</li>
+            <li><strong>Brief</strong> — formularz kontaktowy dostępny w Serwisie, służący do przesyłania zapytań ofertowych</li>
+            <li><strong>Serwis</strong> — strona internetowa nexus.dev wraz ze wszystkimi podstronami</li>
+          </ul>
+
+          <h2>§ 3. Rodzaje usług</h2>
+          <p>Usługodawca świadczy następujące usługi:</p>
+          <ol>
+            <li><strong>Usługi informacyjne</strong> — udostępnienie informacji o ofercie, cennikach i realizacjach za pośrednictwem Serwisu</li>
+            <li><strong>Usługa formularza kontaktowego</strong> — możliwość przesłania briefu projektowego za pośrednictwem formularza</li>
+            <li><strong>Usługi odpłatne</strong> — realizacja projektów na podstawie indywidualnej wyceny i odrębnej umowy, w tym m.in.:
+              <ul>
+                <li>Strategia oferty i pozycjonowanie</li>
+                <li>Projektowanie procesów sprzedażowych i obsługowych</li>
+                <li>Budowa stron internetowych i landing page'ów</li>
+                <li>Automatyzacje procesów biznesowych</li>
+                <li>Wdrożenie chatbotów AI</li>
+                <li>Dashboardy i szablony biznesowe</li>
+                <li>Kampanie reklamowe (Meta Ads, Google Ads)</li>
+                <li>Tworzenie treści i zarządzanie social media</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h2>§ 4. Warunki korzystania z Serwisu</h2>
+          <ol>
+            <li>Korzystanie z Serwisu jest bezpłatne i nie wymaga rejestracji.</li>
+            <li>Do korzystania z Serwisu niezbędne jest urządzenie z dostępem do internetu oraz przeglądarka internetowa obsługująca HTML5, CSS3 i JavaScript.</li>
+            <li>Użytkownik zobowiązany jest do korzystania z Serwisu zgodnie z przepisami prawa, niniejszym Regulaminem i dobrymi obyczajami.</li>
+            <li>Zabronione jest:
+              <ul>
+                <li>Podawanie nieprawdziwych danych w formularzach</li>
+                <li>Próby uzyskania nieautoryzowanego dostępu do zasobów Serwisu</li>
+                <li>Działania mogące zakłócić prawidłowe funkcjonowanie Serwisu</li>
+                <li>Kopiowanie lub rozpowszechnianie treści Serwisu bez zgody Usługodawcy</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h2>§ 5. Formularz kontaktowy (Brief)</h2>
+          <ol>
+            <li>Użytkownik może przesłać brief za pośrednictwem formularza kontaktowego dostępnego w Serwisie.</li>
+            <li>Wypełnienie formularza wymaga podania: imienia i nazwiska, adresu e-mail oraz opisu projektu. Pozostałe pola są opcjonalne.</li>
+            <li>Przesłanie formularza nie stanowi zawarcia umowy ani zobowiązania do skorzystania z usług.</li>
+            <li>Usługodawca zobowiązuje się do odpowiedzi na brief w ciągu 24 godzin roboczych.</li>
+            <li>Formularz jest obsługiwany przez serwis Formspree (Formspree, Inc., USA). Zasady przetwarzania danych opisane są w <a href="privacy.html">Polityce Prywatności</a>.</li>
+          </ol>
+
+          <h2>§ 6. Realizacja usług odpłatnych</h2>
+          <ol>
+            <li>Usługi odpłatne realizowane są na podstawie indywidualnej wyceny przedstawionej Klientowi po analizie briefu.</li>
+            <li>Zakres usługi, termin realizacji, wynagrodzenie oraz warunki płatności ustalane są indywidualnie i potwierdzane w formie pisemnej (e-mail lub umowa).</li>
+            <li>Rozpoczęcie realizacji usługi następuje po:
+              <ul>
+                <li>Zaakceptowaniu warunków współpracy przez obie strony</li>
+                <li>Wpłaceniu zaliczki (jeśli dotyczy)</li>
+              </ul>
+            </li>
+            <li>Wszelkie materiały, dostępy i informacje niezbędne do realizacji usługi Klient zobowiązany jest dostarczyć w uzgodnionym terminie.</li>
+          </ol>
+
+          <h2>§ 7. Ceny i płatności</h2>
+          <ol>
+            <li>Ceny podane w Serwisie mają charakter orientacyjny i nie stanowią oferty w rozumieniu Kodeksu Cywilnego.</li>
+            <li>Ostateczna cena usługi ustalana jest indywidualnie po analizie briefu.</li>
+            <li>Wszystkie ceny podane w Serwisie są cenami netto (o ile nie zaznaczono inaczej).</li>
+            <li>Płatności realizowane są przelewem bankowym na rachunek wskazany na fakturze.</li>
+            <li>Termin płatności wynosi 7 dni od daty wystawienia faktury, o ile nie ustalono inaczej.</li>
+          </ol>
+
+          <h2>§ 8. Prawa autorskie i własność intelektualna</h2>
+          <ol>
+            <li>Wszelkie treści zamieszczone w Serwisie (teksty, grafiki, układ, skrypty, nazwa, logo) stanowią własność intelektualną Usługodawcy i podlegają ochronie prawnej.</li>
+            <li>Kopiowanie, modyfikacja lub rozpowszechnianie treści Serwisu bez pisemnej zgody Usługodawcy jest zabronione.</li>
+            <li>Materiały wytworzone w ramach realizacji usługi odpłatnej przechodzą na Klienta z chwilą dokonania pełnej zapłaty, chyba że umowa stanowi inaczej.</li>
+            <li>Usługodawca zastrzega sobie prawo do wykorzystywania zrealizowanych projektów w swoim portfolio, chyba że Klient wyraźnie się temu sprzeciwi.</li>
+          </ol>
+
+          <h2>§ 9. Odpowiedzialność</h2>
+          <ol>
+            <li>Usługodawca nie ponosi odpowiedzialności za:
+              <ul>
+                <li>Przerwy w działaniu Serwisu wynikające z przyczyn technicznych</li>
+                <li>Szkody wynikające z niewłaściwego korzystania z Serwisu</li>
+                <li>Treści podawane przez Użytkownika w formularzach</li>
+                <li>Działania osób trzecich</li>
+              </ul>
+            </li>
+            <li>Odpowiedzialność Usługodawcy z tytułu realizacji usług odpłatnych ograniczona jest do wartości wynagrodzenia za daną usługę.</li>
+          </ol>
+
+          <h2>§ 10. Reklamacje</h2>
+          <ol>
+            <li>Reklamacje dotyczące usług świadczonych za pośrednictwem Serwisu można składać na adres: <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a></li>
+            <li>Reklamacja powinna zawierać: dane kontaktowe zgłaszającego, opis problemu oraz oczekiwany sposób rozpatrzenia.</li>
+            <li>Usługodawca rozpatrzy reklamację w terminie 14 dni roboczych od daty jej otrzymania.</li>
+          </ol>
+
+          <h2>§ 11. Odstąpienie od umowy</h2>
+          <ol>
+            <li>Konsument ma prawo odstąpić od umowy zawartej na odległość w terminie 14 dni bez podawania przyczyny, zgodnie z ustawą z dnia 30 maja 2014 r. o prawach konsumenta.</li>
+            <li>Prawo odstąpienia nie przysługuje, jeżeli Usługodawca w pełni wykonał usługę za wyraźną zgodą Konsumenta, który został poinformowany o utracie prawa odstąpienia.</li>
+            <li>Oświadczenie o odstąpieniu można złożyć mailowo na adres: <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a></li>
+          </ol>
+
+          <h2>§ 12. Postanowienia końcowe</h2>
+          <ol>
+            <li>Niniejszy Regulamin wchodzi w życie z dniem 31 marca 2026 r.</li>
+            <li>Usługodawca zastrzega sobie prawo do zmiany Regulaminu. Zmiany wchodzą w życie z chwilą ich publikacji na stronie Serwisu.</li>
+            <li>W sprawach nieuregulowanych niniejszym Regulaminem zastosowanie mają przepisy prawa polskiego, w szczególności Kodeksu Cywilnego oraz ustawy o świadczeniu usług drogą elektroniczną.</li>
+            <li>Wszelkie spory wynikające z korzystania z Serwisu będą rozstrzygane przez sąd właściwy dla siedziby Usługodawcy.</li>
+          </ol>
+
+          <h2>§ 13. Kontakt</h2>
+          <div class="highlight-box">
+            <p>W sprawach związanych z Regulaminem lub usługami nexus.dev:<br>
+            <strong>Email:</strong> <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a><br>
+            <strong>Strona:</strong> <a href="https://nexus.dev">nexus.dev</a></p>
+          </div>
+        `
+      },
+      en: {
+        back: "Back to homepage",
+        title: "Terms & Conditions",
+        date: "Last updated: March 31, 2026",
+        cta: "Get a Quote",
+        content: `
+          <div class="highlight-box">
+            <p><strong>Service Provider:</strong> Patrycja Duk, operating under the brand nexus.dev<br>
+            <strong>Contact:</strong> <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a><br>
+            <strong>Location:</strong> Remote, Poland</p>
+          </div>
+
+          <h2>§ 1. General Provisions</h2>
+          <ol>
+            <li>These Terms & Conditions define the rules for using the website available at nexus.dev (the "Website") and the terms of service provision by the Service Provider.</li>
+            <li>Using the Website constitutes acceptance of these Terms & Conditions.</li>
+            <li>These Terms are made freely available on the nexus.dev website in a manner that allows downloading, saving, and printing.</li>
+          </ol>
+
+          <h2>§ 2. Definitions</h2>
+          <ul>
+            <li><strong>Service Provider</strong> — Patrycja Duk, operating under the brand nexus.dev</li>
+            <li><strong>User</strong> — any natural person, legal entity, or organizational unit using the Website</li>
+            <li><strong>Client</strong> — a User who has commissioned a service</li>
+            <li><strong>Service</strong> — a service provided electronically or remotely by the Service Provider</li>
+            <li><strong>Brief</strong> — the contact form available on the Website for submitting project inquiries</li>
+            <li><strong>Website</strong> — the nexus.dev website including all subpages</li>
+          </ul>
+
+          <h2>§ 3. Types of Services</h2>
+          <p>The Service Provider offers the following services:</p>
+          <ol>
+            <li><strong>Information services</strong> — providing information about the offer, pricing, and portfolio through the Website</li>
+            <li><strong>Contact form service</strong> — the ability to submit a project brief via the form</li>
+            <li><strong>Paid services</strong> — project implementation based on individual quotes and separate agreements, including:
+              <ul>
+                <li>Offer strategy and positioning</li>
+                <li>Sales and delivery process design</li>
+                <li>Website and landing page development</li>
+                <li>Business process automation</li>
+                <li>AI chatbot implementation</li>
+                <li>Dashboards and business templates</li>
+                <li>Advertising campaigns (Meta Ads, Google Ads)</li>
+                <li>Content creation and social media management</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h2>§ 4. Terms of Website Use</h2>
+          <ol>
+            <li>Using the Website is free and does not require registration.</li>
+            <li>A device with internet access and a web browser supporting HTML5, CSS3, and JavaScript is required to use the Website.</li>
+            <li>The User is obligated to use the Website in accordance with applicable law, these Terms, and good practices.</li>
+            <li>The following is prohibited:
+              <ul>
+                <li>Providing false information in forms</li>
+                <li>Attempting unauthorized access to Website resources</li>
+                <li>Actions that may disrupt the proper functioning of the Website</li>
+                <li>Copying or distributing Website content without the Service Provider's consent</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h2>§ 5. Contact Form (Brief)</h2>
+          <ol>
+            <li>Users may submit a brief via the contact form available on the Website.</li>
+            <li>Completing the form requires providing: full name, email address, and project description. Other fields are optional.</li>
+            <li>Submitting the form does not constitute a contract or obligation to use services.</li>
+            <li>The Service Provider commits to responding to the brief within 24 business hours.</li>
+            <li>The form is powered by Formspree (Formspree, Inc., USA). Data processing rules are described in the <a href="privacy.html">Privacy Policy</a>.</li>
+          </ol>
+
+          <h2>§ 6. Paid Service Execution</h2>
+          <ol>
+            <li>Paid services are executed based on an individual quote presented to the Client after brief analysis.</li>
+            <li>Service scope, timeline, compensation, and payment terms are determined individually and confirmed in writing (email or contract).</li>
+            <li>Service execution begins after:
+              <ul>
+                <li>Acceptance of cooperation terms by both parties</li>
+                <li>Payment of advance (if applicable)</li>
+              </ul>
+            </li>
+            <li>The Client is obligated to provide all materials, access, and information necessary for service execution within the agreed timeframe.</li>
+          </ol>
+
+          <h2>§ 7. Pricing and Payments</h2>
+          <ol>
+            <li>Prices listed on the Website are approximate and do not constitute an offer under applicable law.</li>
+            <li>The final service price is determined individually after brief analysis.</li>
+            <li>All prices listed on the Website are net prices (unless otherwise indicated).</li>
+            <li>Payments are made via bank transfer to the account specified on the invoice.</li>
+            <li>The payment term is 7 days from the invoice date, unless otherwise agreed.</li>
+          </ol>
+
+          <h2>§ 8. Copyright and Intellectual Property</h2>
+          <ol>
+            <li>All content on the Website (texts, graphics, layout, scripts, name, logo) is the intellectual property of the Service Provider and is legally protected.</li>
+            <li>Copying, modifying, or distributing Website content without the Service Provider's written consent is prohibited.</li>
+            <li>Materials created as part of paid service execution are transferred to the Client upon full payment, unless the agreement states otherwise.</li>
+            <li>The Service Provider reserves the right to use completed projects in their portfolio, unless the Client explicitly objects.</li>
+          </ol>
+
+          <h2>§ 9. Liability</h2>
+          <ol>
+            <li>The Service Provider is not liable for:
+              <ul>
+                <li>Website interruptions due to technical reasons</li>
+                <li>Damages resulting from improper Website use</li>
+                <li>Content provided by Users in forms</li>
+                <li>Actions of third parties</li>
+              </ul>
+            </li>
+            <li>The Service Provider's liability for paid services is limited to the service compensation amount.</li>
+          </ol>
+
+          <h2>§ 10. Complaints</h2>
+          <ol>
+            <li>Complaints about services provided through the Website can be submitted to: <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a></li>
+            <li>A complaint should include: contact details, problem description, and expected resolution.</li>
+            <li>The Service Provider will process the complaint within 14 business days of receipt.</li>
+          </ol>
+
+          <h2>§ 11. Withdrawal from Contract</h2>
+          <ol>
+            <li>A Consumer has the right to withdraw from a distance contract within 14 days without stating reasons, in accordance with applicable consumer protection laws.</li>
+            <li>The right of withdrawal does not apply if the Service Provider has fully performed the service with the Consumer's express consent and acknowledgment of loss of withdrawal rights.</li>
+            <li>Withdrawal notice can be sent via email to: <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a></li>
+          </ol>
+
+          <h2>§ 12. Final Provisions</h2>
+          <ol>
+            <li>These Terms & Conditions come into effect on March 31, 2026.</li>
+            <li>The Service Provider reserves the right to modify these Terms. Changes take effect upon publication on the Website.</li>
+            <li>Matters not regulated by these Terms are governed by Polish law, particularly the Civil Code and the Act on Electronic Services.</li>
+            <li>Any disputes arising from Website use shall be resolved by the court having jurisdiction over the Service Provider's registered office.</li>
+          </ol>
+
+          <h2>§ 13. Contact</h2>
+          <div class="highlight-box">
+            <p>For matters related to these Terms or nexus.dev services:<br>
+            <strong>Email:</strong> <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a><br>
+            <strong>Website:</strong> <a href="https://nexus.dev">nexus.dev</a></p>
+          </div>
+        `
+      },
+      ua: {
+        back: "Повернутися на головну",
+        title: "Умови використання",
+        date: "Останнє оновлення: 31 березня 2026",
+        cta: "Оцiнити проєкт",
+        content: `
+          <div class="highlight-box">
+            <p><strong>Постачальник послуг:</strong> Patrycja Duk, що працює пiд брендом nexus.dev<br>
+            <strong>Контакт:</strong> <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a><br>
+            <strong>Адреса:</strong> Вiддалено, Польща</p>
+          </div>
+
+          <h2>§ 1. Загальнi положення</h2>
+          <ol>
+            <li>Цi Умови використання визначають правила користування веб-сайтом nexus.dev (далi «Сайт») та умови надання послуг Постачальником.</li>
+            <li>Використання Сайту означає прийняття цих Умов.</li>
+            <li>Цi Умови є безкоштовно доступними на сайтi nexus.dev.</li>
+          </ol>
+
+          <h2>§ 2. Визначення</h2>
+          <ul>
+            <li><strong>Постачальник послуг</strong> — Patrycja Duk, що працює пiд брендом nexus.dev</li>
+            <li><strong>Користувач</strong> — будь-яка фiзична особа, юридична особа або органiзацiйна одиниця, що використовує Сайт</li>
+            <li><strong>Клiєнт</strong> — Користувач, який замовив послугу</li>
+            <li><strong>Послуга</strong> — послуга, надана електронно або дистанцiйно Постачальником</li>
+            <li><strong>Бриф</strong> — контактна форма на Сайтi для надсилання запитiв</li>
+            <li><strong>Сайт</strong> — веб-сайт nexus.dev з усiма пiдсторiнками</li>
+          </ul>
+
+          <h2>§ 3. Види послуг</h2>
+          <p>Постачальник надає наступнi послуги:</p>
+          <ol>
+            <li><strong>Iнформацiйнi послуги</strong> — надання iнформацiї про пропозицiю, цiни та портфолiо</li>
+            <li><strong>Контактна форма</strong> — можливiсть надiслати проєктний бриф</li>
+            <li><strong>Платнi послуги:</strong>
+              <ul>
+                <li>Стратегiя пропозицiї та позицiонування</li>
+                <li>Проєктування процесiв продажiв та обслуговування</li>
+                <li>Розробка сайтiв та лендiнгiв</li>
+                <li>Автоматизацiя бiзнес-процесiв</li>
+                <li>Впровадження AI чат-ботiв</li>
+                <li>Дашборди та бiзнес-шаблони</li>
+                <li>Рекламнi кампанiї (Meta Ads, Google Ads)</li>
+                <li>Створення контенту та управлiння соцмережами</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h2>§ 4. Умови користування Сайтом</h2>
+          <ol>
+            <li>Використання Сайту є безкоштовним i не вимагає реєстрацiї.</li>
+            <li>Для використання Сайту необхiдний пристрiй з доступом до Iнтернету та браузер, що пiдтримує HTML5, CSS3 i JavaScript.</li>
+            <li>Користувач зобов'язаний використовувати Сайт вiдповiдно до законодавства та цих Умов.</li>
+            <li>Забороняється:
+              <ul>
+                <li>Надання неправдивих даних у формах</li>
+                <li>Спроби несанкцiонованого доступу до ресурсiв Сайту</li>
+                <li>Дiї, що можуть порушити функцiонування Сайту</li>
+                <li>Копiювання або поширення вмiсту Сайту без згоди Постачальника</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h2>§ 5. Контактна форма (Бриф)</h2>
+          <ol>
+            <li>Користувачi можуть надiслати бриф через контактну форму на Сайтi.</li>
+            <li>Обов'язковi поля: повне iм'я, електронна пошта та опис проєкту. Iншi поля — опцiональнi.</li>
+            <li>Надсилання форми не є укладенням договору.</li>
+            <li>Постачальник вiдповiдає на бриф протягом 24 робочих годин.</li>
+            <li>Форма працює через Formspree (Formspree, Inc., США). Деталi — в <a href="privacy.html">Полiтицi конфiденцiйностi</a>.</li>
+          </ol>
+
+          <h2>§ 6. Виконання платних послуг</h2>
+          <ol>
+            <li>Платнi послуги виконуються на основi iндивiдуальної пропозицiї, наданої Клiєнту пiсля аналiзу брифу.</li>
+            <li>Обсяг послуги, термiн, вартiсть та умови оплати визначаються iндивiдуально та пiдтверджуються письмово.</li>
+            <li>Виконання починається пiсля:
+              <ul>
+                <li>Прийняття умов спiвпрацi обома сторонами</li>
+                <li>Внесення авансу (якщо застосовується)</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h2>§ 7. Цiни та оплата</h2>
+          <ol>
+            <li>Цiни на Сайтi є орiєнтовними i не є офертою.</li>
+            <li>Остаточна цiна визначається iндивiдуально.</li>
+            <li>Усi цiни — цiни нетто (якщо не зазначено iнше).</li>
+            <li>Оплата здiйснюється банкiвським переказом.</li>
+            <li>Термiн оплати — 7 днiв вiд дати рахунку, якщо не узгоджено iнше.</li>
+          </ol>
+
+          <h2>§ 8. Авторськi права та iнтелектуальна власнiсть</h2>
+          <ol>
+            <li>Весь вмiст Сайту є iнтелектуальною власнiстю Постачальника i захищений законом.</li>
+            <li>Копiювання або поширення вмiсту без письмової згоди Постачальника заборонено.</li>
+            <li>Матерiали, створенi в рамках платних послуг, переходять до Клiєнта пiсля повної оплати.</li>
+            <li>Постачальник залишає за собою право використовувати завершенi проєкти в портфолiо.</li>
+          </ol>
+
+          <h2>§ 9. Вiдповiдальнiсть</h2>
+          <ol>
+            <li>Постачальник не несе вiдповiдальностi за:
+              <ul>
+                <li>Перебої в роботi Сайту з технiчних причин</li>
+                <li>Збитки вiд неправильного використання Сайту</li>
+                <li>Вмiст, наданий Користувачами у формах</li>
+                <li>Дiї третiх осiб</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h2>§ 10. Рекламацiї</h2>
+          <ol>
+            <li>Рекламацiї можна надсилати на: <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a></li>
+            <li>Рекламацiя має мiстити: контактнi данi, опис проблеми та очiкуване рiшення.</li>
+            <li>Розгляд — протягом 14 робочих днiв.</li>
+          </ol>
+
+          <h2>§ 11. Вiдмова вiд договору</h2>
+          <ol>
+            <li>Споживач має право вiдмовитися вiд дистанцiйного договору протягом 14 днiв без пояснення причин.</li>
+            <li>Повiдомлення про вiдмову можна надiслати на: <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a></li>
+          </ol>
+
+          <h2>§ 12. Заключнi положення</h2>
+          <ol>
+            <li>Цi Умови набувають чинностi 31 березня 2026 року.</li>
+            <li>Постачальник залишає за собою право змiнювати цi Умови. Змiни набувають чинностi з моменту публiкацiї на Сайтi.</li>
+            <li>Питання, не врегульованi цими Умовами, регулюються польським законодавством.</li>
+          </ol>
+
+          <h2>§ 13. Контакт</h2>
+          <div class="highlight-box">
+            <p>З питань щодо Умов використання або послуг nexus.dev:<br>
+            <strong>Email:</strong> <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a><br>
+            <strong>Сайт:</strong> <a href="https://nexus.dev">nexus.dev</a></p>
+          </div>
+        `
+      }
+    };
+
+    let currentLang = localStorage.getItem('nexus-lang') || 'pl';
+
+    function switchTermsLang(lang) {
+      currentLang = lang;
+      localStorage.setItem('nexus-lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+      renderTerms();
+    }
+
+    function renderTerms() {
+      const data = termsData[currentLang] || termsData.pl;
+      document.getElementById('backLink').textContent = data.back;
+      document.getElementById('termsTitle').textContent = data.title;
+      document.getElementById('termsDate').textContent = data.date;
+      document.getElementById('termsContent').innerHTML = data.content;
+      document.querySelector('.btn-primary').textContent = data.cta;
+      document.title = data.title + ' — nexus.dev';
+
+      const langMap = { pl: 'pl', en: 'en', ua: 'uk' };
+      document.documentElement.lang = langMap[currentLang] || 'pl';
+    }
+
+    // Init
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === currentLang);
+      });
+      renderTerms();
+    });
+  </script>
+
+</body>
+</html>

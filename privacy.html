@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polityka Prywatności — nexus.dev</title>
+  <meta name="description" content="Polityka prywatności nexus.dev — dowiedz się, jak przetwarzamy Twoje dane osobowe.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+  <style>
+    .legal-page {
+      padding-top: 120px;
+      padding-bottom: var(--section-pad);
+      min-height: 100vh;
+    }
+    .legal-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .legal-header h1 {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 12px;
+    }
+    .legal-header .legal-date {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+    .legal-content {
+      max-width: 780px;
+      margin: 0 auto;
+    }
+    .legal-content h2 {
+      font-size: 1.3rem;
+      margin-top: 48px;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--border);
+      color: var(--accent-light);
+    }
+    .legal-content h3 {
+      font-size: 1.1rem;
+      margin-top: 28px;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+    .legal-content p,
+    .legal-content li {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+    .legal-content ul,
+    .legal-content ol {
+      padding-left: 24px;
+      margin-bottom: 16px;
+    }
+    .legal-content ul li {
+      list-style: disc;
+      margin-bottom: 6px;
+    }
+    .legal-content ol li {
+      margin-bottom: 6px;
+    }
+    .legal-content a {
+      color: var(--accent-light);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      transition: color 0.3s;
+    }
+    .legal-content a:hover {
+      color: var(--cyan);
+    }
+    .legal-content .highlight-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      margin: 24px 0;
+    }
+    .legal-content .highlight-box p {
+      margin-bottom: 0;
+    }
+    .legal-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent-light);
+      font-weight: 500;
+      font-size: 0.9rem;
+      margin-bottom: 40px;
+      transition: color 0.3s, transform 0.3s;
+    }
+    .legal-back:hover {
+      color: var(--cyan);
+      transform: translateX(-4px);
+    }
+    .legal-back::before {
+      content: '←';
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="navbar scrolled" id="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">nexus<span>.dev</span></a>
+      <div class="nav-right">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn active" data-lang="pl" onclick="switchPrivacyLang('pl')">PL</button>
+          <button class="lang-btn" data-lang="en" onclick="switchPrivacyLang('en')">EN</button>
+          <button class="lang-btn" data-lang="ua" onclick="switchPrivacyLang('ua')">UA</button>
+        </div>
+        <a href="index.html#contact" class="btn btn-primary btn-arrow">Wyceń swój brief</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ PRIVACY POLICY ═══ -->
+  <section class="legal-page">
+    <div class="container">
+      <a href="index.html" class="legal-back" id="backLink">Wróć na stronę główną</a>
+
+      <div class="legal-header">
+        <h1 id="privacyTitle">Polityka Prywatności</h1>
+        <p class="legal-date" id="privacyDate">Ostatnia aktualizacja: 31 marca 2026</p>
+      </div>
+
+      <div class="legal-content" id="privacyContent">
+        <!-- PL content is default, JS handles lang switching -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div>
+        <a href="index.html" class="logo" style="margin-bottom:8px;">nexus<span>.dev</span></a>
+        <p class="footer-text">© 2026 nexus.dev — Wszystkie prawa zastrzeżone.</p>
+      </div>
+      <ul class="footer-links">
+        <li><a href="privacy.html" style="color:var(--accent-light);">Polityka prywatności</a></li>
+        <li><a href="terms.html">Regulamin</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const privacyData = {
+      pl: {
+        back: "Wróć na stronę główną",
+        title: "Polityka Prywatności",
+        date: "Ostatnia aktualizacja: 31 marca 2026",
+        cta: "Wyceń swój brief",
+        content: `
+          <div class="highlight-box">
+            <p><strong>Administrator danych:</strong> Patrycja Duk, prowadząca działalność pod marką nexus.dev<br>
+            <strong>Kontakt:</strong> <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a></p>
+          </div>
+
+          <h2>1. Informacje ogólne</h2>
+          <p>Niniejsza Polityka Prywatności określa zasady przetwarzania i ochrony danych osobowych osób korzystających z serwisu internetowego nexus.dev (dalej „Serwis").</p>
+          <p>Administrator dokłada szczególnej staranności w celu ochrony prywatności i informacji przekazywanych przez użytkowników. Administrator przetwarza dane osobowe zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. (RODO) oraz ustawą o ochronie danych osobowych.</p>
+
+          <h2>2. Jakie dane zbieramy</h2>
+          <p>W ramach korzystania z Serwisu możemy zbierać następujące dane:</p>
+
+          <h3>2.1 Dane podawane dobrowolnie</h3>
+          <ul>
+            <li>Imię i nazwisko</li>
+            <li>Adres e-mail</li>
+            <li>Numer telefonu (opcjonalnie)</li>
+            <li>Nazwa firmy (opcjonalnie)</li>
+            <li>Branża i wielkość zespołu</li>
+            <li>Adres strony internetowej</li>
+            <li>Informacje o budżecie i potrzebach projektowych</li>
+            <li>Treść wiadomości w formularzu kontaktowym (brief)</li>
+          </ul>
+
+          <h3>2.2 Dane zbierane automatycznie</h3>
+          <ul>
+            <li>Adres IP</li>
+            <li>Typ przeglądarki i systemu operacyjnego</li>
+            <li>Czas spędzony na stronie</li>
+            <li>Odwiedzone podstrony</li>
+            <li>Źródło odwiedzin (referer)</li>
+          </ul>
+
+          <h2>3. Cel przetwarzania danych</h2>
+          <p>Dane osobowe przetwarzamy w następujących celach:</p>
+          <ol>
+            <li><strong>Realizacja zapytań</strong> — odpowiedź na brief, przygotowanie wyceny, nawiązanie współpracy (art. 6 ust. 1 lit. b RODO — wykonanie umowy)</li>
+            <li><strong>Kontakt</strong> — odpowiedź na wiadomości e-mail i telefoniczne (art. 6 ust. 1 lit. f RODO — prawnie uzasadniony interes)</li>
+            <li><strong>Marketing</strong> — wysyłanie informacji o usługach, wyłącznie za Twoją zgodą (art. 6 ust. 1 lit. a RODO)</li>
+            <li><strong>Analityka</strong> — poprawa jakości Serwisu i dostosowanie treści do potrzeb użytkowników (art. 6 ust. 1 lit. f RODO)</li>
+            <li><strong>Obowiązki prawne</strong> — wypełnianie obowiązków wynikających z przepisów prawa (art. 6 ust. 1 lit. c RODO)</li>
+          </ol>
+
+          <h2>4. Formularze i Formspree</h2>
+          <p>Formularz kontaktowy (brief) w Serwisie obsługiwany jest przez serwis <strong>Formspree</strong> (Formspree, Inc., USA). Dane przesyłane za pośrednictwem formularza są przekazywane do Formspree w celu dostarczenia ich do Administratora.</p>
+          <p>Formspree działa jako podmiot przetwarzający dane na zlecenie Administratora. Więcej informacji: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Polityka prywatności Formspree</a>.</p>
+
+          <h2>5. Pliki cookies</h2>
+          <p>Serwis wykorzystuje pliki cookies w następujących celach:</p>
+          <ul>
+            <li><strong>Cookies funkcjonalne</strong> — zapamiętywanie wybranego języka strony (localStorage)</li>
+            <li><strong>Cookies analityczne</strong> — zbieranie anonimowych danych o ruchu na stronie (jeśli wdrożona jest analityka)</li>
+          </ul>
+          <p>Użytkownik może w każdej chwili zmienić ustawienia dotyczące plików cookies w swojej przeglądarce, w tym zablokować ich zapisywanie.</p>
+
+          <h2>6. Udostępnianie danych</h2>
+          <p>Dane osobowe mogą być udostępniane:</p>
+          <ul>
+            <li>Podmiotom przetwarzającym dane na zlecenie Administratora (np. Formspree, dostawca hostingu)</li>
+            <li>Organom państwowym w przypadkach przewidzianych prawem</li>
+          </ul>
+          <p>Nie sprzedajemy, nie wynajmujemy ani nie udostępniamy danych osobowych podmiotom trzecim w celach marketingowych bez Twojej wyraźnej zgody.</p>
+
+          <h2>7. Okres przechowywania danych</h2>
+          <ul>
+            <li><strong>Dane z formularza:</strong> przechowywane do momentu zakończenia korespondencji lub realizacji usługi, a następnie przez okres wymagany przepisami prawa (do 5 lat)</li>
+            <li><strong>Dane analityczne:</strong> przechowywane w formie zanonimizowanej przez okres nie dłuższy niż 26 miesięcy</li>
+            <li><strong>Dane marketingowe:</strong> do momentu wycofania zgody</li>
+          </ul>
+
+          <h2>8. Twoje prawa</h2>
+          <p>Zgodnie z RODO przysługują Ci następujące prawa:</p>
+          <ul>
+            <li><strong>Prawo dostępu</strong> — możesz żądać informacji o przetwarzanych danych</li>
+            <li><strong>Prawo do sprostowania</strong> — możesz żądać poprawienia nieprawidłowych danych</li>
+            <li><strong>Prawo do usunięcia</strong> („prawo do bycia zapomnianym") — możesz żądać usunięcia swoich danych</li>
+            <li><strong>Prawo do ograniczenia przetwarzania</strong></li>
+            <li><strong>Prawo do przenoszenia danych</strong></li>
+            <li><strong>Prawo do sprzeciwu</strong> — wobec przetwarzania opartego na prawnie uzasadnionym interesie</li>
+            <li><strong>Prawo do wycofania zgody</strong> — w dowolnym momencie, bez wpływu na zgodność z prawem przetwarzania przed wycofaniem</li>
+          </ul>
+          <p>W celu realizacji swoich praw skontaktuj się z nami: <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a></p>
+
+          <h2>9. Bezpieczeństwo danych</h2>
+          <p>Stosujemy odpowiednie środki techniczne i organizacyjne w celu ochrony danych osobowych przed nieautoryzowanym dostępem, utratą lub zniszczeniem, w tym:</p>
+          <ul>
+            <li>Szyfrowanie połączenia SSL/TLS</li>
+            <li>Ograniczony dostęp do danych</li>
+            <li>Regularne aktualizacje oprogramowania</li>
+          </ul>
+
+          <h2>10. Zmiany w Polityce Prywatności</h2>
+          <p>Administrator zastrzega sobie prawo do wprowadzania zmian w niniejszej Polityce Prywatności. O istotnych zmianach poinformujemy poprzez umieszczenie stosownej informacji na stronie.</p>
+
+          <h2>11. Kontakt</h2>
+          <div class="highlight-box">
+            <p>W sprawach związanych z ochroną danych osobowych możesz skontaktować się z nami:<br>
+            <strong>Email:</strong> <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a><br>
+            <strong>Masz też prawo wnieść skargę</strong> do Prezesa Urzędu Ochrony Danych Osobowych (PUODO), ul. Stawki 2, 00-193 Warszawa.</p>
+          </div>
+        `
+      },
+      en: {
+        back: "Back to homepage",
+        title: "Privacy Policy",
+        date: "Last updated: March 31, 2026",
+        cta: "Get a Quote",
+        content: `
+          <div class="highlight-box">
+            <p><strong>Data Controller:</strong> Patrycja Duk, operating under the brand nexus.dev<br>
+            <strong>Contact:</strong> <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a></p>
+          </div>
+
+          <h2>1. General Information</h2>
+          <p>This Privacy Policy describes the rules for processing and protecting personal data of users of the nexus.dev website (the "Website").</p>
+          <p>The Controller takes special care to protect the privacy and information provided by users. Personal data is processed in accordance with the General Data Protection Regulation (EU) 2016/679 (GDPR) and applicable data protection laws.</p>
+
+          <h2>2. What Data We Collect</h2>
+          <p>When using the Website, we may collect the following data:</p>
+
+          <h3>2.1 Data Provided Voluntarily</h3>
+          <ul>
+            <li>Full name</li>
+            <li>Email address</li>
+            <li>Phone number (optional)</li>
+            <li>Company name (optional)</li>
+            <li>Industry and team size</li>
+            <li>Website URL</li>
+            <li>Budget and project requirements</li>
+            <li>Message content in the contact form (brief)</li>
+          </ul>
+
+          <h3>2.2 Data Collected Automatically</h3>
+          <ul>
+            <li>IP address</li>
+            <li>Browser type and operating system</li>
+            <li>Time spent on the website</li>
+            <li>Pages visited</li>
+            <li>Referral source</li>
+          </ul>
+
+          <h2>3. Purpose of Data Processing</h2>
+          <p>We process personal data for the following purposes:</p>
+          <ol>
+            <li><strong>Fulfilling requests</strong> — responding to briefs, preparing quotes, establishing cooperation (Art. 6(1)(b) GDPR — contract performance)</li>
+            <li><strong>Communication</strong> — responding to emails and phone inquiries (Art. 6(1)(f) GDPR — legitimate interest)</li>
+            <li><strong>Marketing</strong> — sending service information, only with your consent (Art. 6(1)(a) GDPR)</li>
+            <li><strong>Analytics</strong> — improving Website quality and adapting content (Art. 6(1)(f) GDPR)</li>
+            <li><strong>Legal obligations</strong> — fulfilling legal requirements (Art. 6(1)(c) GDPR)</li>
+          </ol>
+
+          <h2>4. Forms and Formspree</h2>
+          <p>The contact form (brief) on the Website is powered by <strong>Formspree</strong> (Formspree, Inc., USA). Data submitted through the form is transmitted to Formspree for delivery to the Controller.</p>
+          <p>Formspree acts as a data processor on behalf of the Controller. More info: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Formspree Privacy Policy</a>.</p>
+
+          <h2>5. Cookies</h2>
+          <p>The Website uses cookies for the following purposes:</p>
+          <ul>
+            <li><strong>Functional cookies</strong> — remembering the selected language preference (localStorage)</li>
+            <li><strong>Analytical cookies</strong> — collecting anonymous traffic data (if analytics is implemented)</li>
+          </ul>
+          <p>You can change your cookie settings in your browser at any time, including blocking cookies from being stored.</p>
+
+          <h2>6. Data Sharing</h2>
+          <p>Personal data may be shared with:</p>
+          <ul>
+            <li>Data processors acting on behalf of the Controller (e.g., Formspree, hosting provider)</li>
+            <li>Government authorities in cases required by law</li>
+          </ul>
+          <p>We do not sell, rent, or share personal data with third parties for marketing purposes without your explicit consent.</p>
+
+          <h2>7. Data Retention Period</h2>
+          <ul>
+            <li><strong>Form data:</strong> stored until correspondence or service completion, then for the period required by law (up to 5 years)</li>
+            <li><strong>Analytical data:</strong> stored in anonymized form for no longer than 26 months</li>
+            <li><strong>Marketing data:</strong> until consent is withdrawn</li>
+          </ul>
+
+          <h2>8. Your Rights</h2>
+          <p>Under the GDPR, you have the following rights:</p>
+          <ul>
+            <li><strong>Right of access</strong> — you can request information about processed data</li>
+            <li><strong>Right to rectification</strong> — you can request correction of inaccurate data</li>
+            <li><strong>Right to erasure</strong> ("right to be forgotten") — you can request deletion of your data</li>
+            <li><strong>Right to restrict processing</strong></li>
+            <li><strong>Right to data portability</strong></li>
+            <li><strong>Right to object</strong> — to processing based on legitimate interest</li>
+            <li><strong>Right to withdraw consent</strong> — at any time, without affecting the lawfulness of prior processing</li>
+          </ul>
+          <p>To exercise your rights, contact us at: <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a></p>
+
+          <h2>9. Data Security</h2>
+          <p>We implement appropriate technical and organizational measures to protect personal data from unauthorized access, loss, or destruction, including:</p>
+          <ul>
+            <li>SSL/TLS encryption</li>
+            <li>Restricted data access</li>
+            <li>Regular software updates</li>
+          </ul>
+
+          <h2>10. Changes to Privacy Policy</h2>
+          <p>The Controller reserves the right to modify this Privacy Policy. Significant changes will be communicated by placing relevant information on the Website.</p>
+
+          <h2>11. Contact</h2>
+          <div class="highlight-box">
+            <p>For matters related to personal data protection, you can contact us at:<br>
+            <strong>Email:</strong> <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a><br>
+            <strong>You also have the right to file a complaint</strong> with the President of the Personal Data Protection Office (PUODO), ul. Stawki 2, 00-193 Warsaw, Poland.</p>
+          </div>
+        `
+      },
+      ua: {
+        back: "Повернутися на головну",
+        title: "Полiтика конфiденцiйностi",
+        date: "Останнє оновлення: 31 березня 2026",
+        cta: "Оцiнити проєкт",
+        content: `
+          <div class="highlight-box">
+            <p><strong>Адмiнiстратор даних:</strong> Patrycja Duk, що працює пiд брендом nexus.dev<br>
+            <strong>Контакт:</strong> <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a></p>
+          </div>
+
+          <h2>1. Загальна iнформацiя</h2>
+          <p>Ця Полiтика конфiденцiйностi визначає правила обробки та захисту персональних даних користувачiв веб-сайту nexus.dev (далi «Сайт»).</p>
+          <p>Адмiнiстратор приймає особливi заходи для захисту конфiденцiйностi та iнформацiї, наданої користувачами. Персональнi данi обробляються вiдповiдно до Загального регламенту iз захисту даних (ЄС) 2016/679 (GDPR).</p>
+
+          <h2>2. Якi данi ми збираємо</h2>
+          <p>Пiд час використання Сайту ми можемо збирати наступнi данi:</p>
+
+          <h3>2.1 Данi, наданi добровiльно</h3>
+          <ul>
+            <li>Повне iм'я</li>
+            <li>Адреса електронної пошти</li>
+            <li>Номер телефону (необов'язково)</li>
+            <li>Назва компанiї (необов'язково)</li>
+            <li>Галузь та розмiр команди</li>
+            <li>URL веб-сайту</li>
+            <li>Бюджет та потреби проєкту</li>
+            <li>Змiст повiдомлення у контактнiй формi (бриф)</li>
+          </ul>
+
+          <h3>2.2 Данi, зiбранi автоматично</h3>
+          <ul>
+            <li>IP-адреса</li>
+            <li>Тип браузера та операцiйної системи</li>
+            <li>Час, проведений на сайтi</li>
+            <li>Вiдвiданi сторiнки</li>
+            <li>Джерело вiдвiдування</li>
+          </ul>
+
+          <h2>3. Мета обробки даних</h2>
+          <p>Ми обробляємо персональнi данi з наступними цiлями:</p>
+          <ol>
+            <li><strong>Виконання запитiв</strong> — вiдповiдь на брифи, пiдготовка пропозицiй (ст. 6(1)(b) GDPR)</li>
+            <li><strong>Комунiкацiя</strong> — вiдповiдь на електроннi листи та телефоннi запити (ст. 6(1)(f) GDPR)</li>
+            <li><strong>Маркетинг</strong> — надсилання iнформацiї про послуги, лише за вашою згодою (ст. 6(1)(a) GDPR)</li>
+            <li><strong>Аналiтика</strong> — покращення якостi Сайту (ст. 6(1)(f) GDPR)</li>
+            <li><strong>Правовi зобов'язання</strong> — виконання вимог законодавства (ст. 6(1)(c) GDPR)</li>
+          </ol>
+
+          <h2>4. Форми та Formspree</h2>
+          <p>Контактна форма (бриф) на Сайтi працює через сервiс <strong>Formspree</strong> (Formspree, Inc., США). Данi, надiсланi через форму, передаються до Formspree для доставки Адмiнiстратору.</p>
+          <p>Бiльше iнформацiї: <a href="https://formspree.io/legal/privacy-policy" target="_blank" rel="noopener">Полiтика конфiденцiйностi Formspree</a>.</p>
+
+          <h2>5. Файли cookies</h2>
+          <ul>
+            <li><strong>Функцiональнi cookies</strong> — запам'ятовування обраної мови (localStorage)</li>
+            <li><strong>Аналiтичнi cookies</strong> — збiр анонiмних даних про трафiк (якщо впроваджено аналiтику)</li>
+          </ul>
+          <p>Ви можете будь-коли змiнити налаштування cookies у своєму браузерi.</p>
+
+          <h2>6. Передача даних</h2>
+          <p>Персональнi данi можуть бути переданi:</p>
+          <ul>
+            <li>Обробникам, що дiють вiд iменi Адмiнiстратора (Formspree, хостинг)</li>
+            <li>Державним органам у випадках, передбачених законом</li>
+          </ul>
+          <p>Ми не продаємо i не передаємо персональнi данi третiм особам для маркетингових цiлей без вашої явної згоди.</p>
+
+          <h2>7. Строк зберiгання даних</h2>
+          <ul>
+            <li><strong>Данi з форми:</strong> зберiгаються до завершення комунiкацiї, потiм — згiдно з вимогами закону (до 5 рокiв)</li>
+            <li><strong>Аналiтичнi данi:</strong> зберiгаються анонiмно не бiльше 26 мiсяцiв</li>
+            <li><strong>Маркетинговi данi:</strong> до вiдкликання згоди</li>
+          </ul>
+
+          <h2>8. Вашi права</h2>
+          <p>Вiдповiдно до GDPR, ви маєте наступнi права:</p>
+          <ul>
+            <li><strong>Право на доступ</strong> — ви можете запросити iнформацiю про обробленi данi</li>
+            <li><strong>Право на виправлення</strong> — ви можете вимагати виправлення неточних даних</li>
+            <li><strong>Право на видалення</strong> — ви можете вимагати видалення ваших даних</li>
+            <li><strong>Право на обмеження обробки</strong></li>
+            <li><strong>Право на перенесення даних</strong></li>
+            <li><strong>Право на заперечення</strong></li>
+            <li><strong>Право на вiдкликання згоди</strong> — у будь-який час</li>
+          </ul>
+          <p>Для реалiзацiї прав зв'яжiться з нами: <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a></p>
+
+          <h2>9. Безпека даних</h2>
+          <ul>
+            <li>Шифрування SSL/TLS</li>
+            <li>Обмежений доступ до даних</li>
+            <li>Регулярнi оновлення програмного забезпечення</li>
+          </ul>
+
+          <h2>10. Змiни в Полiтицi конфiденцiйностi</h2>
+          <p>Адмiнiстратор залишає за собою право змiнювати цю Полiтику. Про суттєвi змiни ми повiдомимо на Сайтi.</p>
+
+          <h2>11. Контакт</h2>
+          <div class="highlight-box">
+            <p>З питань захисту персональних даних зв'яжiться з нами:<br>
+            <strong>Email:</strong> <a href="mailto:nextlevelaipoland@gmail.com">nextlevelaipoland@gmail.com</a></p>
+          </div>
+        `
+      }
+    };
+
+    let currentLang = localStorage.getItem('nexus-lang') || 'pl';
+
+    function switchPrivacyLang(lang) {
+      currentLang = lang;
+      localStorage.setItem('nexus-lang', lang);
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === lang);
+      });
+      renderPrivacy();
+    }
+
+    function renderPrivacy() {
+      const data = privacyData[currentLang] || privacyData.pl;
+      document.getElementById('backLink').textContent = data.back;
+      document.getElementById('privacyTitle').textContent = data.title;
+      document.getElementById('privacyDate').textContent = data.date;
+      document.getElementById('privacyContent').innerHTML = data.content;
+      document.querySelector('.btn-primary').textContent = data.cta;
+      document.title = data.title + ' — nexus.dev';
+
+      const langMap = { pl: 'pl', en: 'en', ua: 'uk' };
+      document.documentElement.lang = langMap[currentLang] || 'pl';
+    }
+
+    // Init
+    document.addEventListener('DOMContentLoaded', () => {
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.dataset.lang === currentLang);
+      });
+      renderPrivacy();
+    });
+  </script>
+
+</body>
+</html>
