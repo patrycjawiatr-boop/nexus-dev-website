@@ -3,11 +3,11 @@ export const home = {
     pl: {
       badge: "Dla firm, które chcą w końcu ogarnąć biznes",
       h1_line1: "Zamieniamy chaos",
-      h1_line2: "w Waszej firmie",
+      h1_line2: "w Twojej firmie",
       h1_highlight: "w system, który zarabia.",
-      subtitle: "Poukładamy Wam ofertę, sprzedaż, obsługę klienta i liczby — abyście przestali gasić pożary i zaczęli budować.",
-      cta_primary: "Wyceńcie swój brief",
-      cta_secondary: "Zobaczcie, jak pracujemy"
+      subtitle: "Poukładamy Ci ofertę, sprzedaż, obsługę klienta i liczby — abyś przestał gasić pożary i zaczął budować.",
+      cta_primary: "Wyceń swój brief",
+      cta_secondary: "Zobacz, jak pracujemy"
     },
     en: {
       badge: "For businesses ready to get organized",
@@ -30,12 +30,12 @@ export const home = {
   },
   forWhom: {
     pl: {
-      h2: "Rozpoznajecie się w tym?",
+      h2: "Rozpoznajesz się w tym?",
       intro: "nexus.dev nie jest dla każdego. Pracujemy z firmami, które mają konkretny problem do rozwiązania.",
       cards: [
         { title: "Mamy stronę, ale\nzero efektów", desc: "Strona jest, ale nie generuje zapytań. Oferta niejasna, CTA schowane, klient nie wie, co dalej.", icon: "🌐" },
-        { title: "Nie wiemy, na czym\nzarabiamy", desc: "Robicie 10 rzeczy, ale nie wiecie, które przynoszą kasę, a które ją zjadają. Brak kontroli nad liczbami.", icon: "📊" },
-        { title: "Sprzedaż to u nas\nloteria", desc: "Leady przychodzą, ale nie macie procesu — jedne zamykacie, inne się gubią. Brak follow-upów.", icon: "🎰" },
+        { title: "Nie wiemy, na czym\nzarabiamy", desc: "Robisz 10 rzeczy, ale nie wiesz, które przynoszą kasę, a które ją zjadają. Brak kontroli nad liczbami.", icon: "📊" },
+        { title: "Sprzedaż to u nas\nloteria", desc: "Leady przychodzą, ale nie masz procesu — jedne zamykasz, inne się gubią. Brak follow-upów.", icon: "🎰" },
         { title: "Po podpisaniu umowy\nzaczyna się chaos", desc: "Obsługa klienta opiera się na pamięci i Excelu. Nikt nie wie, kto za co odpowiada.", icon: "⚡" }
       ]
     },
@@ -62,9 +62,9 @@ export const home = {
   },
   modules: {
     pl: {
-      h2: "Dobieramy moduły do Waszej sytuacji",
-      intro: "Nie mamy jednego pakietu dla wszystkich. Mamy zestaw modułów — dobieramy je do tego, co u Was naprawdę wymaga naprawy.",
-      cta: "Zobaczcie pełną ofertę",
+      h2: "Dobieramy moduły do Twojej sytuacji",
+      intro: "Nie mamy jednego pakietu dla wszystkich. Mamy zestaw modułów — dobieramy je do tego, co u Ciebie naprawdę wymaga naprawy.",
+      cta: "Zobacz pełną ofertę",
       cards: [
         { icon: "🎯", title: "Strategia oferty", desc: "Prześwietlamy, co sprzedajecie, komu i za ile. Wycinamy to, co nie zarabia, wzmacniamy to, co ma potencjał." },
         { icon: "📊", title: "Liczby i dashboardy", desc: "Budujemy prosty system, w którym widzicie kluczowe wskaźniki bez grzebania w Excelach." },
@@ -105,9 +105,9 @@ export const home = {
     pl: {
       h2: "4 kroki od chaosu do systemu",
       intro: "Każda współpraca zaczyna się od rozmowy. Nie sprzedajemy nic na siłę — najpierw rozumiemy, potem proponujemy.",
-      cta: "Wyślijcie swój brief",
+      cta: "Wyślij swój brief",
       steps: [
-        { num: "01", title: "Rozmowa diagnostyczna", subtitle: "bezpłatna · 30 min", desc: "Rozmawiamy o Waszej firmie: co sprzedajecie, jak wygląda sprzedaż, na czym tracicie czas. Wy mówicie — my słuchamy." },
+        { num: "01", title: "Rozmowa diagnostyczna", subtitle: "bezpłatna · 30 min", desc: "Rozmawiamy o Twojej firmie: co sprzedajesz, jak wygląda sprzedaż, na czym tracisz czas. Ty mówisz — my słuchamy." },
         { num: "02", title: "Diagnoza i plan", subtitle: "dokument z propozycją", desc: "Przygotowujemy krótki dokument: co wymaga naprawy, jakie moduły proponujemy, ile to zajmie i ile kosztuje." },
         { num: "03", title: "Wdrożenie", subtitle: "moduł po module", desc: "Pracujemy w cyklach 1-3 tygodniowych. Po każdym etapie macie gotowy, działający element." },
         { num: "04", title: "Wsparcie i rozwój", subtitle: "stałe partnerstwo", desc: "Po wdrożeniu nie znikamy. Monitorujemy wyniki, optymalizujemy i rozwijamy system, gdy Wasza firma rośnie." }
@@ -136,11 +136,37 @@ export const home = {
       ]
     }
   },
+  testimonials: {
+    pl: {
+      h2: "Co mówią ci, z którymi pracowaliśmy",
+      items: [
+        { quote: "nexus.dev poukładało nam sprzedaż w 3 tygodnie. Wcześniej każdy pracował po swojemu, teraz mamy jeden system i w końcu wiemy, ile zarabiamy.", name: "Marek", role: "Właściciel Agencji" },
+        { quote: "Najbardziej doceniam konkret. Żadnego lania wody. Diagnoza, plan, wdrożenie. Dzięki automatyzacji odzyskałam 10h w tygodniu.", name: "Anna", role: "CEO Software House" },
+        { quote: "To nie jest kolejna agencja marketingowa. To ludzie, którzy rozumieją biznes i tech. Pomogli mi zamienić chaos w przewidywalny lejek.", name: "Piotr", role: "Freelancer / Edukator" }
+      ]
+    },
+    en: {
+      h2: "What those we worked with say",
+      items: [
+        { quote: "nexus.dev organized our sales in 3 weeks. Before, everyone worked their own way, now we have one system and finally know our numbers.", name: "Mark", role: "Agency Owner" },
+        { quote: "I appreciate the directness. No fluff. Diagnosis, plan, implementation. Automations saved me 10h a week.", name: "Ann", role: "CEO Software House" },
+        { quote: "This isn't another marketing agency. These people understand business and tech. They helped me turn chaos into a predictable funnel.", name: "Peter", role: "Freelancer / Educator" }
+      ]
+    },
+    ua: {
+      h2: "Що кажуть тi, з ким ми працювали",
+      items: [
+        { quote: "nexus.dev впорядкували нашi продажi за 3 тижнi. Ранiше кожен працював по-своєму, тепер у нас єдина система.", name: "Марко", role: "Власник агентства" },
+        { quote: "Найбiльше цiную конкретику. Жодної води. Дiагноз, план, впровадження.", name: "Анна", role: "CEO Software House" },
+        { quote: "Це не просто чергове маркетингове агентство. Це люди, якi розумiють бiзнес i технiку.", name: "Петро", role: "Фрiлансер" }
+      ]
+    }
+  },
   cases: {
     pl: {
       h2: "Co się zmienia, gdy chaos zamienia się w system",
       intro: "Każda firma jest inna. Ale wzorzec jest podobny: przychodzą z bałaganem, wychodzą z planem i narzędziami.",
-      cta: "Chcecie podobne wyniki? Wyślijcie brief",
+      cta: "Chcesz podobne wyniki? Wyślij brief",
       items: [
         { type: "Agencja marketingowa", size: "8 osób", before: "20 uslug na stronie, klienci nie wiedzieli co wybrać. Brak CRM, brak follow-upów.", modules: "Strategia oferty > Proces sprzedaży > Dashboard > Strona WWW", after: "5 pakietów z cenami. Pipeline w Notion. Czas zamykania deala skrócony o połowę." },
         { type: "Freelancerka", size: "jednoosobowa działalność", before: "Oferta: robię co klient chce. Brak strony, brak cennika. Praca wieczorami i w weekendy.", modules: "Strategia oferty → Strona wizytówka → Automatyzacja leadów", after: "3 jasne pakiety na stronie. Formularz kwalifikujący. Pierwszy wolny weekend od 2 lat. Przychód +30%." },
@@ -156,15 +182,25 @@ export const home = {
         { type: "Freelancer", size: "solo business", before: "Offer: I do whatever the client wants. No website, no pricing, no system.", modules: "Offer Strategy > Business Website > Lead Automation", after: "3 clear packages on the website. Qualifying form. First free weekend in 2 years. Revenue +30%." },
         { type: "Software House", size: "12 people", before: "After the sale - chaos. Nobody knows who is responsible for what.", modules: "Delivery Process > Project Dashboard > Report Automation", after: "Project board in Asana. Automatic weekly client updates. Team stopped firefighting." }
       ]
+    },
+    ua: {
+      h2: "Що змiнюється, коли хаос стає системою",
+      intro: "Кожен бiзнес iндивiдуальний, але шаблон схожий: приходять з безладом, йдуть з планом i робочими iнструментами.",
+      cta: "Хочете схожi результати? Надiшлiть бриф",
+      items: [
+        { type: "Маркетингове агентство", size: "8 осiб", before: "20 послуг на сайтi, клiєнти не знали що обрати. Без CRM, без follow-up.", modules: "Стратегiя пропозицiї > Процес продажу > Дашборд > Сайт", after: "5 чiтких пакетiв з цiнами. Воронка в Notion. Час закриття угоди скоротився вдвiчi." },
+        { type: "Фрiлансер", size: "соло-бiзнес", before: "Пропозицiя: роблю все, що хоче клiєнт. Без сайту, без цiнника.", modules: "Стратегiя пропозицiї > Бiзнес-сайт > Автоматизацiя лiдiв", after: "3 чiтких пакети на сайтi. Квалiфiкацiйна форма. Першi вiльнi вихiднi за 2 роки." },
+        { type: "Software house", size: "12 осiб", before: "Пiсля продажу — хаос. Нiхто не знає хто за що вiдповiдає.", modules: "Процес обслуговування > Дашборд реалізації > Автоматизацiя звiтiв", after: "Дошка реалізації в Asana. Автоматичне оновлення щотижня. Команда перестала гасити пожежi." }
+      ]
     }
   },
   whyNexus: {
     pl: {
       h2: "Dlaczego my, a nie kolejna agencja od wszystkiego",
       cards: [
-        { icon: "🔍", title: "Najpierw diagnoza, potem rozwiązanie", desc: "Nie zaczynamy od 'zrobimy Wam stronę'. Zaczynamy od 'pokażcie, jak wygląda Wasza firma dziś' — i dopiero proponujemy." },
-        { icon: "🧩", title: "Moduły, nie pakiety all in one", desc: "Nie płacicie za to, czego nie potrzebujecie. Dobieramy moduły do sytuacji — od jednego do pełnej transformacji." },
-        { icon: "🚀", title: "Wyniki, nie raporty", desc: "Nie dostajecie 40-stronicowej prezentacji. Dostajecie działający system, który od razu zmienia to, jak pracujecie." },
+        { icon: "🔍", title: "Najpierw diagnoza, potem rozwiązanie", desc: "Nie zaczynamy od 'zrobimy Ci stronę'. Zaczynamy od 'pokaż, jak wygląda Twoja firma dziś' — i dopiero proponujemy." },
+        { icon: "🧩", title: "Moduły, nie pakiety all in one", desc: "Nie płacisz za to, czego nie potrzebujesz. Dobieramy moduły do sytuacji — od jednego do pełnej transformacji." },
+        { icon: "🚀", title: "Wyniki, nie raporty", desc: "Nie dostajesz 40-stronicowej prezentacji. Dostajesz działający system, który od razu zmienia to, jak pracujesz." },
         { icon: "💬", title: "Po ludzku, nie korporacyjnie", desc: "Rozmawiamy jak ludzie. Zależy nam na pełnym zrozumieniu tego, co robimy i dlaczego — bez żargonu." }
       ]
     },
@@ -175,6 +211,15 @@ export const home = {
         { icon: "🧩", title: "Modules, not all-in-one packages", desc: "You don't pay for what you don't need. We match the blocks to your situation - from a single module to full transformation." },
         { icon: "🚀", title: "Results, not reports", desc: "You don't get a 40-page presentation. You get a working system that immediately changes how you operate." },
         { icon: "💬", title: "Human, not corporate", desc: "We talk like people. We care that you understand what we're doing and why - no jargon." }
+      ]
+    },
+    ua: {
+      h2: "Чому ми, а не чергове агентство 'для всього'",
+      cards: [
+        { icon: "🔍", title: "Спочатку дiагноз, потiм рiшення", desc: "Ми не починаємо з 'зробимо вам сайт'. Ми починаємо з розумiння того, як працює ваш бiзнес сьогодні." },
+        { icon: "🧩", title: "Модулi, а не пакети 'все в одному'", desc: "Ви не платите за те, що вам не потрiбно. Ми пiдбираємо блоки пiд вашу ситуацiю." },
+        { icon: "🚀", title: "Результати, а не звiти", desc: "Ви не отримуєте 40-сторiнкову презентацiю. Ви отримуєте робочу систему." },
+        { icon: "💬", title: "По-людськи, без корпоративу", desc: "Ми спiлкуємося нормальною мовою. Нам важливо, щоб ви розумiли, що ми робимо i навіщо." }
       ]
     }
   },
@@ -217,6 +262,26 @@ export const home = {
         { title: "Outcomes, not reports", desc: "We measure ourselves by client results, not by slides." },
         { title: "Modularity", desc: "The client pays for what they need - nothing less, nothing more." },
         { title: "Human touch", desc: "We speak plain language. If something doesn't make sense - we say it directly." }
+      ]
+    },
+    ua: {
+      h2: "Ми не продаємо iнструменти. Ми допомагаємо впорядкувати бiзнес.",
+      paragraphs: [
+        "nexus.dev виник з фрустрацiї. Ми бачили, як власники компанiй тонуть у хаосi — вони мали клiєнтiв, команду, iдеї — але бракувало системи.",
+        "Ми не будуємо величезнi IT-системи за сотнi тисяч. Ми сiдаємо з власником, слухаємо, що болiть, i крок за кроком допомагаємо все владнати.",
+        "Працюємо модульно. Обираємо те, що зараз потрiбно. Завжди: конкретно, по-людськи."
+      ],
+      team: [
+        { name: "Патріція Дук", role: "Бiзнес-стратег", bio: "Дизайнерка систем i процесiв. Допомагаємо компанiям перейти вiд хаосу до порядку." },
+        { name: "Павло Дук", role: "Lead Developer", bio: "Спецiалiст з технiчних впроваджень та AI-автоматизацiї." }
+      ],
+      values_title: "Нашi принципи",
+      values: [
+        { title: "Спочатку зрозумiти, потiм дiяти", desc: "Ми не пропонуємо рiшень, поки не зрозумiємо проблему." },
+        { title: "Простота понад складнiсть", desc: "Найкращi системи — це тi, якими люди насправдi користуються." },
+        { title: "Результат, а не звiт", desc: "Ми вимiрюємо себе результатами клiєнта." },
+        { title: "Модульнiсть", desc: "Клiєнт платить за те, що йому потрiбно — не бiльше i не менше." },
+        { title: "По-людськи", desc: "Ми спiлкуємося нормальною мовою." }
       ]
     }
   }

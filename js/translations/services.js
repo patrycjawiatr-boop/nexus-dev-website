@@ -2,8 +2,8 @@ export const services = {
   servicesFull: {
     pl: {
       h2: "Pełna lista usług — od A do Z",
-      intro: "Nie mamy jednego pakietu dla wszystkich. Poniżej znajdziecie pełną listę modułów — dobieramy je do tego, co w Waszej firmie naprawdę wymaga naprawy.",
-      cta: "Wyceńcie swój projekt →",
+      intro: "Nie mamy jednego pakietu dla wszystkich. Poniżej znajdziesz pełną listę modułów — dobieramy je do tego, co w Twojej firmie naprawdę wymaga naprawy.",
+      cta: "Wyceń swój projekt →",
       categories: [
         {
           name: "🎯 Strategia i oferta",
@@ -73,6 +73,39 @@ export const services = {
             { title: "Sales Process", desc: "We design the path from 'lead reached out' to 'deal signed' — with follow-ups, qualification, and pipeline.", time: "5-7 days", price: "from €235" },
             { title: "Delivery Process", desc: "We define what happens after the sale: who does what, when, with which tool. No more chaos.", time: "5-10 days", price: "from €305" },
             { title: "Process Automation", desc: "We automate repetitive tasks — emails, follow-ups, reporting, data sync. Save 5-15h/week.", time: "3-7 days", price: "from €165" }
+          ]
+        }
+      ]
+    },
+    ua: {
+      h2: "Повний список послуг — вiд А до Я",
+      intro: "У нас немає один-пакет-на-всiх. Нижче ви знайдете повний список модулiв.",
+      cta: "Оцiнити проєкт →",
+      categories: [
+        {
+          name: "🎯 Стратегiя i пропозицiя",
+          modules: [
+            { title: "Стратегiя i позицiонування пропозицiї", desc: "Ми аналiзуємо, що ви продаєте, кому i за скiльки.", time: "3-5 днiв", price: "вiд 140 €" },
+            { title: "Стартовий аудит (60 хв)", desc: "Година розмови з конкретним планом дiй.", time: "2 днi", price: "95-140 €" }
+          ]
+        },
+        {
+          name: "🔄 Процеси",
+          modules: [
+            { title: "Процес продажу", desc: "Створюємо шлях вiд лiда до пiдпису.", time: "5-7 днiв", price: "вiд 235 €" },
+            { title: "Процес обслуговування", desc: "Визначаємо, що вiдбувається пiсля продажу.", time: "5-10 днiв", price: "вiд 305 €" }
+          ]
+        },
+        {
+          name: "🌐 Сайт i комунiкацiя",
+          modules: [
+            { title: "Бiзнес-сайт (7-10 днiв)", desc: "Професiйний сайт для вашого бiзнесу.", time: "7-10 днiв", price: "вiд 350 €" }
+          ]
+        },
+        {
+          name: "🤖 AI i автоматизацiя",
+          modules: [
+            { title: "Чат-бот на сайт", desc: "AI-бот для цiлодобової роботи з клiєнтами.", time: "5-10 днiв", price: "вiд 300 €" }
           ]
         }
       ]

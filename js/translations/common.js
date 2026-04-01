@@ -14,39 +14,39 @@ export const common = {
     }
   },
   nav: {
-    pl: { home: "Strona główna", services: "Usługi", cases: "Realizacje", about: "O nas", pricing: "Cennik", blog: "FAQ", cta: "Wyceńcie swój brief" },
+    pl: { home: "Strona główna", services: "Usługi", cases: "Realizacje", about: "O nas", pricing: "Cennik", blog: "FAQ", cta: "Wyceń swój brief" },
     en: { home: "Home", services: "Services", cases: "Case Studies", about: "About Us", pricing: "Pricing", blog: "FAQ", cta: "Get a Quote" },
     ua: { home: "Головна", services: "Послуги", cases: "Кейси", about: "Про нас", pricing: "Цiни", blog: "FAQ", cta: "Оцiнити проєкт" }
   },
   contact: {
     pl: {
-      h2: "Wyceńcie swój projekt — wypełnijcie brief",
-      intro: "Wypełnijcie krótki brief, a przygotujemy dla Was indywidualną wycenę. Im więcej napiszecie, tym dokładniejszą propozycję dostaniecie.",
+      h2: "Wyceń swój projekt — wypełnij brief",
+      intro: "Wypełnij krótki brief, a przygotujemy dla Ciebie indywidualną wycenę. Im więcej napiszesz, tym dokładniejszą propozycję dostaniesz.",
       steps_title: "Co się stanie po wysłaniu briefu:",
-      steps: ["Dostaniecie potwierdzenie na maila w ciągu 5 minut.", "W ciągu 24h odezwiemy się z indywidualną wyceną.", "Ustalimy szczegóły — przez mail, video lub telefon.", "Dostaniecie propozycję — bez niespodzianek."],
+      steps: ["Dostaniesz potwierdzenie na maila w ciągu 5 minut.", "W ciągu 24h odezwiemy się z indywidualną wyceną.", "Ustalimy szczegóły — przez mail, video lub telefon.", "Dostaniesz propozycję — bez niespodzianek."],
       form: {
         header: "📋 Brief projektowy",
-        header_desc: "Im więcej wypełnicie, tym dokładniejszą wycenę otrzymacie.",
+        header_desc: "Im więcej wypełnisz, tym dokładniejszą wycenę otrzymasz.",
         section_contact: "👤 Dane kontaktowe",
-        section_business: "🏢 O Waszej firmie",
-        section_needs: "🎯 Czego potrzebujecie?",
+        section_business: "🏢 O Twojej firmie",
+        section_needs: "🎯 Czego potrzebujesz?",
         section_details: "💬 Szczegóły",
         name: "Imię i nazwisko *", email: "Email *", company: "Nazwa firmy", phone: "Telefon",
         industry: "Branża",
-        industry_options: ["Wybierzcie branżę...", "IT / Software", "Marketing / Agencja", "Usługi lokalne", "E-commerce", "Consulting", "Freelance", "Gastronomia / HoReCa", "Zdrowie / Uroda", "Budownictwo / Remonty", "Inna"],
+        industry_options: ["Wybierz branżę...", "IT / Software", "Marketing / Agencja", "Usługi lokalne", "E-commerce", "Consulting", "Freelance", "Gastronomia / HoReCa", "Zdrowie / Uroda", "Budownictwo / Remonty", "Inna"],
         team_size: "Wielkość zespołu",
-        team_size_options: ["Wybierzcie...", "1 osoba (freelancer)", "2-5 osób", "6-15 osób", "16-50 osób", "powyżej 50 osób"],
-        website: "Adres obecnej strony (jeśli macie)",
-        services_label: "Zaznaczcie, co Was interesuje (możecie wybrać kilka):",
+        team_size_options: ["Wybierz...", "1 osoba (freelancer)", "2-5 osób", "6-15 osób", "16-50 osób", "powyżej 50 osób"],
+        website: "Adres obecnej strony (jeśli masz)",
+        services_label: "Zaznacz, co Cię interesuje (możesz wybrać kilka):",
         services_checkboxes: ["Strategia oferty", "Proces sprzedaży", "Proces obsługi", "Strona WWW / Landing", "Automatyzacje / AI", "Dashboard / Liczby", "Kampanie reklamowe", "Social media", "Chatbot AI", "Nie wiemy — potrzebujemy diagnozy"],
         budget: "Orientacyjny budżet",
-        budget_options: ["Wybierzcie zakres...", "do 1 000 zł", "1 000 - 3 000 zł", "3 000 - 5 000 zł", "5 000 - 10 000 zł", "powyżej 10 000 zł"],
-        timeline: "Kiedy chcecie wystartować?",
-        timeline_options: ["Wybierzcie...", "Jak najszybciej", "W ciągu 2 tygodni", "W ciągu miesiąca", "Za 1-3 miesiące", "Jeszcze nie wiemy"],
-        message: "Opiszcie krótko swoją sytuację — co Was boli, czego szukacie? *",
-        source: "Skąd o nas wiecie?",
-        source_options: ["Wybierzcie...", "Google", "Social media", "Polecenie", "Inne"],
-        submit: "Wyślijcie brief i otrzymajcie wycenę", success: "Dziękujemy! Odezwiemy się w ciągu 24h z wyceną."
+        budget_options: ["Wybierz zakres...", "do 1 000 zł", "1 000 - 3 000 zł", "3 000 - 5 000 zł", "5 000 - 10 000 zł", "powyżej 10 000 zł"],
+        timeline: "Kiedy chcesz wystartować?",
+        timeline_options: ["Wybierz...", "Jak najszybciej", "W ciągu 2 tygodni", "W ciągu miesiąca", "Za 1-3 miesiące", "Jeszcze nie wiemy"],
+        message: "Opisz krótko swoją sytuację — co Cię boli, czego szukasz? *",
+        source: "Skąd o nas wiesz?",
+        source_options: ["Wybierz...", "Google", "Social media", "Polecenie", "Inne"],
+        submit: "Wyślij brief i otrzymaj wycenę", success: "Dziękujemy! Odezwiemy się w ciągu 24h z wyceną."
       },
       alt_cta: "Wolicie po prostu napisać?", alt_desc: "Wyślijcie maila na nextlevelaipoland@gmail.com z krótkim opisem sytuacji.",
       info: { email: "nextlevelaipoland@gmail.com", location: "Zdalnie, cała Polska i nie tylko", response: "Czas odpowiedzi: do 24h" }
@@ -91,11 +91,72 @@ export const common = {
       }
     }
   },
+  leadMagnet: {
+    pl: {
+      badge: "Darmowy dostęp",
+      h2: "Pobierz Checklistę: 5 Kroków do Automatyzacji Twojej Firmy",
+      desc: "Dowiedz się, od czego zacząć wdrażanie AI i automatyzacji, aby odzyskać nawet 15 godzin tygodniowo. Konkretne narzędzia i procesy.",
+      cta: "Odbierz checklistę",
+      item1: "Moduł: Strategia oferty",
+      item2: "Moduł: Lejek sprzedaży",
+      item3: "Moduł: Automatyzacja AI",
+      item4: "Wynik: Więcej czasu"
+    },
+    en: {
+      badge: "Free Access",
+      h2: "Download the Checklist: 5 Steps to Automate Your Business",
+      desc: "Learn where to start with AI and automation to reclaim up to 15 hours a week. Concrete tools and processes.",
+      cta: "Get the Checklist",
+      item1: "Module: Offer Strategy",
+      item2: "Module: Sales Funnel",
+      item3: "Module: AI Automation",
+      item4: "Result: More Time"
+    },
+    ua: {
+      badge: "Безкоштовний доступ",
+      h2: "Завантажте чек-лiст: 5 крокiв до автоматизацiї вашого бiзнесу",
+      desc: "Дiзнайтеся, з чого почати впровадження AI та автоматизацiї, щоб повернути до 15 годин на тиждень.",
+      cta: "Отримати чек-лiст",
+      item1: "Модуль: Стратегiя пропозицiї",
+      item2: "Модуль: Воронка продажiв",
+      item3: "Модуль: AI-автоматизацiя",
+      item4: "Результат: Бiльше часу"
+    }
+  },
+  ui: {
+    pl: {
+      addToBrief: "Dodaj do briefu +",
+      showFullOffer: "Zobacz pełną ofertę",
+      clientType: "Typ klienta",
+      teamSize: "Wielkość zespołu",
+      challenge: "Wyzwanie",
+      solution: "Rozwiązanie",
+      result: "Wynik"
+    },
+    en: {
+      addToBrief: "Add to brief +",
+      showFullOffer: "See full offer",
+      clientType: "Client type",
+      teamSize: "Team size",
+      challenge: "Challenge",
+      solution: "Solution",
+      result: "Result"
+    },
+    ua: {
+      addToBrief: "Додати до брифу +",
+      showFullOffer: "Дивитися повну пропозицiю",
+      clientType: "Тип клiєнта",
+      teamSize: "Розмiр команди",
+      challenge: "Виклик",
+      solution: "Рiшення",
+      result: "Результат"
+    }
+  },
   footerCta: {
     pl: {
-      h2: "Jeden brief może zmienić to, jak prowadzicie firmę.",
-      subtitle: "Opiszcie swoją sytuację, a my powiemy Wam, co byśmy z tym zrobili. Zero zobowiązań.",
-      cta: "Wyceńcie swój brief"
+      h2: "Jeden brief może zmienić to, jak prowadzisz firmę.",
+      subtitle: "Opisz swoją sytuację, a my powiemy Ci, co byśmy z tym zrobili. Zero zobowiązań.",
+      cta: "Wyceń swój brief"
     },
     en: {
       h2: "One brief can change how you run your business.",

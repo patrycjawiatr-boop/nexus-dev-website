@@ -1077,6 +1077,43 @@ p {
 }
 
 /* Brief form section labels */
+.value-item {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+}
+.value-item:hover {
+  border-color: var(--accent-light);
+  transform: translateX(10px);
+}
+.value-icon {
+  width: 32px;
+  height: 32px;
+  background: var(--accent-glow);
+  color: var(--accent-light);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+.value-content h4 {
+  font-size: 1.1rem;
+  margin-bottom: 4px;
+  color: var(--text-primary);
+}
+.value-content p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
 .form-section-label {
   font-size: 0.75rem;
   font-weight: 700;
@@ -1431,18 +1468,28 @@ p {
 
 .pricing-badge {
   position: absolute;
-  top: -12px;
+  top: -16px;
   left: 50%;
   transform: translateX(-50%);
-  padding: 6px 20px;
-  background: linear-gradient(135deg, var(--accent-light), var(--accent));
-  border-radius: var(--radius-full);
-  font-size: 0.7rem;
+  padding: 8px 24px;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  border-radius: 100px;
+  font-size: 0.75rem;
   font-weight: 800;
-  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: #fff;
   white-space: nowrap;
-  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+  box-shadow: 0 10px 25px rgba(108, 92, 231, 0.4);
+  z-index: 10;
+  border: 2px solid var(--bg-card);
+  animation: badge-pulse 2.5s infinite;
+}
+
+@keyframes badge-pulse {
+  0% { transform: translateX(-50%) scale(1); box-shadow: 0 10px 25px rgba(108, 92, 231, 0.4); }
+  50% { transform: translateX(-50%) scale(1.05); box-shadow: 0 15px 35px rgba(108, 92, 231, 0.6); }
+  100% { transform: translateX(-50%) scale(1); box-shadow: 0 10px 25px rgba(108, 92, 231, 0.4); }
 }
 
 .pricing-name {
@@ -2345,3 +2392,23 @@ input:checked + .slider:before {
   .footer-social { margin-top: 0; justify-content: center; }
 }
 
+/* ── UKRAINIAN (UA) SPECIFIC OVERRIDES ─────────────────── */
+/* Targeted font reductions to prevent clipping for longer UA strings */
+html[lang="uk"] .hero-badge {
+    font-size: 0.75rem;
+    padding: 6px 16px;
+}
+
+html[lang="uk"] .hero h1 {
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+}
+
+html[lang="uk"] .card h3 {
+    font-size: 1.15rem;
+    line-height: 1.25;
+}
+
+html[lang="uk"] .hero-subtitle {
+    font-size: 1.05rem !important;
+}

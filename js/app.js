@@ -19,12 +19,13 @@ function initApp() {
     // Initial language setup
     setLanguage(currentLang);
 
-    // Event Listeners for Language Switcher
-    document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.addEventListener('click', () => {
+    // Event Delegation for Language Switcher (more robust for subpages)
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('.lang-btn');
+        if (btn) {
             const lang = btn.getAttribute('data-lang');
             setLanguage(lang);
-        });
+        }
     });
 
     // Mobile Menu Toggle
@@ -121,15 +122,29 @@ function updateMetaTags(lang) {
 }
 
 function renderDynamicContent(lang) {
-    renderForWhomCards(lang);
-    renderModulesCards(lang);
-    renderProcessTimeline(lang);
-    renderCasesGrid(lang);
-    renderTestimonials(lang);
-    renderFAQ(lang);
-    renderAbout(lang);
-    renderLeadMagnetChecklist(lang);
-    renderPortfolio(lang);
+    const renderSteps = [
+        { name: 'ForWhom', fn: renderForWhomCards },
+        { name: 'Modules', fn: renderModulesCards },
+        { name: 'Process', fn: renderProcessTimeline },
+        { name: 'Cases', fn: renderCasesGrid },
+        { name: 'Testimonials', fn: renderTestimonials },
+        { name: 'Why', fn: renderWhyCards },
+        { name: 'FAQ', fn: renderFAQ },
+        { name: 'About', fn: renderAbout },
+        { name: 'Portfolio', fn: renderPortfolioGrid },
+        { name: 'Services', fn: renderServicesCatalog },
+        { name: 'Pricing', fn: updatePricing },
+        { name: 'LeadMagnet', fn: renderLeadMagnetChecklist }
+    ];
+
+    renderSteps.forEach(step => {
+        try {
+            step.fn(lang);
+            console.log(`Render success: ${step.name}`);
+        } catch (err) {
+            console.warn(`Render failed for ${step.name}:`, err);
+        }
+    });
 }
 
 function renderForWhomCards(lang) {
@@ -229,6 +244,21 @@ function renderTestimonials(lang) {
     observeNewElements(container);
 }
 
+function renderWhyCards(lang) {
+    const container = document.getElementById('whyCards');
+    const data = translations.whyNexus?.[lang];
+    if (!container || !data) return;
+
+    container.innerHTML = data.cards.map((card, i) => `
+        <div class="card reveal reveal-delay-${(i % 4) + 1}">
+            <div class="card-icon">${card.icon}</div>
+            <h3>${card.title}</h3>
+            <p>${card.desc}</p>
+        </div>
+    `).join('');
+    observeNewElements(container);
+}
+
 function renderFAQ(lang) {
     const container = document.getElementById('faqList');
     const data = translations.faq?.[lang];
@@ -289,6 +319,9 @@ function renderAbout(lang) {
             </div>
         `).join('');
     }
+
+    // Ensure animations are observed for the new content
+    observeNewElements(document.getElementById('about'));
 }
 
 function renderLeadMagnetChecklist(lang) {
@@ -296,21 +329,76 @@ function renderLeadMagnetChecklist(lang) {
     const data = translations.leadMagnet?.[lang];
     if (!container || !data) return;
 
-    // We map back to item1..item4 based on position if needed, 
-    // but usually these are already translated via data-i18n in index.html.
-    // This serves as a backup or for dynamic parts.
+    container.innerHTML = `
+        <div class="checklist-item"><span>✓</span> <span>${data.item1}</span></div>
+        <div class="checklist-item"><span>✓</span> <span>${data.item2}</span></div>
+        <div class="checklist-item"><span>✓</span> <span>${data.item3}</span></div>
+        <div class="checklist-item highlight"><span>⚡</span> <span>${data.item4}</span></div>
+    `;
 }
 
-function renderPortfolio(lang) {
-    const container = document.getElementById('portfolioGrid');
+function renderPortfolioGrid(lang) {
+    const container = document.getElementById('portfolioList');
     const items = translations.portfolioItems?.[lang];
     if (!container || !items) return;
 
-    // Logic for portfolio.html if it exists
+    container.innerHTML = items.map((item, i) => `
+        <div class="portfolio-item reveal">
+            <img src="${item.img}" alt="${item.title}" class="portfolio-img">
+            <div class="portfolio-content">
+                <div class="portfolio-category">${item.category}</div>
+                <h3 class="portfolio-title">${item.title}</h3>
+                <p>${item.challenge}</p>
+                <div class="portfolio-stats">
+                    ${item.result.stats ? item.result.stats.map(s => `
+                        <div class="stat-item">
+                            <span class="stat-val">${s.val}</span>
+                            <span class="stat-label">${s.label}</span>
+                        </div>
+                    `).join('') : `
+                        <div class="stat-item">
+                            <span class="stat-val">${item.result.perc}</span>
+                            <span class="stat-label">${item.result.desc}</span>
+                        </div>
+                    `}
+                </div>
+                <a href="brief.html" class="btn btn-secondary btn-arrow">Wyceń podobny projekt</a>
+            </div>
+        </div>
+    `).join('');
+    observeNewElements(container);
+}
+
+function renderServicesCatalog(lang) {
+    const container = document.getElementById('servicesFullGrid');
+    const data = translations.servicesFull?.[lang];
+    if (!container || !data) return;
+
+    container.innerHTML = data.categories.map((cat, i) => `
+        <div class="service-category reveal">
+            <h2 class="category-title">${cat.name}</h2>
+            <div class="service-modules-grid">
+                ${cat.modules.map(mod => `
+                    <div class="service-module-card">
+                        <div class="module-header">
+                            <h4>${mod.title}</h4>
+                            <div class="module-price">${mod.price}</div>
+                        </div>
+                        <p>${mod.desc}</p>
+                        <div class="module-footer">
+                            <span class="module-time">⏱ ${mod.time}</span>
+                            <a href="brief.html" class="btn-text" onclick="addToBrief('${mod.title}')">${translations.ui?.[lang]?.addToBrief || 'Dodaj do briefu +'}</a>
+                        </div>
+                    </div>
+                `).join('')}
+            </div>
+        </div>
+    `).join('');
+    observeNewElements(container);
 }
 
 function updatePricing(lang) {
-    const t = translations.pricing?.[lang] || translations.pricing?.pl;
+    const t = translations.pricing?.[lang];
     if (!t) return;
 
     const setEl = (id, text) => {
@@ -335,7 +423,8 @@ function updatePricing(lang) {
         }
     });
 
-    document.querySelectorAll('[data-i18n="pricing.cta"]').forEach(el => el.innerHTML = t.cta || 'Wybieram');
+    const ctaText = t.cta || (translations.ui?.[lang]?.selectPackage || 'Wybieram');
+    document.querySelectorAll('[data-i18n="pricing.cta"]').forEach(el => el.innerHTML = ctaText);
 }
 
 // ── UTILITIES ────────────────────────────────────────────
@@ -366,8 +455,15 @@ function observeNewElements(container) {
 
 function selectPackage(packageName) {
     const messageField = document.getElementById('message');
+    const lang = currentLang || 'pl';
+    const prefixes = {
+        pl: 'Interesuje mnie zestaw: ',
+        en: 'I am interested in the package: ',
+        ua: 'Мене цiкавить пакет: '
+    };
     if (messageField) {
-        messageField.value = `Interesuje mnie pakiet: ${packageName}\n\n`;
+        messageField.value = `${prefixes[lang] || prefixes.pl}${packageName}\n\n`;
+        messageField.scrollIntoView({ behavior: 'smooth' });
         messageField.focus();
     }
 }

@@ -149,11 +149,11 @@ export const portfolio = {
       {
         id: "ecommerce-auto",
         category: "E-commerce / Автоматизацiя",
-        title: "Автоматизацiя для магазину одягу",
+        title: "Автоматизацiя процесiв для магазину одягу",
         img: "img/case-ecommerce.png",
         challenge: "Власник втрачав 4 години на день на ручну синхронiзацiю замовлень.",
         solution: "Впровадження центрального дашборду. Автоматичнi сповiщення.",
-        result: { perc: "+35%", desc: "Рiст ефективностi" }
+        result: { perc: "+35%", desc: "Рiст ефективностi", stats: [{ val: "20 год", label: "Економiя часу" }] }
       },
       {
         id: "realestate-ai",
@@ -162,7 +162,25 @@ export const portfolio = {
         img: "img/case-realestate.png",
         challenge: "Старий сайт не вiдповiдав рiвню об'єктiв.",
         solution: "Дизайн з акцентом на UX та швидкiсть.",
-        result: { perc: "+150%", desc: "Бiльше лiдiв" }
+        result: { perc: "+150%", desc: "Бiльше лiдiв", stats: [{ val: "2.4с", label: "Час завантаження" }] }
+      },
+      {
+        id: "ai-assistant",
+        category: "AI / Обслуговування",
+        title: "AI Асистент з продажу",
+        img: "img/case-ai.png",
+        challenge: "Клiєнти писали 24/7, а команда не встигала вiдповiдати.",
+        solution: "Розумний чат-бот, який квалiфiкує запити.",
+        result: { perc: "-80%", desc: "Менше рутини", stats: [{ val: "100%", label: "Вiдповiдi 24/7" }] }
+      },
+      {
+        id: "strategy-scale",
+        category: "Стратегiя / Масштабування",
+        title: "Трансформацiя процесiв маркетингової агенцiї",
+        img: "img/case-strategy.png",
+        challenge: "Хаос в управлiннi проєктами при завеликому рості.",
+        solution: "Карта процесiв та автоматизованi звiти KPI.",
+        result: { perc: "+45%", desc: "Рiст маржi", stats: [{ val: "30 днiв", label: "Термiн впровадження" }] }
       }
     ]
   }
