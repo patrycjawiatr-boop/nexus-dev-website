@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Realizacje i Case Studies — nexus.dev</title>
   <meta name="description" content="Zobacz, jak nexus.dev pomaga firmom zamieniać chaos w zyskowne systemy. Autentyczne historie wdrożeń, wyniki i procesy.">
-  <meta name="author" content="Patrycja Duk">
+  <meta name="author" content="Patrycja Duk & Paweł Duk">
   <link rel="canonical" href="https://nexus.dev/portfolio">
   <link rel="alternate" hreflang="pl" href="https://nexus.dev/portfolio">
   <link rel="alternate" hreflang="en" href="https://nexus.dev/portfolio">
@@ -18,7 +18,7 @@
   
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="nexus.dev — Od chaosu do systemu">
-  <meta name="twitter:description" content="Poukładam Ci ofertę, sprzedaż, obsługę klienta i liczby — zacznij budować system.">
+  <meta name="twitter:description" content="Poukładamy Wam ofertę, sprzedaż, obsługę klienta i liczby — zacznijcie budować system.">
   <meta name="twitter:image" content="https://nexus.dev/img/og-image.png?v=2">
 
   <link rel="stylesheet" href="css/styles.css?v=11">
@@ -130,7 +130,7 @@
         <li><a href="index.html" data-i18n="nav.home" onclick="closeNav()">Strona główna</a></li>
         <li><a href="services.html" data-i18n="nav.services" onclick="closeNav()">Usługi</a></li>
         <li><a href="portfolio.html" class="active" data-i18n="nav.cases" onclick="closeNav()">Realizacje</a></li>
-        <li><a href="index.html#about" data-i18n="nav.about" onclick="closeNav()">O mnie</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about" onclick="closeNav()">O nas</a></li>
         <li><a href="index.html#pricing" data-i18n="nav.pricing" onclick="closeNav()">Cennik</a></li>
         <li><a href="index.html#faq" data-i18n="nav.blog" onclick="closeNav()">FAQ</a></li>
       </ul>
@@ -182,23 +182,22 @@
     <div class="container">
       <div class="lead-magnet-card reveal">
         <div class="lead-magnet-content">
-          <div class="hero-badge" data-i18n="leadMagnet.badge">Darmowy zasób</div>
+          <div class="hero-badge" data-i18n="leadMagnet.badge">Darmowy dostęp</div>
           <h2 data-i18n="leadMagnet.h2">Pobierz Checklistę: 5 Kroków do Automatyzacji Twojej Firmy</h2>
           <p data-i18n="leadMagnet.desc">Dowiedz się, od czego zacząć wdrażanie AI i automatyzacji, aby odzyskać nawet 15 godzin tygodniowo. Konkretne narzędzia i procesy.</p>
-          <form id="leadMagnetForm" class="lead-magnet-form">
-            <input type="email" name="email" id="leadEmail" data-i18n="contact.form.email" placeholder="Twój adres email *" required>
-            <button type="submit" class="btn btn-primary" id="leadSubmit">
-              <span data-i18n="leadMagnet.cta">Odbierz checklistę</span>
-            </button>
-          </form>
+          <div class="lead-magnet-actions">
+            <a href="checklist-nexus-dev.html" class="btn btn-primary" id="leadSubmit" data-i18n="leadMagnet.cta">
+              Odbierz checklistę
+            </a>
+          </div>
           <p id="leadSuccess" class="success-msg hidden" data-i18n="leadMagnet.success">Sukces! Checklista została wysłana na Twój e-mail. Sprawdź folder odebrane (lub spam).</p>
         </div>
         <div class="lead-magnet-visual">
           <div class="checklist-mockup">
-            <div class="checklist-item"><span>✓</span> Moduł: Strategia oferty</div>
-            <div class="checklist-item"><span>✓</span> Moduł: Lejek sprzedaży</div>
-            <div class="checklist-item"><span>✓</span> Moduł: Automatyzacja AI</div>
-            <div class="checklist-item highlight"><span>⚡</span> Wynik: Więcej czasu</div>
+            <div class="checklist-item"><span>✓</span> <span data-i18n="leadMagnet.item1">Moduł: Strategia oferty</span></div>
+            <div class="checklist-item"><span>✓</span> <span data-i18n="leadMagnet.item2">Moduł: Lejek sprzedaży</span></div>
+            <div class="checklist-item"><span>✓</span> <span data-i18n="leadMagnet.item3">Moduł: Automatyzacja AI</span></div>
+            <div class="checklist-item highlight"><span>⚡</span> <span data-i18n="leadMagnet.item4">Wynik: Więcej czasu</span></div>
           </div>
         </div>
       </div>
@@ -211,7 +210,7 @@
       <div class="footer-top">
         <div class="footer-brand">
           <a href="index.html" class="logo">nexus<span>.dev</span></a>
-          <p data-i18n="footer.tagline">Zamieniamy chaos w system, który zarabia.</p>
+          <p data-i18n="footer.tagline"></p>
         </div>
         <div class="footer-social">
           <a href="#" class="social-link" aria-label="LinkedIn">
@@ -235,8 +234,8 @@
     </div>
   </footer>
 
-  <script src="js/translations.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/cookies.js"></script>
+  <script type="module" src="js/translations/index.js?v=final_agency"></script>
+  <script type="module" src="js/cookies.js?v=final_agency"></script>
+  <script type="module" src="js/app.js?v=final_agency"></script>
 </body>
 </html>

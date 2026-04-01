@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checklista: 5 Kroków do Automatyzacji Twojej Firmy — nexus.dev</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title data-i18n="checklistPage.title">Checklista: 5 Kroków do Automatyzacji Twojej Firmy — nexus.dev</title>
+  <link rel="stylesheet" href="css/styles.css?v=11">
   <style>
     :root {
       --doc-bg: #0a0a0f;
@@ -13,17 +13,24 @@
     body {
       background: var(--doc-bg);
       color: #fff;
-      padding: 40px 20px;
+      padding: 0;
+      margin: 0;
+    }
+    .check-container {
+      padding: 120px 20px 60px;
     }
     .check-doc {
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
       background: var(--doc-card);
       border-radius: 32px;
-      padding: 60px;
+      padding: 80px;
       border: 1px solid rgba(255, 255, 255, 0.1);
       box-shadow: 0 40px 100px rgba(0,0,0,0.5);
       position: relative;
+      background-image: 
+        radial-gradient(circle at 0% 0%, rgba(108, 92, 231, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 100% 100%, rgba(108, 92, 231, 0.05) 0%, transparent 50%);
     }
     .check-header {
       text-align: center;
@@ -31,151 +38,188 @@
       padding-bottom: 40px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     }
-    .check-header .logo { margin-bottom: 20px; font-size: 1.8rem; }
-    .check-header h1 { font-size: 2.5rem; margin-bottom: 16px; }
-    .check-header p { color: var(--accent-light); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
+    .check-header .logo { margin-bottom: 20px; font-size: 2rem; }
+    .check-header h1 { font-size: 3rem; margin-bottom: 16px; font-weight: 800; line-height: 1.1; }
+    .check-header p { color: var(--accent-light); font-weight: 600; text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; }
 
     .step {
-      margin-bottom: 50px;
+      margin-bottom: 60px;
       position: relative;
+      padding-left: 0;
     }
     .step-num {
-      position: absolute;
-      left: -40px;
-      top: 0;
-      font-size: 3rem;
-      font-weight: 800;
+      font-size: 4rem;
+      font-weight: 900;
       color: rgba(108, 92, 231, 0.1);
       line-height: 1;
+      margin-bottom: -20px;
+      user-select: none;
+    }
+    .step-content {
+        position: relative;
+        z-index: 2;
     }
     .step-content h2 {
-      font-size: 1.5rem;
-      margin-bottom: 12px;
+      font-size: 1.8rem;
+      margin-bottom: 16px;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 16px;
     }
     .step-content h2 span { color: var(--accent-light); }
-    .step-content p { color: var(--text-secondary); line-height: 1.7; margin-bottom: 16px; }
+    .step-content p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 24px; font-size: 1.1rem; }
     .action-box {
-      background: rgba(255, 255, 255, 0.03);
-      padding: 20px;
-      border-radius: 16px;
+      background: rgba(108, 92, 231, 0.05);
+      padding: 24px;
+      border-radius: 20px;
       border-left: 4px solid var(--accent-light);
+      backdrop-filter: blur(10px);
     }
-    .action-box strong { display: block; margin-bottom: 8px; color: #fff; }
+    .action-box strong { display: block; margin-bottom: 8px; color: #fff; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; }
     
     .doc-footer {
       margin-top: 80px;
       text-align: center;
-      padding-top: 40px;
+      padding-top: 60px;
       border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
+    .doc-footer h3 { font-size: 2rem; margin-bottom: 16px; }
+    .doc-footer p { color: var(--text-secondary); margin-bottom: 32px; font-size: 1.1rem; }
+
     .btn-download {
       display: inline-block;
-      margin-top: 20px;
-      padding: 16px 32px;
-      background: var(--accent-light);
-      color: #fff;
+      margin-top: 40px;
+      padding: 18px 36px;
+      background: transparent;
+      color: var(--text-secondary);
       text-decoration: none;
-      border-radius: 12px;
-      font-weight: 700;
+      border-radius: 14px;
+      font-weight: 600;
       transition: 0.3s;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      cursor: pointer;
     }
-    .btn-download:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(108, 92, 231, 0.3); }
+    .btn-download:hover { background: rgba(255, 255, 255, 0.05); color: #fff; }
 
     @media (max-width: 768px) {
-      .check-doc { padding: 40px 20px; }
-      .step-num { position: static; margin-bottom: 10px; }
-      .check-header h1 { font-size: 1.8rem; }
+      .check-doc { padding: 40px 24px; border-radius: 0; border: none; }
+      .check-container { padding-top: 80px; padding-left: 0; padding-right: 0; }
+      .check-header h1 { font-size: 2rem; }
+      .step-content h2 { font-size: 1.4rem; }
     }
     @media print {
       body { background: #fff; color: #000; padding: 0; }
-      .check-doc { border: none; box-shadow: none; background: #fff; color: #000; padding: 0; }
-      .btn-download { display: none; }
+      .navbar, .btn-download, .btn-primary { display: none !important; }
+      .check-container { padding: 0; }
+      .check-doc { border: none; box-shadow: none; background: #fff; color: #000; padding: 0; width: 100%; max-width: 100%; }
       .step-num { color: #eee; }
       .step-content h2, .step-content h2 span { color: #000; }
-      .action-box { background: #f9f9f9; border-left-color: #000; }
+      .action-box { background: #f9f9f9; border-left-color: #000; color: #333; }
+      .step-content p { color: #333; }
     }
   </style>
 </head>
 <body>
 
-  <div class="check-doc">
-    <div class="check-header">
-      <div class="logo">nexus<span>.dev</span></div>
-      <p>Darmowy Zasób Merytoryczny</p>
-      <h1>5 Kroków do Automatyzacji Twojej Firmy</h1>
-    </div>
-
-    <!-- KROK 1 -->
-    <div class="step">
-      <div class="step-num">01</div>
-      <div class="step-content">
-        <h2><span>⚡</span> Audyt Procesów i "Wąskich Gardeł"</h2>
-        <p>Zanim wdrożysz jakiekolwiek narzędzie, musisz wiedzieć, gdzie tracisz najwięcej czasu. Wypisz 3 czynności, które Ty lub Twój zespół wykonujecie codziennie ręcznie (np. kopiowanie danych, wysyłanie tych samych maili, ręczne wystawianie faktur).</p>
-        <div class="action-box">
-          <strong>Zadanie:</strong> Przez jeden dzień mierz czas stoperem przy każdej powtarzalnej czynności. Wynik Cię zaskoczy.
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="container" style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+      <a href="index.html" class="logo">nexus<span>.dev</span></a>
+      <div class="nav-right" style="display: flex; align-items: center; gap: 20px;">
+        <div class="lang-switcher" id="langSwitcher">
+          <button class="lang-btn" data-lang="pl">PL</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="ua">UA</button>
         </div>
       </div>
     </div>
+  </nav>
 
-    <!-- KROK 2 -->
-    <div class="step">
-      <div class="step-num">02</div>
-      <div class="step-content">
-        <h2><span>⚡</span> Centralizacja Danych (CRM/Base)</h2>
-        <p>Automatyzacja nie działa w chaosie. Wszystkie informacje o klientach, zamówieniach i projektach muszą być w jednym miejscu (np. Airtable, Notion, Pipedrive). Zapomnij o Excelach rozproszonych po komputerach pracowników.</p>
-        <div class="action-box">
-          <strong>Zadanie:</strong> Wybierz jedno narzędzie, które stanie się "sercem" informacji w Twojej firmie.
+  <div class="check-container">
+    <div class="check-doc">
+      <div class="check-header">
+        <div class="logo">nexus<span>.dev</span></div>
+        <p data-i18n="checklistPage.badge">Darmowy Dostęp Merytoryczny</p>
+        <h1 data-i18n="checklistPage.h1">5 Kroków do Automatyzacji Twojej Firmy</h1>
+      </div>
+
+      <!-- KROK 1 -->
+      <div class="step reveal">
+        <div class="step-num">01</div>
+        <div class="step-content">
+          <h2 data-i18n="checklistPage.step1.title"><span>⚡</span> Audyt Procesów i "Wąskich Gardeł"</h2>
+          <p data-i18n="checklistPage.step1.desc">Zanim wdrożysz jakiekolwiek narzędzie, musisz wiedzieć, gdzie tracisz najwięcej czasu. Wypisz 3 czynności, które Ty lub Twój zespół wykonujecie codziennie ręcznie.</p>
+          <div class="action-box">
+            <strong data-i18n="checklist.task_label">Zadanie:</strong>
+            <span data-i18n="checklistPage.step1.action">Przez jeden dzień mierz czas stoperem przy każdej powtarzalnej czynności. Wynik Cię zaskoczy.</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- KROK 3 -->
-    <div class="step">
-      <div class="step-num">03</div>
-      <div class="step-content">
-        <h2><span>⚡</span> Mapowanie Scenariuszy "Jeśli-To"</h2>
-        <p>Zdefiniuj jasne reguły. "Jeśli klient wypełni formularz na stronie, to automatycznie stwórz rekord w CRM i wyślij mu powitanie". To podstawa pracy z narzędziami takimi jak Make.com czy Zapier.</p>
-        <div class="action-box">
-          <strong>Zadanie:</strong> Rozrysuj na kartce prosty schemat przepływu informacji dla swojego najczęstszego procesu.
+      <!-- KROK 2 -->
+      <div class="step reveal">
+        <div class="step-num">02</div>
+        <div class="step-content">
+          <h2 data-i18n="checklistPage.step2.title"><span>⚡</span> Centralizacja Danych (CRM/Base)</h2>
+          <p data-i18n="checklistPage.step2.desc">Automatyzacja nie działa w chaosie. Wszystkie informacje o klientach, zamówieniach i projektach muszą być w jednym miejscu.</p>
+          <div class="action-box">
+            <strong data-i18n="checklist.task_label">Zadanie:</strong>
+            <span data-i18n="checklistPage.step2.action">Wybierz jedno narzędzie, które stanie się "sercem" informacji w Twojej firmie.</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- KROK 4 -->
-    <div class="step">
-      <div class="step-num">04</div>
-      <div class="step-content">
-        <h2><span>⚡</span> Wdrożenie AI do Obsługi i Treści</h2>
-        <p>Wykorzystaj modele językowe (GPT-4, Claude) do analizy zapytań, generowania szkiców ofert czy kategoryzacji zgłoszeń. AI może działać w tle Twoich automatyzacji, podejmując proste decyzje tekstowe.</p>
-        <div class="action-box">
-          <strong>Zadanie:</strong> Podłącz API OpenAI do swojego systemu, aby automatycznie streszczać długie maile od klientów.
+      <!-- KROK 3 -->
+      <div class="step reveal">
+        <div class="step-num">03</div>
+        <div class="step-content">
+          <h2 data-i18n="checklistPage.step3.title"><span>⚡</span> Mapowanie Scenariuszy "Jeśli-To"</h2>
+          <p data-i18n="checklistPage.step3.desc">Zdefiniuj jasne reguły. "Jeśli klient wypełni formularz na stronie, to automatycznie stwórz rekord w CRM i wyślij mu powitanie".</p>
+          <div class="action-box">
+            <strong data-i18n="checklist.task_label">Zadanie:</strong>
+            <span data-i18n="checklistPage.step3.action">Rozrysuj na kartce prosty schemat przepływu informacji dla swojego najczęstszego procesu.</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- KROK 5 -->
-    <div class="step">
-      <div class="step-num">05</div>
-      <div class="step-content">
-        <h2><span>⚡</span> Testy i Eliminacja Błędów</h2>
-        <p>Automatyzacja to proces ciągły. Przez pierwsze 2 tygodnie monitoruj logi i sprawdzaj, czy system nie popełnia błędów. Zbieraj feedback od zespołu — czy faktycznie mają mniej pracy?</p>
-        <div class="action-box">
-          <strong>Zadanie:</strong> Wyznacz jedną osobę w zespole, która będzie "strażnikiem" automatyzacji i będzie zgłaszać błędy.
+      <!-- KROK 4 -->
+      <div class="step reveal">
+        <div class="step-num">04</div>
+        <div class="step-content">
+          <h2 data-i18n="checklistPage.step4.title"><span>⚡</span> Wdrożenie AI do Obsługi i Treści</h2>
+          <p data-i18n="checklistPage.step4.desc">Wykorzystaj modele językowe (GPT-4, Claude) do analizy zapytań, generowania szkiców ofert czy kategoryzacji zgłoszeń.</p>
+          <div class="action-box">
+            <strong data-i18n="checklist.task_label">Zadanie:</strong>
+            <span data-i18n="checklistPage.step4.action">Podłącz API OpenAI do swojego systemu, aby automatycznie streszczać długie maile od klientów.</span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="doc-footer">
-      <h3>Chcesz, abyśmy wdrożyli to za Ciebie?</h3>
-      <p>Umów się na bezpłatną konsultację i zamień chaos w zyskowny system.</p>
-      <a href="index.html#contact" class="btn btn-primary">Wróć do nexus.dev</a>
-      <br><br>
-      <button onclick="window.print()" class="btn-download">Zapisz jako PDF / Wydrukuj</button>
+      <!-- KROK 5 -->
+      <div class="step reveal">
+        <div class="step-num">05</div>
+        <div class="step-content">
+          <h2 data-i18n="checklistPage.step5.title"><span>⚡</span> Testy i Eliminacja Błędów</h2>
+          <p data-i18n="checklistPage.step5.desc">Automatyzacja to proces ciągły. Przez pierwsze 2 tygodnie monitoruj logi i sprawdzaj, czy system nie popełnia błędów.</p>
+          <div class="action-box">
+            <strong data-i18n="checklist.task_label">Zadanie:</strong>
+            <span data-i18n="checklistPage.step5.action">Wyznacz jedną osobę w zespole, która będzie "strażnikiem" automatyzacji i będzie zgłaszać błędy.</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="doc-footer reveal">
+        <h3 data-i18n="checklistPage.footer_h3">Chcecie, abyśmy wdrożyli to za Was?</h3>
+        <p data-i18n="checklistPage.footer_p">Umówcie się na bezpłatną konsultację i zamieńcie chaos w zyskowny system.</p>
+        <a href="index.html#contact" class="btn btn-primary" data-i18n="checklistPage.footer_cta">Wróć do nexus.dev</a>
+        <br><br>
+        <button onclick="window.print()" class="btn-download" data-i18n="checklistPage.print_btn">Zapisz jako PDF / Wydrukuj</button>
+      </div>
     </div>
   </div>
 
+  <script type="module" src="js/translations/index.js?v=final_agency"></script>
+  <script type="module" src="js/cookies.js?v=final_agency"></script>
+  <script type="module" src="js/app.js?v=final_agency"></script>
 </body>
 </html>

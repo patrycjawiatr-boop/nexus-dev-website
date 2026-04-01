@@ -1,8 +1,22 @@
-const translations = {
+﻿const translations = {
+  metadata: {
+    pl: {
+      title: "nexus.dev | Systemy, które zarabiają",
+      description: "Zamieniamy chaos w Twojej firmie w system, który zarabia. Strategia oferty, procesy sprzedaży, automatyzacje AI i dashboardy."
+    },
+    en: {
+      title: "nexus.dev | Systems that earn",
+      description: "We turn chaos in your business into a system that earns. Offer strategy, sales processes, AI automations, and dashboards."
+    },
+    ua: {
+      title: "nexus.dev | Системи, що заробляють",
+      description: "Ми перетворюємо хаос у вашому бiзнесi на систему, яка заробляє. Стратегiя, процеси, AI-автоматизацiя та дашборди."
+    }
+  },
   nav: {
-    pl: { home: "Strona główna", services: "Usługi", cases: "Realizacje", about: "O mnie", pricing: "Cennik", blog: "FAQ", cta: "Wyceń swój brief" },
-    en: { home: "Home", services: "Services", cases: "Case Studies", about: "About", pricing: "Pricing", blog: "FAQ", cta: "Get a Quote" },
-    ua: { home: "Головна", services: "Послуги", cases: "Кейси", about: "Про мене", pricing: "Цiни", blog: "FAQ", cta: "Оцiнити проєкт" }
+    pl: { home: "Strona główna", services: "Usługi", cases: "Realizacje", about: "O nas", pricing: "Cennik", blog: "FAQ", cta: "Wyceń swój brief" },
+    en: { home: "Home", services: "Services", cases: "Case Studies", about: "About Us", pricing: "Pricing", blog: "FAQ", cta: "Get a Quote" },
+    ua: { home: "Головна", services: "Послуги", cases: "Кейси", about: "Про нас", pricing: "Цiни", blog: "FAQ", cta: "Оцiнити проєкт" }
   },
   hero: {
     pl: {
@@ -10,25 +24,25 @@ const translations = {
       h1_line1: "Zamieniamy chaos",
       h1_line2: "w Twojej firmie",
       h1_highlight: "w system, który zarabia.",
-      subtitle: "Poukładam Ci ofertę, sprzedaż, obsługę klienta i liczby — aby przestać gasić pożary i zacząć budować.",
+      subtitle: "Poukładamy Wam ofertę, sprzedaż, obsługę klienta i liczby — aby przestać gasić pożary i zacząć budować.",
       cta_primary: "Wyceń swój brief",
-      cta_secondary: "Zobacz, jak pracuję"
+      cta_secondary: "Zobacz, jak pracujemy"
     },
     en: {
       badge: "For businesses ready to get organized",
       h1_line1: "Turning chaos",
       h1_line2: "in your business",
       h1_highlight: "into a system that earns.",
-      subtitle: "I will organize your offer, sales, client service, and numbers - so you can stop firefighting and start building.",
+      subtitle: "We will organize your offer, sales, client service, and numbers - so you can stop firefighting and start building.",
       cta_primary: "Get a Free Quote",
-      cta_secondary: "See How I Work"
+      cta_secondary: "See How We Work"
     },
     ua: {
       badge: "Для бiзнесiв, якi хочуть нарештi навести лад",
       h1_line1: "Перетворюємо хаос",
       h1_line2: "у вашому бiзнесi",
       h1_highlight: "на систему, яка заробляє.",
-      subtitle: "Впорядкую вашу пропозицiю, продажi, обслуговування клiєнтiв i цифри - щоб ви перестали гасити пожежi.",
+      subtitle: "Впорядкуємо вашу пропозицiю, продажi, обслуговування клiєнтiв i цифри - щоб ви перестали гасити пожежi.",
       cta_primary: "Отримати безкоштовну оцiнку",
       cta_secondary: "Дiзнатися бiльше"
     }
@@ -36,7 +50,7 @@ const translations = {
   forWhom: {
     pl: {
       h2: "Rozpoznajesz się w tym?",
-      intro: "nexus.dev nie jest dla każdego. Pracuję z firmami, które mają konkretny problem do rozwiązania.",
+      intro: "nexus.dev nie jest dla każdego. Pracujemy z firmami, które mają konkretny problem do rozwiązania.",
       cards: [
         { title: "Mamy stronę, ale\nzero efektów", desc: "Strona jest, ale nie generuje zapytań. Oferta niejasna, CTA schowane, klient nie wie, co dalej.", icon: "🌐" },
         { title: "Nie wiem, na czym\nzarabiam", desc: "Robisz 10 rzeczy, ale nie wiesz, które przynoszą kasę, a które ją zjadają. Brak kontroli nad liczbami.", icon: "📊" },
@@ -46,7 +60,7 @@ const translations = {
     },
     en: {
       h2: "Sound familiar?",
-      intro: "nexus.dev is not for everyone. I work with businesses that have a specific problem to solve.",
+      intro: "nexus.dev is not for everyone. We work with businesses that have a specific problem to solve.",
       cards: [
         { title: "We have a website,\nbut zero results", desc: "The website exists but generates no inquiries. Unclear offer, hidden CTAs, visitors don't know what to do next.", icon: "🌐" },
         { title: "I don't know what's\nmaking money", desc: "You do 10 things but don't know which bring revenue and which drain it. No control over numbers.", icon: "📊" },
@@ -56,7 +70,7 @@ const translations = {
     },
     ua: {
       h2: "Впiзнаєте себе?",
-      intro: "nexus.dev не для всiх. Я працюю з компанiями, якi мають конкретну проблему для вирiшення.",
+      intro: "nexus.dev не для всiх. Ми працюємо з компанiями, якi мають конкретну проблему для вирiшення.",
       cards: [
         { title: "Ми маємо сайт,\nале нуль результатiв", desc: "Сайт є, але не генерує запитiв. Пропозицiя незрозумiла, CTA прихованi.", icon: "🌐" },
         { title: "Не знаю, на чому\nзаробляю", desc: "Ви робите 10 речей, але не знаєте, якi приносять грошi, а якi витрачають.", icon: "📊" },
@@ -67,77 +81,77 @@ const translations = {
   },
   modules: {
     pl: {
-      h2: "Dobieram moduły do Twojej sytuacji",
-      intro: "Nie mam jednego pakietu dla wszystkich. Mam zestaw modułów — dobieram je do tego, co u Ciebie naprawdę wymaga naprawy.",
+      h2: "Dobieramy moduły do Twojej sytuacji",
+      intro: "Nie mamy jednego pakietu dla wszystkich. Mamy zestaw modułów — dobieramy je do tego, co u Ciebie naprawdę wymaga naprawy.",
       cta: "Zobacz pełną ofertę",
       cards: [
-        { icon: "🎯", title: "Strategia oferty", desc: "Prześwietlam, co sprzedajesz, komu i za ile. Wycinam to, co nie zarabia, wzmacniam to, co ma potencjał." },
-        { icon: "📊", title: "Liczby i dashboardy", desc: "Buduję prosty system, w którym widzisz kluczowe wskaźniki bez grzebania w Excelach." },
-        { icon: "🔄", title: "Proces sprzedaży", desc: "Układam ścieżkę od 'klient się odezwał' do 'podpisaliśmy umowę' — z follow-upami i lejkiem." },
-        { icon: "⚙️", title: "Proces obsługi", desc: "Definiuję, co się dzieje po sprzedaży: kto robi co, kiedy, jakim narzędziem. Koniec z chaosem." },
-        { icon: "🌐", title: "Strona i komunikacja", desc: "Projektuję stronę WWW i materiały ofertowe, żeby jasno mówić: dla kogo jesteś, co dajesz, ile to kosztuje." },
-        { icon: "🤖", title: "Automatyzacje i AI", desc: "Automatyzuję powtarzalne zadania: follow-upy, raporty, chatboty, integracje między narzędziami." }
+        { icon: "🎯", title: "Strategia oferty", desc: "Prześwietlamy, co sprzedajesz, komu i za ile. Wycinamy to, co nie zarabia, wzmacniamy to, co ma potencjał." },
+        { icon: "📊", title: "Liczby i dashboardy", desc: "Budujemy prosty system, w którym widzisz kluczowe wskaźniki bez grzebania w Excelach." },
+        { icon: "🔄", title: "Proces sprzedaży", desc: "Układamy ścieżkę od 'klient się odezwał' do 'podpisaliśmy umowę' — z follow-upami i lejkiem." },
+        { icon: "⚙️", title: "Proces obsługi", desc: "Definiujemy, co się dzieje po sprzedaży: kto robi co, kiedy, jakim narzędziem. Koniec z chaosem." },
+        { icon: "🌐", title: "Strona i komunikacja", desc: "Projektujemy stronę WWW i materiały ofertowe, żeby jasno mówić: dla kogo jesteś, co dajesz, ile to kosztuje." },
+        { icon: "🤖", title: "Automatyzacje i AI", desc: "Automatyzujemy powtarzalne zadania: follow-upy, raporty, chatboty, integracje między narzędziami." }
       ]
     },
     en: {
       h2: "Building blocks tailored to your situation",
-      intro: "I don't have one-size-fits-all packages. I have a set of modules - and I match them to what actually needs fixing.",
+      intro: "We don't have one-size-fits-all packages. We have a set of modules - and we match them to what actually needs fixing.",
       cta: "See Full Offer",
       cards: [
-        { icon: "🎯", title: "Offer Strategy", desc: "I analyze what you sell, to whom, and for how much. Cut what doesn't earn, strengthen what has potential." },
-        { icon: "📊", title: "Numbers & Dashboards", desc: "I build a simple system where you see key metrics without digging through spreadsheets." },
-        { icon: "🔄", title: "Sales Process", desc: "I design the path from 'client reached out' to 'deal signed' - with follow-ups and a pipeline." },
-        { icon: "⚙️", title: "Delivery Process", desc: "I define what happens after the sale: who does what, when, with which tool. No more chaos." },
-        { icon: "🌐", title: "Website & Communication", desc: "I design websites and sales materials that clearly say: who you're for, what you deliver, how much it costs." },
-        { icon: "🤖", title: "Automations & AI", desc: "I automate repetitive tasks: follow-ups, reports, chatbots, integrations between tools." }
+        { icon: "🎯", title: "Offer Strategy", desc: "We analyze what you sell, to whom, and for how much. Cut what doesn't earn, strengthen what has potential." },
+        { icon: "📊", title: "Numbers & Dashboards", desc: "We build a simple system where you see key metrics without digging through spreadsheets." },
+        { icon: "🔄", title: "Sales Process", desc: "We design the path from 'client reached out' to 'deal signed' - with follow-ups and a pipeline." },
+        { icon: "⚙️", title: "Delivery Process", desc: "We define what happens after the sale: who does what, when, with which tool. No more chaos." },
+        { icon: "🌐", title: "Website & Communication", desc: "We design websites and sales materials that clearly say: who you're for, what you deliver, how much it costs." },
+        { icon: "🤖", title: "Automations & AI", desc: "We automate repetitive tasks: follow-ups, reports, chatbots, integrations between tools." }
       ]
     },
     ua: {
       h2: "Пiдбираємо блоки пiд вашу ситуацiю",
-      intro: "У мене немає одного пакету для всiх. Є набiр модулiв - я пiдбираю їх пiд те, що у вас потребує ремонту.",
+      intro: "У нас немає одного пакету для всiх. Є набiр модулiв - ми пiдбираємо їх пiд те, що у вас потребує ремонту.",
       cta: "Переглянути повну пропозицiю",
       cards: [
-        { icon: "🎯", title: "Стратегiя пропозицiї", desc: "Аналiзую, що ви продаєте, кому i за скiльки. Прибираю те, що не заробляє." },
-        { icon: "📊", title: "Цифри та дашборди", desc: "Будую просту систему, де ви бачите ключовi показники без копання в Excel." },
-        { icon: "🔄", title: "Процес продажiв", desc: "Вибудовую шлях вiд 'клiєнт звернувся' до 'пiдписали договiр' - з follow-up та воронкою." },
-        { icon: "⚙️", title: "Процес обслуговування", desc: "Визначаю, що вiдбувається пiсля продажу: хто робить що, коли, яким iнструментом." },
-        { icon: "🌐", title: "Сайт i комунiкацiя", desc: "Проєктую сайт i матерiали, щоб чiтко говорити: для кого ви, що даєте, скiльки це коштує." },
-        { icon: "🤖", title: "Автоматизацiя та AI", desc: "Автоматизую повторюванi завдання: follow-up, звiти, чат-боти, iнтеграцiї." }
+        { icon: "🎯", title: "Стратегiя пропозицiї", desc: "Аналiзуємо, що ви продаєте, кому i за скiльки. Прибираємо те, що не заробляє." },
+        { icon: "📊", title: "Цифри та дашборди", desc: "Будуємо просту систему, де ви бачите ключовi показники без копання в Excel." },
+        { icon: "🔄", title: "Процес продажiв", desc: "Вибудовуємо шлях вiд 'клiєнт звернувся' до 'пiдписали договiр' - з follow-up та воронкою." },
+        { icon: "⚙️", title: "Процес обслуговування", desc: "Визначаємо, що вiдбувається пiсля продажу: хто робить що, коли, яким iнструментом." },
+        { icon: "🌐", title: "Сайт i комунiкацiя", desc: "Проєктуємо сайт i матерiали, щоб чiтко говорити: для кого ви, що даєте, скiльки це коштує." },
+        { icon: "🤖", title: "Автоматизацiя та AI", desc: "Автоматизуємо повторюванi завдання: follow-up, звiти, чат-боти, iнтеграцiї." }
       ]
     }
   },
   process: {
     pl: {
       h2: "4 kroki od chaosu do systemu",
-      intro: "Każda współpraca zaczyna się od rozmowy. Nie sprzedaję nic na siłę — najpierw rozumiem, potem proponuję.",
+      intro: "Każda współpraca zaczyna się od rozmowy. Nie sprzedajemy nic na siłę — najpierw rozumiemy, potem proponujemy.",
       cta: "Wyślij swój brief",
       steps: [
-        { num: "01", title: "Rozmowa diagnostyczna", subtitle: "bezpłatna · 30 min", desc: "Rozmawiamy o Twojej firmie: co sprzedajesz, jak wygląda sprzedaż, na czym tracisz czas. Ty mówisz — ja słucham." },
-        { num: "02", title: "Diagnoza i plan", subtitle: "dokument z propozycją", desc: "Przygotowuję krótki dokument: co wymaga naprawy, jakie moduły proponuję, ile to zajmie i ile kosztuje." },
-        { num: "03", title: "Wdrożenie", subtitle: "moduł po module", desc: "Pracuję w cyklach 1-3 tygodniowych. Po każdym etapie masz gotowy, działający element." },
-        { num: "04", title: "Wsparcie i rozwój", subtitle: "stałe partnerstwo", desc: "Po wdrożeniu nie znikam. Monitoruję wyniki, optymalizuję i rozwijam system, gdy Twoja firma rośnie." }
+        { num: "01", title: "Rozmowa diagnostyczna", subtitle: "bezpłatna · 30 min", desc: "Rozmawiamy o Twojej firmie: co sprzedajesz, jak wygląda sprzedaż, na czym tracisz czas. Ty mówisz — my słuchamy." },
+        { num: "02", title: "Diagnoza i plan", subtitle: "dokument z propozycją", desc: "Przygotowujemy krótki dokument: co wymaga naprawy, jakie moduły proponujemy, ile to zajmie i ile kosztuje." },
+        { num: "03", title: "Wdrożenie", subtitle: "moduł po module", desc: "Pracujemy w cyklach 1-3 tygodniowych. Po każdym etapie masz gotowy, działający element." },
+        { num: "04", title: "Wsparcie i rozwój", subtitle: "stałe partnerstwo", desc: "Po wdrożeniu nie znikamy. Monitorujemy wyniki, optymalizujemy i rozwijamy system, gdy Twoja firma rośnie." }
       ]
     },
     en: {
       h2: "4 steps from chaos to system",
-      intro: "Every collaboration starts with a conversation. I don't sell anything by force - first I understand, then I propose.",
+      intro: "Every collaboration starts with a conversation. We don't sell anything by force - first we understand, then we propose.",
       cta: "Send Your Brief",
       steps: [
-        { num: "01", title: "Diagnostic Call", subtitle: "free - 30 min", desc: "We talk about your business: what you sell, how sales work, your pain points. You talk - I listen." },
-        { num: "02", title: "Diagnosis & Plan", subtitle: "proposal document", desc: "I prepare a short document: what needs fixing, which modules I propose, timeline, and cost. No surprises." },
-        { num: "03", title: "Implementation", subtitle: "module by module", desc: "I work in 1-3 week cycles. After each phase, you have a working element - no waiting months." },
-        { num: "04", title: "Support & Growth", subtitle: "ongoing partnership", desc: "After implementation, I don't disappear. I monitor results, optimize, and expand the system as your business grows." }
+        { num: "01", title: "Diagnostic Call", subtitle: "free - 30 min", desc: "We talk about your business: what you sell, how sales work, your pain points. You talk - we listen." },
+        { num: "02", title: "Diagnosis & Plan", subtitle: "proposal document", desc: "We prepare a short document: what needs fixing, which modules we propose, timeline, and cost. No surprises." },
+        { num: "03", title: "Implementation", subtitle: "module by module", desc: "We work in 1-3 week cycles. After each phase, you have a working element - no waiting months." },
+        { num: "04", title: "Support & Growth", subtitle: "ongoing partnership", desc: "After implementation, we don't disappear. We monitor results, optimize, and expand the system as your business grows." }
       ]
     },
     ua: {
       h2: "4 кроки вiд хаосу до системи",
-      intro: "Кожна спiвпраця починається з розмови. Я нiчого не продаю силомiць - спочатку розумiю, потiм пропоную.",
+      intro: "Кожна спiвпраця починається з розмови. Ми нiчого не продаємо силомiць - спочатку розумiємо, потiм пропонуємо.",
       cta: "Надiслати бриф",
       steps: [
-        { num: "01", title: "Дiагностичний дзвiнок", subtitle: "безкоштовно - 30 хв", desc: "Розмовляємо про ваш бiзнес: що продаєте, як виглядають продажi. Ви розповiдаєте - я слухаю." },
-        { num: "02", title: "Дiагноз i план", subtitle: "документ з пропозицiєю", desc: "Готую короткий документ: що потребує ремонту, якi модулi пропоную, скiльки займе i коштує." },
-        { num: "03", title: "Впровадження", subtitle: "модуль за модулем", desc: "Працюю в циклах 1-3 тижнi. Пiсля кожного етапу маєте готовий, працюючий елемент." },
-        { num: "04", title: "Пiдтримка i розвиток", subtitle: "постiйне партнерство", desc: "Пiсля впровадження не зникаю. Монiторю результати, оптимiзую i розвиваю систему." }
+        { num: "01", title: "Дiагностичний дзвiнок", subtitle: "безкоштовно - 30 хв", desc: "Розмовляємо про ваш бiзнес: що продаєте, як виглядають продажi. Ви розповiдаєте - ми слухаємо." },
+        { num: "02", title: "Дiагноз i план", subtitle: "документ з пропозицiєю", desc: "Готуємо короткий документ: що потребує ремонту, якi модулi пропонуємо, скiльки займе i коштує." },
+        { num: "03", title: "Впровадження", subtitle: "модуль за модулем", desc: "Працюємо в циклах 1-3 тижнi. Пiсля кожного етапу маєте готовий, працюючий елемент." },
+        { num: "04", title: "Пiдтримка i розвиток", subtitle: "постiйне партнерство", desc: "Пiсля впровадження не зникаємо. Монiторимо результати, оптимiзуємо i розвиваємо систему." }
       ]
     }
   },
@@ -175,56 +189,56 @@ const translations = {
   },
   testimonials: {
     pl: {
-      h2: "Co mówią ci, z którymi pracowałam",
+      h2: "Co mówią ci, z którymi pracowaliśmy",
       items: [
         { quote: "Myślałem, że muszę zatrudnić dyrektora operacyjnego. Wystarczyło poukładać procesy.", name: "Tomek K.", role: "właściciel software house'u" },
         { quote: "Pierwszy raz widzę w jednym miejscu, ile zarabiam, ile tracę i na czym się skupić.", name: "Ania M.", role: "freelancerka, copywriting" },
-        { quote: "Nie sprzedała mi systemu za 50 tysięcy. Pomogła mi ogarnąć firmę za ułamek tego.", name: "Marek S.", role: "właściciel agencji" }
+        { quote: "Nie sprzedali mi systemu za 50 tysięcy. Pomogli mi ogarnąć firmę za ułamek tego.", name: "Marek S.", role: "właściciel agencji" }
       ]
     },
     en: {
-      h2: "What my clients say",
+      h2: "What our clients say",
       items: [
         { quote: "I thought I needed to hire a COO. Turns out I just needed to organize my processes.", name: "Tom K.", role: "software house owner" },
         { quote: "For the first time, I see in one place how much I earn, how much I lose, and what to focus on.", name: "Anna M.", role: "freelance copywriter" },
-        { quote: "She didn't sell me a system for 50 thousand. She helped me sort out my business for a fraction of that.", name: "Mark S.", role: "agency owner" }
+        { quote: "They didn't sell me a system for 50 thousand. They helped me sort out my business for a fraction of that.", name: "Mark S.", role: "agency owner" }
       ]
     },
     ua: {
-      h2: "Що кажуть тi, з ким я працювала",
+      h2: "Що кажуть тi, з ким ми працювали",
       items: [
         { quote: "Думав, потрiбно найняти операцiйного директора. Виявилося, досить було впорядкувати процеси.", name: "Тарас К.", role: "власник software house" },
         { quote: "Вперше бачу в одному мiсцi, скiльки заробляю, скiльки втрачаю i на чому фокусуватися.", name: "Анна М.", role: "фрiлансерка, копiрайтинг" },
-        { quote: "Не продала менi систему за 50 тисяч. Допомогла впорядкувати бiзнес за частку цiєї суми.", name: "Марко С.", role: "власник агенцiї" }
+        { quote: "Не продали менi систему за 50 тисяч. Допомогли впорядкувати бiзнес за частку цiєї суми.", name: "Марко С.", role: "власник агенцiї" }
       ]
     }
   },
   whyNexus: {
     pl: {
-      h2: "Dlaczego ja, a nie kolejna agencja od wszystkiego",
+      h2: "Dlaczego my, a nie kolejna agencja od wszystkiego",
       cards: [
-        { icon: "🔍", title: "Najpierw diagnoza, potem rozwiązanie", desc: "Nie zaczynam od 'zrobimy Ci stronę'. Zaczynam od 'pokaż, jak wygląda Twoja firma dziś' — i dopiero proponuję." },
-        { icon: "🧩", title: "Moduły, nie pakiety all in one", desc: "Nie płacisz za to, czego nie potrzebujesz. Dobieram moduły do sytuacji — od jednego do pełnej transformacji." },
+        { icon: "🔍", title: "Najpierw diagnoza, potem rozwiązanie", desc: "Nie zaczynamy od 'zrobimy Ci stronę'. Zaczynamy od 'pokaż, jak wygląda Twoja firma dziś' — i dopiero proponujemy." },
+        { icon: "🧩", title: "Moduły, nie pakiety all in one", desc: "Nie płacisz za to, czego nie potrzebujesz. Dobieramy moduły do sytuacji — od jednego do pełnej transformacji." },
         { icon: "🚀", title: "Wyniki, nie raporty", desc: "Nie dostajesz 40-stronicowej prezentacji. Dostajesz działający system, który od razu zmienia to, jak pracujesz." },
-        { icon: "💬", title: "Po ludzku, nie korporacyjnie", desc: "Rozmawiamy jak ludzie. Zależy mi na pełnym zrozumieniu tego, co robimy i dlaczego — bez żargonu." }
+        { icon: "💬", title: "Po ludzku, nie korporacyjnie", desc: "Rozmawiamy jak ludzie. Zależy nam na pełnym zrozumieniu tego, co robimy i dlaczego — bez żargonu." }
       ]
     },
     en: {
-      h2: "Why me, not another agency for everything",
+      h2: "Why us, not another agency for everything",
       cards: [
-        { icon: "🔍", title: "Diagnosis first, solution second", desc: "I don't start with 'let's build you a website.' I start with 'show me how your business works today' - then propose what to fix." },
-        { icon: "🧩", title: "Modules, not all-in-one packages", desc: "You don't pay for what you don't need. I match the blocks to your situation - from a single module to full transformation." },
+        { icon: "🔍", title: "Diagnosis first, solution second", desc: "We don't start with 'let's build you a website.' We start with 'show me how your business works today' - then propose what to fix." },
+        { icon: "🧩", title: "Modules, not all-in-one packages", desc: "You don't pay for what you don't need. We match the blocks to your situation - from a single module to full transformation." },
         { icon: "🚀", title: "Results, not reports", desc: "You don't get a 40-page presentation. You get a working system that immediately changes how you operate." },
-        { icon: "💬", title: "Human, not corporate", desc: "We talk like people. I care that you understand what we're doing and why - no jargon." }
+        { icon: "💬", title: "Human, not corporate", desc: "We talk like people. We care that you understand what we're doing and why - no jargon." }
       ]
     },
     ua: {
-      h2: "Чому я, а не чергова агенцiя вiд усього",
+      h2: "Чому ми, а не чергова агенцiя вiд усього",
       cards: [
-        { icon: "🔍", title: "Спочатку дiагноз, потiм рiшення", desc: "Не починаю з 'зробимо вам сайт'. Починаю з 'покажiть, як виглядає ваш бiзнес сьогоднi'." },
-        { icon: "🧩", title: "Модулi, а не пакети все включено", desc: "Ви не платите за те, що не потрiбно. Пiдбираю блоки пiд ситуацiю." },
+        { icon: "🔍", title: "Спочатку дiагноз, потiм рiшення", desc: "Не починаємо з 'зробимо вам сайт'. Починаємо з 'покажiть, як виглядає ваш бiзнес сьогоднi'." },
+        { icon: "🧩", title: "Модулi, а не пакети все включено", desc: "Ви не платите за те, що не потрiбно. Пiдбираємо блоки пiд ситуацiю." },
         { icon: "🚀", title: "Результати, а не звiти", desc: "Не отримуєте 40-сторiнкову презентацiю. Отримуєте працюючу систему." },
-        { icon: "💬", title: "По-людськи, не корпоративно", desc: "Розмовляємо як люди. Менi важливо, щоб ви розумiли - що робимо i навiщо." }
+        { icon: "💬", title: "По-людськи, не корпоративно", desc: "Розмовляємо як люди. Нам важливо, щоб ви розумiли - що робимо i навiщо." }
       ]
     }
   },
@@ -235,8 +249,8 @@ const translations = {
         { q: "Ile kosztuje współpraca z nexus.dev?", a: "Zależy od zakresu. Pojedynczy moduł zaczyna się od 499 zł, pakiety startowe od 2299 zł. Dokładną wycenę dostaniesz po bezpłatnej rozmowie." },
         { q: "Dla jakich firm to jest?", a: "Dla małych i średnich firm usługowych (1-50 osób), które mają chaos w ofercie, sprzedaży, obsłudze lub nie widzą swoich liczb." },
         { q: "Ile trwa wdrożenie?", a: "Typowy moduł: 1-3 tygodnie. Pełna transformacja: 4-8 tygodni. Po każdym module masz gotowy, działający element." },
-        { q: "Czy muszę mieć jakieś narzędzia na start?", a: "Nie. Dobieram narzędzia do sytuacji — od prostego Notiona po dedykowane systemy." },
-        { q: "Co jeśli nie wiem, czego potrzebuję?", a: "Właśnie od tego jest bezpłatna rozmowa diagnostyczna. 30 minut — opowiadasz o firmie, ja zadaję pytania." }
+        { q: "Czy muszę mieć jakieś narzędzia na start?", a: "Nie. Dobieramy narzędzia do sytuacji — od prostego Notiona po dedykowane systemy." },
+        { q: "Co jeśli nie wiem, czego potrzebuję?", a: "Właśnie od tego jest bezpłatna rozmowa diagnostyczna. 30 minut — opowiadasz o firmie, my zadajemy pytania." }
       ]
     },
     en: {
@@ -245,8 +259,8 @@ const translations = {
         { q: "How much does working with nexus.dev cost?", a: "It depends on scope. A single module starts at 120 EUR, starter packages from 550 EUR. Exact quote after a free diagnostic call." },
         { q: "What types of businesses is this for?", a: "Small and mid-sized service businesses (1-50 people) that have chaos in their offer, sales, delivery, or can't see their numbers." },
         { q: "How long does implementation take?", a: "Typical module: 1-3 weeks. Full transformation: 4-8 weeks. After each module, you have a working element." },
-        { q: "Do I need any tools to start?", a: "No. I match tools to your situation - from simple Notion to dedicated systems. I don't force any tech stack." },
-        { q: "What if I don't know what I need?", a: "That's exactly what the free diagnostic call is for. 30 minutes - you tell me about your business, I ask questions." }
+        { q: "Do I need any tools to start?", a: "No. We match tools to your situation - from simple Notion to dedicated systems. We don't force any tech stack." },
+        { q: "What if I don't know what I need?", a: "That's exactly what the free diagnostic call is for. 30 minutes - you tell us about your business, we ask questions." }
       ]
     },
     ua: {
@@ -255,61 +269,70 @@ const translations = {
         { q: "Скiльки коштує робота з nexus.dev?", a: "Залежить вiд обсягу. Один модуль починається вiд 499 zl, стартовi пакети вiд 2299 zl." },
         { q: "Для яких компанiй це пiдходить?", a: "Для малих i середнiх сервiсних компанiй (1-50 осiб), якi мають хаос у пропозицiї, продажах, обслуговуваннi." },
         { q: "Скiльки часу займає впровадження?", a: "Типовий модуль: 1-3 тижнi. Повна трансформацiя: 4-8 тижнiв." },
-        { q: "Чи потрiбнi iнструменти для початку?", a: "Нi. Пiдбираю iнструменти пiд ситуацiю - вiд простого Notion до спецiалiзованих систем." },
+        { q: "Чи потрiбнi iнструменти для початку?", a: "Нi. Пiдбираємо iнструменти пiд ситуацiю - вiд простого Notion до спецiалiзованих систем." },
         { q: "Що якщо я не знаю, чого потребую?", a: "Саме для цього безкоштовний дiагностичний дзвiнок. 30 хвилин." }
       ]
     }
   },
   about: {
     pl: {
-      h2: "Nie sprzedaję narzędzi. Pomagam ogarnąć firmę.",
+      h2: "Nie sprzedajemy narzędzi. Pomagamy ogarnąć firmę.",
       paragraphs: [
-        "nexus.dev powstało z frustracji. Widziałam, jak właściciele firm tonęli w chaosie — mieli klientów, mieli zespół, mieli pomysły — ale brakowało systemu, który to wszystko spina.",
-        "Nie buduję wielkich systemów IT za setki tysięcy. Siadam z właścicielem firmy, słucham, co go boli, a potem krok po kroku pomagam to poukładać.",
-        "Pracuję modułowo. Dobieram to, co akurat potrzebne. Zawsze: konkretnie, po ludzku, bez korporacyjnego bełkotu."
+        "nexus.dev powstało z frustracji. Widzieliśmy, jak właściciele firm tonęli w chaosie — mieli klientów, mieli zespół, mieli pomysły — ale brakowało systemu, który to wszystko spina.",
+        "Nie budujemy wielkich systemów IT za setki tysięcy. Siadamy z właścicielem firmy, słuchamy, co go boli, a potem krok po kroku pomagamy to poukładać.",
+        "Pracujemy modułowo. Dobieramy to, co akurat potrzebne. Zawsze: konkretnie, po ludzku, bez korporacyjnego bełkotu."
       ],
-      founder: { name: "Patrycja Duk", role: "Founder, nexus.dev", bio: "Strateg biznesowy, projektantka systemów i procesów. Pomagam firmom przejść od chaosu do porządku." },
-      values_title: "Czym się kieruję",
+      team: [
+        { name: "Patrycja Duk", role: "Strateg Biznesowy", bio: "Projektantka systemów i procesów. Pomagamy firmom przejść od chaosu do porządku." },
+        { name: "Paweł Duk", role: "Lead Developer", bio: "Specjalista od wdrożeń technologicznych i automatyzacji AI." }
+      ],
+      values_title: "Czym się kierujemy",
       values: [
-        { title: "Najpierw zrozumieć, potem działać", desc: "Nie proponuję rozwiązań, zanim nie zrozumiem problemu." },
+        { title: "Najpierw zrozumieć, potem działać", desc: "Nie proponujemy rozwiązań, zanim nie zrozumiemy problemu." },
         { title: "Prostota ponad złożoność", desc: "Najlepsze systemy to te, które ludzie faktycznie używają." },
-        { title: "Efekt, nie raport", desc: "Mierzę się wynikami klienta, nie liczbą slajdów." },
+        { title: "Efekt, nie raport", desc: "Mierzymy się wynikami klienta, nie liczbą slajdów." },
         { title: "Modularność", desc: "Klient płaci za to, czego potrzebuje — ani mniej, ani więcej." },
-        { title: "Po ludzku", desc: "Mówię normalnym językiem. Jeśli coś nie ma sensu — powiem to wprost." }
+        { title: "Po ludzku", desc: "Mówimy normalnym językiem. Jeśli coś nie ma sensu — powiemy to wprost." }
       ]
     },
     en: {
-      h2: "I don't sell tools. I help you sort out your business.",
+      h2: "We don't sell tools. We help you sort out your business.",
       paragraphs: [
-        "nexus.dev was born from frustration. I watched business owners drown in chaos - they had clients, teams, ideas - but no system to connect it all.",
-        "I don't build massive IT systems for hundreds of thousands. I sit down with the business owner, listen to what hurts, and step by step help organize it.",
-        "I work modularly. I pick what's actually needed. Always: specific, human, no corporate nonsense."
+        "nexus.dev was born from frustration. We watched business owners drown in chaos - they had clients, teams, ideas - but no system to connect it all.",
+        "We don't build massive IT systems for hundreds of thousands. We sit down with the business owner, listen to what hurts, and step by step help organize it.",
+        "We work modularly. We pick what's actually needed. Always: specific, human, no corporate nonsense."
       ],
-      founder: { name: "Patrycja Duk", role: "Founder, nexus.dev", bio: "Business strategist, systems and process designer. I help companies transition from chaos to order." },
-      values_title: "My principles",
+      team: [
+        { name: "Patrycja Duk", role: "Business Strategist", bio: "Systems and process designer. We help companies transition from chaos to order." },
+        { name: "Paweł Duk", role: "Lead Developer", bio: "Technological implementation and AI automation specialist." }
+      ],
+      values_title: "Our principles",
       values: [
-        { title: "Understand first, act second", desc: "I don't propose solutions before I understand the problem." },
+        { title: "Understand first, act second", desc: "We don't propose solutions before we understand the problem." },
         { title: "Simplicity over complexity", desc: "The best systems are those people actually use." },
-        { title: "Outcomes, not reports", desc: "I measure myself by client results, not by slides." },
+        { title: "Outcomes, not reports", desc: "We measure ourselves by client results, not by slides." },
         { title: "Modularity", desc: "The client pays for what they need - nothing less, nothing more." },
-        { title: "Human touch", desc: "I speak plain language. If something doesn't make sense - I say it directly." }
+        { title: "Human touch", desc: "We speak plain language. If something doesn't make sense - we say it directly." }
       ]
     },
     ua: {
-      h2: "Я не продаю iнструменти. Я допомагаю навести лад у бiзнесi.",
+      h2: "Ми не продаємо iнструменти. Ми допомагаємо навести лад у бiзнесi.",
       paragraphs: [
-        "nexus.dev народився з фрустрацiї. Я бачила, як власники бiзнесу тонули в хаосi - мали клiєнтiв, команду, iдеї - але не мали системи.",
-        "Я не будую масивнi IT-системи за сотнi тисяч. Я сiдаю з власником бiзнесу, слухаю що болить, i крок за кроком допомагаю впорядкувати.",
-        "Працюю модульно - як з конструктором. Пiдбираю те, що дiйсно потрiбно."
+        "nexus.dev народився з фрустрацiї. Ми бачили, як власники бiзнесу тонули в хаосi - мали клiєнтiв, команду, iдеї - але не мали системи.",
+        "Ми не будуємо масивнi IT-системи за сотнi тисяч. Ми сiдаємо з власником бiзнесу, слухаємо що болить, i крок за кроком допомагаємо впорядкувати.",
+        "Працюємо модульно. Пiдбираємо те, що дiйсно потрiбно."
       ],
-      founder: { name: "Patrycja Duk", role: "Засновниця, nexus.dev", bio: "Бiзнес-стратег, дизайнер систем i процесiв." },
-      values_title: "Мої принципи",
+      team: [
+        { name: "Patrycja Duk", role: "Бiзнес-стратег", bio: "Дизайнер систем i процесiв." },
+        { name: "Paweł Duk", role: "Lead Developer", bio: "Спецiалiст з технiчних впроваджень та AI-автоматизацiї." }
+      ],
+      values_title: "Нашi принципи",
       values: [
-        { title: "Спочатку зрозумiти, потiм дiяти", desc: "Не пропоную рiшень, поки не зрозумiю проблему." },
+        { title: "Спочатку зрозумiти, потiм дiяти", desc: "Не пропонуємо рiшень, поки не зрозумiємо проблему." },
         { title: "Простота понад складнiсть", desc: "Найкращi системи - тi, якими люди дiйсно користуються." },
-        { title: "Результат, а не звiт", desc: "Оцiнюю себе за результатами клiєнта." },
+        { title: "Результат, а не звiт", desc: "Оцiнюємо себе за результатами клiєнта." },
         { title: "Модульнiсть", desc: "Клiєнт платить за те, що потребує." },
-        { title: "По-людськи", desc: "Говорю нормальною мовою. Якщо щось не має сенсу - скажу прямо." }
+        { title: "По-людськи", desc: "Говоримо нормальною мовою. Якщо щось не має сенсу - скажемо прямо." }
       ]
     }
   },
@@ -318,7 +341,7 @@ const translations = {
       h2: "Wyceń swój projekt — wypełnij brief",
       intro: "Wypełnij krótki brief, a przygotujemy dla Ciebie indywidualną wycenę. Im więcej napiszesz, tym dokładniejszą propozycję dostaniesz.",
       steps_title: "Co się stanie po wysłaniu briefu:",
-      steps: ["Dostaniesz potwierdzenie na maila w ciągu 5 minut.", "W ciągu 24h odezwę się z indywidualną wyceną.", "Ustalimy szczegóły — przez mail, video lub telefon.", "Dostaniesz propozycję — bez niespodzianek."],
+      steps: ["Dostaniesz potwierdzenie na maila w ciągu 5 minut.", "W ciągu 24h odezwiemy się z indywidualną wyceną.", "Ustalimy szczegóły — przez mail, video lub telefon.", "Dostaniesz propozycję — bez niespodzianek."],
       form: {
         header: "📋 Brief projektowy",
         header_desc: "Im więcej wypełnisz, tym dokładniejszą wycenę otrzymasz.",
@@ -341,7 +364,7 @@ const translations = {
         message: "Opisz krótko swoją sytuację — co Cię boli, czego szukasz? *",
         source: "Skąd o nas wiesz?",
         source_options: ["Wybierz...", "Google", "Social media", "Polecenie", "Inne"],
-        submit: "Wyślij brief i otrzymaj wycenę", success: "Dziękuję! Odezwę się w ciągu 24h z wyceną."
+        submit: "Wyślij brief i otrzymaj wycenę", success: "Dziękujemy! Odezwiemy się w ciągu 24h z wyceną."
       },
       alt_cta: "Wolisz po prostu napisać?", alt_desc: "Wyślij maila na nextlevelaipoland@gmail.com z krótkim opisem sytuacji.",
       info: { email: "nextlevelaipoland@gmail.com", location: "Zdalnie, cała Polska i nie tylko", response: "Czas odpowiedzi: do 24h" }
@@ -350,7 +373,7 @@ const translations = {
       h2: "Get a Quote — Fill Out the Brief",
       intro: "Fill out a short brief and we'll prepare a custom quote for you. The more you write, the more accurate the proposal.",
       steps_title: "What happens after you submit the brief:",
-      steps: ["You'll get a confirmation email within 5 minutes.", "I'll reach out within 24h with a custom quote.", "We'll discuss details via email, video or phone.", "You'll get a proposal - no surprises."],
+      steps: ["You'll get a confirmation email within 5 minutes.", "We'll reach out within 24h with a custom quote.", "We'll discuss details via email, video or phone.", "You'll get a proposal - no surprises."],
       form: {
         header: "📋 Project Brief",
         header_desc: "The more you fill out, the more accurate your quote will be.",
@@ -373,42 +396,241 @@ const translations = {
         message: "Briefly describe your situation — what hurts, what are you looking for? *",
         source: "How did you find us?",
         source_options: ["Select...", "Google", "Social media", "Referral", "Other"],
-        submit: "Send Brief & Get a Quote", success: "Thank you! I'll get back to you within 24h with a quote."
+        submit: "Send Brief & Get a Quote", success: "Thank you! We'll get back to you within 24h with a quote."
       },
       alt_cta: "Prefer to just write?", alt_desc: "Send an email to nextlevelaipoland@gmail.com with a brief description.",
       info: { email: "nextlevelaipoland@gmail.com", location: "Remote, worldwide", response: "Response time: under 24h" }
     },
     ua: {
       h2: "Оцiнiть свiй проєкт — заповнiть бриф",
-      intro: "Заповнiть короткий бриф, i ми пiдготуємо для вас iндивiдуальну оцiнку. Чим бiльше напишете, тим точнiшу пропозицiю отримаєте.",
-      steps_title: "Що станеться пiсля вiдправки:",
-      steps: ["Отримаєте пiдтвердження на email протягом 5 хвилин.", "Протягом 24 годин зв'яжуся з iндивiдуальною оцiнкою.", "Обговоримо деталi — email, вiдео або телефон.", "Отримаєте пропозицiю — без сюрпризiв."],
-      form: {
-        header: "📋 Проєктний бриф",
-        header_desc: "Чим бiльше заповните, тим точнiшу оцiнку отримаєте.",
-        section_contact: "👤 Контактнi данi",
-        section_business: "🏢 Про ваш бiзнес",
-        section_needs: "🎯 Що вам потрiбно?",
-        section_details: "💬 Деталi",
-        name: "Повне iм'я *", email: "Email *", company: "Назва компанiї", phone: "Телефон",
-        industry: "Галузь",
-        industry_options: ["Оберiть галузь...", "IT / Software", "Маркетинг / Агенцiя", "Локальнi послуги", "E-commerce", "Консалтинг", "Фрiланс", "Гастро / HoReCa", "Здоров'я / Краса", "Будiвництво", "Iнше"],
-        team_size: "Розмiр команди",
-        team_size_options: ["Оберiть...", "1 особа (фрiлансер)", "2-5 осiб", "6-15 осiб", "16-50 осiб", "понад 50 осiб"],
-        website: "Адреса поточного сайту (якщо є)",
-        services_label: "Оберiть, що вас цiкавить (декiлька):",
-        services_checkboxes: ["Стратегiя пропозицiї", "Процес продажiв", "Процес обслуговування", "Сайт / Лендiнг", "Автоматизацiя / AI", "Дашборд / Цифри", "Рекламнi кампанiї", "Social media", "AI Чат-бот", "Не знаю — потрiбна дiагностика"],
-        budget: "Орiєнтовний бюджет",
-        budget_options: ["Оберiть дiапазон...", "до 1 000 zl", "1 000 - 3 000 zł", "3 000 - 5 000 zł", "5 000 - 10 000 zł", "понад 10 000 zl"],
-        timeline: "Коли хочете розпочати?",
-        timeline_options: ["Оберiть...", "Якнайшвидше", "Протягом 2 тижнiв", "Протягом мiсяця", "За 1-3 мiсяцi", "Ще не знаю"],
-        message: "Коротко опишiть свою ситуацiю — що болить, чого шукаєте? *",
-        source: "Як ви нас знайшли?",
-        source_options: ["Оберiть...", "Google", "Social media", "Рекомендацiя", "Iнше"],
-        submit: "Надiслати бриф i отримати оцiнку", success: "Дякую! Зв'яжуся протягом 24 годин з оцiнкою."
+      intro: "Заповнiть короткий бриф, i ми пiдготуємо для вас iндивiдуальну оцiнку. Чим �  checklistPage: {
+    pl: {
+      title: "Checklista: 5 Kroków do Automatyzacji Twojej Firmy — nexus.dev",
+      badge: "Darmowy Dostęp Merytoryczny",
+      h1: "5 Kroków do Automatyzacji Twojej Firmy",
+      step1: {
+        title: "Audyt Procesów i \"Wąskich Gardeł\"",
+        desc: "Zanim wdrożysz jakiekolwiek narzędzie, musisz wiedzieć, gdzie tracisz najwięcej czasu. Wypisz 3 czynności, które Ty lub Twój zespół wykonujecie codziennie ręcznie.",
+        action: "Zadanie: Przez jeden dzień mierz czas stoperem przy każdej powtarzalnej czynności. Wynik Cię zaskoczy."
       },
-      alt_cta: "Волiєте просто написати?", alt_desc: "Надiшлiть листа на nextlevelaipoland@gmail.com з коротким описом ситуацiї.",
-      info: { email: "nextlevelaipoland@gmail.com", location: "Вiддалено, весь свiт", response: "Час вiдповiдi: до 24 год" }
+      step2: {
+        title: "Centralizacja Danych (CRM/Base)",
+        desc: "Automatyzacja nie działa w chaosie. Wszystkie informacje o klientach, zamówieniach i projektach muszą być w jednym miejscu.",
+        action: "Zadanie: Wybierz jedno narzędzie, które stanie się \"sercem\" informacji w Twojej firmie."
+      },
+      step3: {
+        title: "Mapowanie Scenariuszy \"Jeśli-To\"",
+        desc: "Zdefiniuj jasne reguły. \"Jeśli klient wypełni formularz na stronie, to automatycznie stwórz rekord w CRM i wyślij mu powitanie\".",
+        action: "Zadanie: Rozrysuj na kartce prosty schemat przepływu informacji dla swojego najczęstszego procesu."
+      },
+      step4: {
+        title: "Wdrożenie AI do Obsługi i Treści",
+        desc: "Wykorzystaj modele językowe (GPT-4, Claude) do analizy zapytań, generowania szkiców ofert czy kategoryzacji zgłoszeń. AI może działać w tle Twoich automatyzacji.",
+        action: "Zadanie: Podłącz API OpenAI do swojego systemu, aby automatycznie streszczać długie maile od klientów."
+      },
+      step5: {
+        title: "Testy i Eliminacja Błędów",
+        desc: "Automatyzacja to proces ciągły. Przez pierwsze 2 tygodnie monitoruj logi i sprawdzaj, czy system nie popełnia błędów. Zbieraj feedback od zespołu.",
+        action: "Zadanie: Wyznacz jedną osobę w zespole, która będzie \"strażnikiem\" automatyzacji."
+      },
+      footer_h3: "Chcecie, abyśmy wdrożyli to za Was?",
+      footer_p: "Umówcie się na bezpłatną konsultację i zamieńcie chaos w zyskowny system.",
+      footer_cta: "Wróć do nexus.dev",
+      print_btn: "Zapisz jako PDF / Wydrukuj",
+      task_label: "Zadanie:"
+    },
+    en: {
+      title: "Checklist: 5 Steps to Automate Your Business — nexus.dev",
+      badge: "Free Educational Access",
+      h1: "5 Steps to Automate Your Business",
+      step1: {
+        title: "Process Audit & \"Bottlenecks\"",
+        desc: "Before you implement any tool, you need to know where you lose the most time. List 3 activities that you or your team perform manually every day.",
+        action: "Task: For one day, track time with a stopwatch for every repetitive task. The result will surprise you."
+      },
+      step2: {
+        title: "Data Centralization (CRM/Base)",
+        desc: "Automation doesn't work in chaos. All client, order, and project info must be in one place.",
+        action: "Task: Choose one tool that will become the \"heart\" of information in your company."
+      },
+      step3: {
+        title: "Mapping \"If-This-Then-That\" Scenarios",
+        desc: "Define clear rules. \"If a client fills out a form, then automatically create a record in CRM and send a greeting.\"",
+        action: "Task: Sketch a simple information flow diagram for your most frequent process."
+      },
+      step4: {
+        title: "Implementing AI for Service & Content",
+        desc: "Use language models (GPT-4, Claude) to analyze inquiries, generate proposal drafts, or categorize tickets. AI can work in the background.",
+        action: "Task: Connect the OpenAI API to your system to automatically summarize long client emails."
+      },
+      step5: {
+        title: "Testing & Error Elimination",
+        desc: "Automation is a continuous process. For the first 2 weeks, monitor logs and check for errors. Gather feedback from the team.",
+        action: "Task: Appoint one person in the team to be the \"automation guardian\" to report bugs."
+      },
+      footer_h3: "Want us to implement this for you?",
+      footer_p: "Book a free consultation and turn chaos into a profitable system.",
+      footer_cta: "Back to nexus.dev",
+      print_btn: "Save as PDF / Print",
+      task_label: "Task:"
+    },
+    ua: {
+      title: "Чек-лист: 5 крокiв до автоматизацiї вашого бiзнесу — nexus.dev",
+      badge: "Безкоштовний навчальний доступ",
+      h1: "5 крокiв до автоматизацiї вашого бiзнесу",
+      step1: {
+        title: "Аудит процесiв та \"вузьких мiсць\"",
+        desc: "Перш нiж впроваджувати будь-який iнструмент, ви маєте знати, де втрачаєте найбiльше часу. Випишiть 3 дiї, якi ви або ваша команда виконуєте вручну щодня.",
+        action: "Завдання: Протягом одного дня вимiрюйте час секундомiром при кожнiй повторюванiй дiї."
+      },
+      step2: {
+        title: "Централiзацiя даних (CRM/Base)",
+        desc: "Автоматизацiя не працює в хаосi. Вся iнформацiя про клiєнтiв та проєкти має бути в одному мiсцi.",
+        action: "Завдання: Оберiть один iнструмент, який стане \"серцем\" iнформацiї у вашiй компанiї."
+      },
+      step3: {
+        title: "Мапування сценарiїв \"Якщо-То\"",
+        desc: "Визначте чiткi правила. \"Якщо клiєнт заповнив форму, то автоматично створити запис у CRM i надiслати привiтання\".",
+        action: "Завдання: Намалюйте просту схему потоку iнформацiї для вашого найчастiшого процесу."
+      },
+      step4: {
+        title: "Впровадження AI для сервiсу та контенту",
+        desc: "Використовуйте мовнi моделi (GPT-4, Claude) для аналiзу запитiв та генерацiї чернеток. AI може працювати у фоновому режимi ваших автоматизацiй.",
+        action: "Завдання: Пiдключiть API OpenAI до своєї системи для автоматичного резюме листiв."
+      },
+      step5: {
+        title: "Тестування та усунення помилок",
+        desc: "Автоматизацiя - це безперервний процес. Першi 2 тижнi монiторте логи. Збирайте фiдбек вiд команди.",
+        action: "Завдання: Призначте одну людину в командi \"охоронцем\" автоматизацiї."
+      },
+      footer_h3: "Хочете, щоб ми впровадили це за вас?",
+      footer_p: "Запишiться на безкоштовну консультацiю i перетворiть хаос на прибуткову систему.",
+      footer_cta: "Повернутися до nexus.dev",
+      print_btn: "Зберегти як PDF / Друкувати",
+      task_label: "Завдання:"
+    }
+  },
+
+  pricing: {
+    pl: {
+      h2: "Gotowe zestawy na start",
+      intro: "Nie wiesz, od czego zacząć? Wybierz pakiet dopasowany do Twojej sytuacji.",
+      badge: "NAJPOPULARNIEJSZY",
+      cta: "Wybieram ten pakiet",
+      pkg1: { name: "START Z GWARANCJĄ", price: "2 299 zł", old: "3 397 zł", f1: "Strona wizytówka filmowa", f2: "10 postów social media", f3: "Audyt procesów", f4: "1 automatyzacja" },
+      pkg2: { name: "SYSTEM LEADÓW", price: "2 999 zł", old: "4 497 zł", f1: "Landing page sprzedażowy", f2: "Meta Ads setup", f3: "Automatyzacja leadów", f4: "Dashboard leadów", f5: "5 rolek reklamowych" },
+      pkg3: { name: "PEŁNA AUTOMATYZACJA", price: "3 499 zł", old: "4 896 zł", f1: "2 automatyzacje procesów", f2: "Bot AI na stronę", f3: "Dashboard zarządzający", f4: "Szablon biznesowy Excel", f5: "1 miesiąc retainer" }
+    },
+    en: {
+      h2: "Ready-to-go kits",
+      intro: "Don't know where to start? Choose a package tailored to your situation.",
+      badge: "MOST POPULAR",
+      cta: "I choose this package",
+      pkg1: { name: "GUARANTEED START", price: "€550", old: "€790", f1: "Business website", f2: "10 social media posts", f3: "Process audit", f4: "1 automation" },
+      pkg2: { name: "LEAD SYSTEM", price: "€720", old: "€1050", f1: "Sales landing page", f2: "Meta Ads setup", f3: "Lead automation", f4: "Lead dashboard", f5: "5 ad reels" },
+      pkg3: { name: "FULL AUTOMATION", price: "€840", old: "€1150", f1: "2 process automations", f2: "AI website bot", f3: "Management dashboard", f4: "Excel business template", f5: "1 month retainer" }
+    },
+    ua: {
+      h2: "Готовi пакети на старт",
+      intro: "Не знаєте, з чого почати? Оберiть пакет, що пiдходить саме вам.",
+      badge: "НАЙПОПУЛЯРНІШИЙ",
+      cta: "Обираю цей пакет",
+      pkg1: { name: "ГАРАНТОВАНИЙ СТАРТ", price: "450 €", old: "680 €", f1: "Бiзнес-сайт", f2: "10 постiв у соцмережах", f3: "Аудит процесiв", f4: "1 автоматизацiя" },
+      pkg2: { name: "СИСТЕМА ЛIДIВ", price: "590 €", old: "880 €", f1: "Продажовий лендiнг", f2: "Meta Ads setup", f3: "Автоматизацiя лiдiв", f4: "Дашборд лiдiв", f5: "5 рекламних рiлсiв" },
+      pkg3: { name: "ПОВНА АВТОМАТИЗАЦIЯ", price: "690 €", old: "940 €", f1: "2 автоматизацiї процесiв", f2: "AI-бот на сайт", f3: "Управлiнський дашборд", f4: "Бiзнес-шаблон Excel", f5: "1 мiсяць супроводу" }
+    }
+  },
+�, з чого почати? Оберiть пакет, що пiдходить саме вам.",
+      badge: "НАЙПОПУЛЯРНІШИЙ",
+      cta: "Обираю цей пакет",
+      pkg1: { name: "ГАРАНТОВАНИЙ СТАРТ", price: "450 €", old: "680 €", f1: "Бiзнес-сайт", f2: "10 постiв у соцмережах", f3: "Аудит процесiв", f4: "1 автоматизацiя" },
+      pkg2: { name: "СИСТЕМА ЛIДIВ", price: "590 €", old: "880 €", f1: "Продажовий лендiнг", f2: "Meta Ads setup", f3: "Автоматизацiя лiдiв", f4: "Дашборд лiдiв", f5: "5 рекламних рiлсiв" },
+      pkg3: { name: "ПОВНА АВТОМАТИЗАЦIЯ", price: "690 €", old: "940 €", f1: "2 автоматизацiї процесiв", f2: "AI-бот на сайт", f3: "Управлiнський дашборд", f4: "Бiзнес-шаблон Excel", f5: "1 мiсяць супроводу" }
+    }
+  },
+s. \"If a client fills out a form, then automatically create a record in CRM and send a greeting.\"",
+        action: "Task: Sketch a simple information flow diagram for your most frequent process."
+      },
+      step4: {
+        title: "Implementing AI for Service & Content",
+        desc: "Use language models (GPT-4, Claude) to analyze inquiries, generate proposal drafts, or categorize tickets. AI can work in the background.",
+        action: "Task: Connect the OpenAI API to your system to automatically summarize long client emails."
+      },
+      step5: {
+        title: "Testing & Error Elimination",
+        desc: "Automation is a continuous process. For the first 2 weeks, monitor logs and check for errors. Gather feedback from the team.",
+        action: "Task: Appoint one person in the team to be the \"automation guardian\" to report bugs."
+      },
+      footer_h3: "Want us to implement this for you?",
+      footer_p: "Book a free consultation and turn chaos into a profitable system.",
+      footer_cta: "Back to nexus.dev",
+      print_btn: "Save as PDF / Print",
+      task_label: "Task:"
+    },
+    ua: {
+      title: "Чек-лист: 5 крокiв до автоматизацiї вашого бiзнесу — nexus.dev",
+      badge: "Безкоштовний навчальний доступ",
+      h1: "5 крокiв до автоматизацiї вашого бiзнесу",
+      step1: {
+        title: "Аудит процесiв та \"вузьких мiсць\"",
+        desc: "Перш нiж впроваджувати будь-який iнструмент, ви маєте знати, де втрачаєте найбiльше часу. Випишiть 3 дiї, якi ви або ваша команда виконуєте вручну щодня.",
+        action: "Завдання: Протягом одного дня вимiрюйте час секундомiром при кожнiй повторюванiй дiї."
+      },
+      step2: {
+        title: "Централiзацiя даних (CRM/Base)",
+        desc: "Автоматизацiя не працює в хаосi. Вся iнформацiя про клiєнтiв та проєкти має бути в одному мiсцi. Забудьте про розрозненi Excel-файли.",
+        action: "Завдання: Оберiть один iнструмент, який стане \"серцем\" iнформацiї у вашiй компанiї."
+      },
+      step3: {
+        title: "Мапування сценарiїв \"Якщо-То\"",
+        desc: "Визначте чiткi правила. \"Якщо клiєнт заповнив форму, то автоматично створити запис у CRM i надiслати привiтання\".",
+        action: "Завдання: Намалюйте просту схему потоку iнформацiї для вашого найчастiшого процесу."
+      },
+      step4: {
+        title: "Впровадження AI для сервiсу та контенту",
+        desc: "Використовуйте мовнi моделi (GPT-4, Claude) для аналiзу запитiв та генерацiї чернеток. AI може працювати у фоновому режимi ваших автоматизацiй.",
+        action: "Завдання: Пiдключiть API OpenAI до своєї системи для автоматичного резюме листiв."
+      },
+      step5: {
+        title: "Тестування та усунення помилок",
+        desc: "Автоматизацiя - це безперервний процес. Першi 2 тижнi монiторте логи. Збирайте фiдбек вiд команди.",
+        action: "Завдання: Призначте одну людину в командi \"охоронцем\" автоматизацiї.",
+      },
+      footer_h3: "Хочете, щоб ми впровадили це за вас?",
+      footer_p: "Запишiться на безкоштовну консультацiю i перетворiть хаос на прибуткову систему.",
+      footer_cta: "Повернутися до nexus.dev",
+      print_btn: "Зберегти як PDF / Друкувати",
+      task_label: "Завдання:"
+    }
+  },
+
+  pricing: {
+    pl: {
+      h2: "Gotowe zestawy na start",
+      intro: "Nie wiesz, od czego zacząć? Wybierz pakiet dopasowany do Twojej sytuacji.",
+      badge: "NAJPOPULARNIEJSZY",
+      cta: "Wybieram ten pakiet",
+      pkg1: { name: "START Z GWARANCJĄ", price: "2 299 zł", old: "3 397 zł", f1: "Strona wizytówka filmowa", f2: "10 postów social media", f3: "Audyt procesów", f4: "1 automatyzacja" },
+      pkg2: { name: "SYSTEM LEADÓW", price: "2 999 zł", old: "4 497 zł", f1: "Landing page sprzedażowy", f2: "Meta Ads setup", f3: "Automatyzacja leadów", f4: "Dashboard leadów", f5: "5 rolek reklamowych" },
+      pkg3: { name: "PEŁNA AUTOMATYZACJA", price: "3 499 zł", old: "4 896 zł", f1: "2 automatyzacje procesów", f2: "Bot AI na stronę", f3: "Dashboard zarządzający", f4: "Szablon biznesowy Excel", f5: "1 miesiąc retainer" }
+    },
+    en: {
+      h2: "Ready-to-go startup kits",
+      intro: "Don't know where to start? Choose a package tailored to your situation.",
+      badge: "MOST POPULAR",
+      cta: "I choose this package",
+      pkg1: { name: "GUARANTEED START", price: "€550", old: "€790", f1: "Business website", f2: "10 social media posts", f3: "Process audit", f4: "1 automation" },
+      pkg2: { name: "LEAD SYSTEM", price: "€720", old: "€1050", f1: "Sales landing page", f2: "Meta Ads setup", f3: "Lead automation", f4: "Lead dashboard", f5: "5 ad reels" },
+      pkg3: { name: "FULL AUTOMATION", price: "€840", old: "€1150", f1: "2 process automations", f2: "AI website bot", f3: "Management dashboard", f4: "Excel business template", f5: "1 month retainer" }
+    },
+    ua: {
+      h2: "Готовi пакети на старт",
+      intro: "Не знаєте, з чого почати? Оберiть пакет, що пiдходить саме вам.",
+      badge: "НАЙПОПУЛЯРНІШИЙ",
+      cta: "Обираю цей пакет",
+      pkg1: { name: "ГАРАНТОВАНИЙ СТАРТ", price: "450 €", old: "680 €", f1: "Бiзнес-сайт", f2: "10 постiв у соцмережах", f3: "Аудит процесiв", f4: "1 автоматизацiя" },
+      pkg2: { name: "СИСТЕМА ЛIДIВ", price: "590 €", old: "880 €", f1: "Продажовий лендiнг", f2: "Meta Ads setup", f3: "Автоматизацiя лiдiв", f4: "Дашборд лiдiв", f5: "5 рекламних рiлсiв" },
+      pkg3: { name: "ПОВНА АВТОМАТИЗАЦIЯ", price: "690 €", old: "940 €", f1: "2 автоматизацiї процесiв", f2: "AI-бот на сайт", f3: "Управлiнський дашборд", f4: "Бiзнес-шаблон Excel", f5: "1 мiсяць супроводу" }
     }
   },
 
@@ -574,44 +796,6 @@ const translations = {
           ]
         }
       ]
-    }
-  },
-  footerCta: {
-    pl: { h2: "Jeden brief może zmienić to, jak prowadzisz firmę.", subtitle: "Opisz swoją sytuację, a ja powiem Ci, co bym z tym zrobiła. Zero zobowiązań.", cta: "Wyceń swój brief" },
-    en: { h2: "One brief can change how you run your business.", subtitle: "Describe your situation and I'll tell you what I'd do about it. Zero obligations.", cta: "Get a Free Quote" },
-    ua: { h2: "Один бриф може змiнити те, як ви ведете бiзнес.", subtitle: "Опишiть свою ситуацiю - я скажу, що б зробила. Жодних зобов'язань.", cta: "Отримати безкоштовну оцiнку" }
-  },
-  footer: {
-    pl: { copyright: "2026 nexus.dev - Wszystkie prawa zastrzeżone.", links: { privacy: "Polityka prywatności", terms: "Regulamin" } },
-    en: { copyright: "2026 nexus.dev - All rights reserved.", links: { privacy: "Privacy Policy", terms: "Terms & Conditions" } },
-    ua: { copyright: "2026 nexus.dev - Усi права захищенi.", links: { privacy: "Полiтика конфiденцiйностi", terms: "Умови використання" } },
-    tagline: {
-      pl: "Zamieniamy chaos w system, który zarabia.",
-      en: "Turning chaos into a system that earns.",
-      ua: "Перетворюємо хаос на систему, яка заробляє."
-    }
-  },
-  leadMagnet: {
-    pl: {
-      badge: "Darmowy zasób",
-      h2: "Pobierz Checklistę: 5 Kroków do Automatyzacji Twojej Firmy",
-      desc: "Dowiedz się, od czego zacząć wdrażanie AI i automatyzacji, aby odzyskać nawet 15 godzin tygodniowo. Konkretne narzędzia i procesy.",
-      cta: "Odbierz checklistę",
-      success: "Sukces! Za chwilę zostaniesz przekierowany do swojej checklisty..."
-    },
-    en: {
-      badge: "Free Resource",
-      h2: "Download Checklist: 5 Steps to Automate Your Business",
-      desc: "Learn where to start with AI and automation to reclaim up to 15 hours per week. Concrete tools and processes.",
-      cta: "Get the checklist",
-      success: "Success! You will be redirected to your checklist in a moment..."
-    },
-    ua: {
-      badge: "Безкоштовний ресурс",
-      h2: "Завантажте чек-лист: 5 крокiв до автоматизацiї вашого бiзнесу",
-      desc: "Дiзнайтеся, з чого почати впровадження AI та автоматизацiї, щоб повернути до 15 годин на тиждень.",
-      cta: "Отримати чек-лист",
-      success: "Успіх! Прямо зараз ви будете перенаправлені до свого чек-листа..."
     }
   },
   portfolioPage: {
@@ -830,6 +1014,25 @@ const translations = {
         }
       }
     ]
+  },
+
+  footerCta: {
+    pl: {
+      h2: "Jeden brief może zmienić to, jak prowadzicie firmę.",
+      subtitle: "Opiszcie swoją sytuację, a my powiemy Wam, co byśmy z tym zrobili. Zero zobowiązań.",
+      cta: "Wyceńcie swój brief"
+    },
+    en: {
+      h2: "One brief can change how you run your business.",
+      subtitle: "Describe your situation, and we'll tell you what we'd do. Zero commitments.",
+      cta: "Get a Free Quote"
+    },
+    ua: {
+      h2: "Один бриф може змiнити те, як ви ведете бiзнес.",
+      subtitle: "Опишiть свою ситуацiю, i ми скажемо, що б ми зробили. Нiяких зобов'язань.",
+      cta: "Оцiнити проєкт"
+    }
   }
 };
+
 

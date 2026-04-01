@@ -75,13 +75,14 @@ function initCookieConsent(lang) {
     }
   }
 
+  updateBannerUI(lang);
+  injectSettingsModal(lang);
+
   if (consent !== null) {
     banner.style.display = 'none';
     return;
   }
 
-  updateBannerUI(lang);
-  injectSettingsModal(lang);
   setTimeout(() => banner.classList.add('show'), 800);
 }
 
@@ -104,11 +105,10 @@ function updateBannerUI(lang) {
 }
 
 function injectSettingsModal(lang) {
-  if (document.getElementById('cookieModal')) return;
   const t = cookieTexts[lang]?.modal || cookieTexts.pl.modal;
+  let modal = document.getElementById('cookieModal');
   
   const modalHTML = `
-    <div id="cookieModal" class="cookie-modal-overlay">
       <div class="cookie-modal">
         <h3>${t.title}</h3>
         <p>${t.desc}</p>
@@ -153,9 +153,17 @@ function injectSettingsModal(lang) {
           <button class="btn btn-primary" onclick="setCookieConsent(true)">${t.acceptAll}</button>
         </div>
       </div>
-    </div>
   `;
-  document.body.insertAdjacentHTML('beforeend', modalHTML);
+
+  if (modal) {
+    modal.innerHTML = modalHTML;
+  } else {
+    modal = document.createElement('div');
+    modal.id = 'cookieModal';
+    modal.className = 'cookie-modal-overlay';
+    modal.innerHTML = modalHTML;
+    document.body.appendChild(modal);
+  }
 }
 
 function showCookieSettings() {
@@ -209,7 +217,9 @@ function hasConsent(category) {
   }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-  const lang = localStorage.getItem('nexus-lang') || 'pl';
-  initCookieConsent(lang);
-});
+// Expose to window for HTML onclick handlers
+window.initCookieConsent = initCookieConsent;
+window.showCookieSettings = showCookieSettings;
+window.saveGranularConsent = saveGranularConsent;
+window.setCookieConsent = setCookieConsent;
+window.hasConsent = hasConsent;
