@@ -136,7 +136,8 @@ function renderDynamicContent(lang) {
         { name: 'Portfolio', fn: renderPortfolioGrid },
         { name: 'Services', fn: renderServicesCatalog },
         { name: 'Pricing', fn: updatePricing },
-        { name: 'LeadMagnet', fn: renderLeadMagnetChecklist }
+        { name: 'LeadMagnet', fn: renderLeadMagnetChecklist },
+        { name: 'ContactForm', fn: renderContactForm }
     ];
 
     renderSteps.forEach(step => {
@@ -477,7 +478,36 @@ function closeNav() {
     if (mobileToggle) mobileToggle.classList.remove('active');
 }
 
+function renderContactForm(lang) {
+    const data = translations.contact?.[lang]?.form;
+    if (!data) return;
+
+    const setOptions = (id, options) => {
+        const el = document.getElementById(id);
+        if (el && options) {
+            el.innerHTML = options.map(opt => `<option value="${opt}">${opt}</option>`).join('');
+        }
+    };
+
+    setOptions('industry', data.industry_options);
+    setOptions('teamSize', data.team_size_options);
+    setOptions('budget', data.budget_options);
+    setOptions('timeline', data.timeline_options);
+    setOptions('source', data.source_options);
+
+    const checkContainer = document.getElementById('servicesCheckboxes');
+    if (checkContainer && data.services_checkboxes) {
+        checkContainer.innerHTML = data.services_checkboxes.map(svc => `
+            <label class="checkbox-item">
+                <input type="checkbox" name="services[]" value="${svc}">
+                <span>${svc}</span>
+            </label>
+        `).join('');
+    }
+}
+
 // Expose to window for HTML onclick handlers
 window.selectPackage = selectPackage;
 window.closeNav = closeNav;
 window.setLanguage = setLanguage;
+window.renderContactForm = renderContactForm;

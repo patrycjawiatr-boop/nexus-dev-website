@@ -5,9 +5,9 @@ export const home = {
       h1_line1: "Zamieniamy chaos",
       h1_line2: "w Twojej firmie",
       h1_highlight: "w system, który zarabia.",
-      subtitle: "Poukładamy Ci ofertę, sprzedaż, obsługę klienta i liczby — abyś przestał gasić pożary i zaczął budować.",
+      subtitle: "Poukładam Ci ofertę, sprzedaż, obsługę klienta i liczby — abyś przestał gasić pożary i zaczął budować.",
       cta_primary: "Wyceń swój brief",
-      cta_secondary: "Zobacz, jak pracujemy"
+      cta_secondary: "Zobacz, jak pracuję"
     },
     en: {
       badge: "For businesses ready to get organized",
@@ -272,8 +272,8 @@ export const home = {
         "Працюємо модульно. Обираємо те, що зараз потрiбно. Завжди: конкретно, по-людськи."
       ],
       team: [
-        { name: "Патріція Дук", role: "Бiзнес-стратег", bio: "Дизайнерка систем i процесiв. Допомагаємо компанiям перейти вiд хаосу до порядку." },
-        { name: "Павло Дук", role: "Lead Developer", bio: "Спецiалiст з технiчних впроваджень та AI-автоматизацiї." }
+        { name: "Patrycja Duk", role: "Бiзнес-стратег", bio: "Дизайнерка систем i процесiв. Допомагаємо компанiям перейти вiд хаосу до порядку." },
+        { name: "Paweł Duk", role: "Lead Developer", bio: "Спецiалiст з технiчних впроваджень та AI-автоматизацiї." }
       ],
       values_title: "Нашi принципи",
       values: [

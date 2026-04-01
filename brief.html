@@ -113,13 +113,8 @@
       <div class="contact-grid">
         <!-- Left: Info -->
         <div class="contact-info reveal">
-          <p style="font-weight:600; color:var(--text-primary); margin-bottom:12px;" data-i18n="contact.steps_title">Co się stanie po wysłaniu briefu:</p>
-          <ol class="contact-steps" id="contactSteps">
-            <!-- Filled by JS -->
-          </ol>
-
           <div class="contact-details" id="contactDetails">
-            <!-- Filled by JS -->
+            <!-- Optional details -->
           </div>
 
           <div style="margin-top:32px; padding:20px; background:var(--bg-card); border-radius:var(--radius-md); border:1px solid var(--border);">
@@ -146,22 +141,22 @@
             <div class="form-row">
               <div class="form-group">
                 <label data-i18n="contact.form.name" for="name">Imię i nazwisko *</label>
-                <input type="text" id="name" name="name" required placeholder="Jan Kowalski">
+                <input type="text" id="name" name="name" required placeholder="Jan Kowalski" data-i18n="contact.form.name_placeholder">
               </div>
               <div class="form-group">
                 <label data-i18n="contact.form.email" for="email">Email *</label>
-                <input type="email" id="email" name="email" required placeholder="jan@firma.pl">
+                <input type="email" id="email" name="email" required placeholder="jan@firma.pl" data-i18n="contact.form.email_placeholder">
               </div>
             </div>
 
             <div class="form-row">
               <div class="form-group">
                 <label data-i18n="contact.form.company" for="company">Nazwa firmy</label>
-                <input type="text" id="company" name="company" placeholder="Opcjonalnie">
+                <input type="text" id="company" name="company" placeholder="Opcjonalnie" data-i18n="contact.form.optional_placeholder">
               </div>
               <div class="form-group">
                 <label data-i18n="contact.form.phone" for="phone">Telefon</label>
-                <input type="tel" id="phone" name="phone" placeholder="Opcjonalnie">
+                <input type="tel" id="phone" name="phone" placeholder="Opcjonalnie" data-i18n="contact.form.optional_placeholder">
               </div>
             </div>
 
@@ -185,7 +180,7 @@
 
             <div class="form-group">
               <label data-i18n="contact.form.website" for="website">Adres obecnej strony (jeśli masz)</label>
-              <input type="url" id="website" name="website" placeholder="https://twojastrona.pl">
+              <input type="url" id="website" name="website" placeholder="https://twojastrona.pl" data-i18n="contact.form.website_placeholder">
             </div>
 
             <!-- Section: Potrzeby -->
@@ -218,7 +213,7 @@
 
             <div class="form-group">
               <label data-i18n="contact.form.message" for="message">Opisz krótko swoją sytuację — co Cię boli, czego szukasz? *</label>
-              <textarea id="message" name="message" required placeholder="Np. Mamy stronę, ale nie generuje leadów. Chcielibyśmy ułożyć ofertę i zautomatyzować pozyskiwanie klientów..."></textarea>
+              <textarea id="message" name="message" required placeholder="Np. Mamy stronę, ale nie generuje leadów. Chcielibyśmy ułożyć ofertę i zautomatyzować pozyskiwanie klientów..." data-i18n="contact.form.message_placeholder"></textarea>
             </div>
 
             <div class="form-group">

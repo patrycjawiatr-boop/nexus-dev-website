@@ -46,9 +46,14 @@ export const common = {
         message: "Opisz krótko swoją sytuację — co Cię boli, czego szukasz? *",
         source: "Skąd o nas wiesz?",
         source_options: ["Wybierz...", "Google", "Social media", "Polecenie", "Inne"],
-        submit: "Wyślij brief i otrzymaj wycenę", success: "Dziękujemy! Odezwiemy się w ciągu 24h z wyceną."
+        submit: "Wyślij brief i otrzymaj wycenę", success: "Dziękujemy! Odezwiemy się w ciągu 24h z wyceną.",
+        name_placeholder: "Jan Kowalski",
+        email_placeholder: "jan@firma.pl",
+        optional_placeholder: "Opcjonalnie",
+        website_placeholder: "https://twojastrona.pl",
+        message_placeholder: "Np. Mamy stronę, ale nie generuje leadów. Chcielibyśmy ułożyć ofertę i zautomatyzować pozyskiwanie klientów..."
       },
-      alt_cta: "Wolicie po prostu napisać?", alt_desc: "Wyślijcie maila na nextlevelaipoland@gmail.com z krótkim opisem sytuacji.",
+      alt_cta: "Wolisz po prostu napisać?", alt_desc: "Wyślij maila na nextlevelaipoland@gmail.com z krótkim opisem sytuacji.",
       info: { email: "nextlevelaipoland@gmail.com", location: "Zdalnie, cała Polska i nie tylko", response: "Czas odpowiedzi: do 24h" }
     },
     en: {
@@ -78,17 +83,52 @@ export const common = {
         message: "Briefly describe your situation — what hurts, what are you looking for? *",
         source: "How did you find us?",
         source_options: ["Select...", "Google", "Social media", "Referral", "Other"],
-        submit: "Send Brief & Get a Quote", success: "Thank you! We'll get back to you within 24h with a quote."
+        submit: "Send Brief & Get a Quote", success: "Thank you! We'll get back to you within 24h with a quote.",
+        name_placeholder: "John Smith",
+        email_placeholder: "john@company.com",
+        optional_placeholder: "Optional",
+        website_placeholder: "https://yourwebsite.com",
+        message_placeholder: "e.g. We have a website but it generates no leads. We'd like to fix the offer..."
       },
       alt_cta: "Prefer to just write?", alt_desc: "Send an email to nextlevelaipoland@gmail.com with a brief description.",
       info: { email: "nextlevelaipoland@gmail.com", location: "Remote, worldwide", response: "Response time: under 24h" }
     },
     ua: {
       h2: "Оцiнiть свiй проєкт — заповнiть бриф",
-      intro: "Заповнiть короткий бриф, i ми пiдготуємо для вас iндивiдуальну оцiнку.",
+      intro: "Заповнiть короткий бриф, i ми пiдготуємо для вас iндивiдуальну оцiнку. Чим бiльше ви напишете, тим точнiшу пропозицiю отримаєте.",
+      steps_title: "Що станеться пiсля надсилання брифу:",
+      steps: ["Ви отримаєте пiдтвердження на e-mail протягом 5 хвилин.", "Ми зв'яжемося з вами протягом 24 годин з iндивiдуальною оцiнкою.", "Узгодимо деталi — через e-mail, вiдео-зв'язок або по телефону.", "Ви отримаєте пропозицiю — без сюрпризiв."],
       form: {
-        submit: "Надiслати бриф", success: "Дякуємо! Ми зв'яжемося з вами протягом 24 годин."
-      }
+        header: "📋 Проєктний бриф",
+        header_desc: "Чим бiльше ви заповните, тим точнiшу оцiнку отримаєте.",
+        section_contact: "👤 Контактнi данi",
+        section_business: "🏢 Про вашу компанiю",
+        section_needs: "🎯 Що вам потрiбно?",
+        section_details: "💬 Деталi",
+        name: "Iм'я та прiзвище *", email: "Email *", company: "Назва компанiї", phone: "Телефон",
+        industry: "Галузь",
+        industry_options: ["Оберiть галузь...", "IT / Software", "Маркетинг / Агентство", "Локальнi послуги", "E-commerce", "Консалтинг", "Фрiланс", "Гастрономiя / HoReCa", "Здоров'я / Краса", "Будiвництво / Ремонт", "Iнша"],
+        team_size: "Розмiр команди",
+        team_size_options: ["Оберiть...", "1 особа (фрiлансер)", "2-5 осiб", "6-15 осiб", "16-50 осiб", "понад 50 осiб"],
+        website: "Адреса поточного сайту (якщо є)",
+        services_label: "Оберiть, що вас цiкавить (можна декiлька):",
+        services_checkboxes: ["Стратегiя пропозицiї", "Процес продажу", "Процес обслуговування", "Сайт / Landing", "Автоматизацiї / AI", "Дашборд / Цифри", "Рекламнi кампанiї", "Social media", "Чат-бот AI", "Не знаємо — потрiбна дiагностика"],
+        budget: "Орiєнтовний бюджет",
+        budget_options: ["Оберiть дiапазон...", "до 1 000 zł", "1 000 - 3 000 zł", "3 000 - 5 000 zł", "5 000 - 10 000 zł", "понад 10 000 zł"],
+        timeline: "Коли ви хочете розпочати?",
+        timeline_options: ["Оберiть...", "Якнайшвидше", "Протягом 2 тижнiв", "Протягом мiсяця", "Через 1-3 мiсяцi", "Ще не знаємо"],
+        message: "Коротко опишiть вашу ситуацiю — що вас турбує, що ви шукаєте? *",
+        source: "Звiдки ви про нас дiзналися?",
+        source_options: ["Оберiть...", "Google", "Соцмережi", "Рекомендацiя", "Iнше"],
+        submit: "Надiслати бриф та отримати оцiнку", success: "Дякуємо! Ми зв'яжемося з вами протягом 24 годин з оцiнкою.",
+        name_placeholder: "Iван Ковальчук",
+        email_placeholder: "ivan@firma.ua",
+        optional_placeholder: "Необов'язково",
+        website_placeholder: "https://vashsite.ua",
+        message_placeholder: "Напр. У нас є сайт, але вiн не генерує лiди. Ми хотiли б впорядкувати пропозицiю..."
+      },
+      alt_cta: "Бажаєте просто написати?", alt_desc: "Надiшлiть e-mail на nextlevelaipoland@gmail.com з коротким описом ситуацiї.",
+      info: { email: "nextlevelaipoland@gmail.com", location: "Дистанцiйно, весь свiт", response: "Час вiдповiдi: до 24 годин" }
     }
   },
   leadMagnet: {
