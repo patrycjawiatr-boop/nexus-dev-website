@@ -31,10 +31,12 @@ function initApp() {
     // Mobile Menu Toggle
     const mobileToggle = document.getElementById('mobileToggle');
     const navRight = document.querySelector('.nav-right');
-    if (mobileToggle && navRight) {
+    const navContainer = document.getElementById('navbar');
+    if (mobileToggle && navContainer) {
         mobileToggle.addEventListener('click', () => {
-            navRight.classList.toggle('active');
+            navContainer.classList.toggle('nav-active');
             mobileToggle.classList.toggle('active');
+            if (navRight) navRight.classList.toggle('active');
         });
     }
 
@@ -362,7 +364,7 @@ function renderPortfolioGrid(lang) {
                         </div>
                     `}
                 </div>
-                <a href="brief.html" class="btn btn-secondary btn-arrow">Wyceń podobny projekt</a>
+                <a href="brief.html" class="btn btn-secondary btn-arrow">${translations.ui?.[lang]?.portfolioCta || 'Wyceń podobny projekt'}</a>
             </div>
         </div>
     `).join('');

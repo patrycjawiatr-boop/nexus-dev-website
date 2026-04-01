@@ -131,7 +131,8 @@ export const common = {
       teamSize: "Wielkość zespołu",
       challenge: "Wyzwanie",
       solution: "Rozwiązanie",
-      result: "Wynik"
+      result: "Wynik",
+      portfolioCta: "Wyceń podobny projekt"
     },
     en: {
       addToBrief: "Add to brief +",
@@ -140,7 +141,8 @@ export const common = {
       teamSize: "Team size",
       challenge: "Challenge",
       solution: "Solution",
-      result: "Result"
+      result: "Result",
+      portfolioCta: "Get a quote for a similar project"
     },
     ua: {
       addToBrief: "Додати до брифу +",
@@ -149,7 +151,8 @@ export const common = {
       teamSize: "Розмiр команди",
       challenge: "Виклик",
       solution: "Рiшення",
-      result: "Результат"
+      result: "Результат",
+      portfolioCta: "Оцiнити подiбний проєкт"
     }
   },
   footerCta: {

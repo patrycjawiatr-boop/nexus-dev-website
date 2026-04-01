@@ -4,6 +4,8 @@ export const services = {
       h2: "Pełna lista usług — od A do Z",
       intro: "Nie mamy jednego pakietu dla wszystkich. Poniżej znajdziesz pełną listę modułów — dobieramy je do tego, co w Twojej firmie naprawdę wymaga naprawy.",
       cta: "Wyceń swój projekt →",
+      bottomTitle: "Nie wiesz, od czego zacząć?",
+      bottomDesc: "Opisz swoją sytuację, a przygotujemy indywidualną propozycję.",
       categories: [
         {
           name: "🎯 Strategia i oferta",
@@ -58,6 +60,8 @@ export const services = {
       h2: "Full Service List — A to Z",
       intro: "We don't have one-size-fits-all packages. Below you'll find our complete module list — we match them to what actually needs fixing in your business.",
       cta: "Get a Quote →",
+      bottomTitle: "Don't know where to start?",
+      bottomDesc: "Describe your situation, and we'll prepare a custom proposal.",
       categories: [
         {
           name: "🎯 Strategy & Offer",
@@ -81,6 +85,8 @@ export const services = {
       h2: "Повний список послуг — вiд А до Я",
       intro: "У нас немає один-пакет-на-всiх. Нижче ви знайдете повний список модулiв.",
       cta: "Оцiнити проєкт →",
+      bottomTitle: "Не знаєте, з чого почати?",
+      bottomDesc: "Опишiть свою ситуацiю, i ми пiдготуємо iндивiдуальну пропозицiю.",
       categories: [
         {
           name: "🎯 Стратегiя i пропозицiя",
