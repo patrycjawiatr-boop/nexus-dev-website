@@ -56,6 +56,12 @@ function initApp() {
     // Force immediate loader removal
     hideLoader();
     
+    // Parallax Effect
+    initHeroParallax();
+    
+    // Particles System
+    initParticles();
+
     // Backup loader removal
     setTimeout(hideLoader, 1000);
 }
@@ -381,19 +387,25 @@ function renderServicesCatalog(lang) {
         <div class="service-category reveal">
             <h2 class="category-title">${cat.name}</h2>
             <div class="service-modules-grid">
-                ${cat.modules.map(mod => `
+                ${cat.modules.map(mod => {
+                    const isEntry = mod.title.includes('(');
+                    const cleanTitle = isEntry ? mod.title.split('(')[0].trim() : mod.title;
+                    const badgeText = isEntry ? mod.title.match(/\(([^)]+)\)/)[1] : '';
+                    
+                    return `
                     <div class="service-module-card">
+                        ${isEntry ? `<div class="module-badge">${badgeText}</div>` : ''}
                         <div class="module-header">
-                            <h4>${mod.title}</h4>
+                            <h4>${cleanTitle}</h4>
                             <div class="module-price">${mod.price}</div>
                         </div>
                         <p>${mod.desc}</p>
                         <div class="module-footer">
                             <span class="module-time">⏱ ${mod.time}</span>
-                            <a href="brief.html" class="btn-text" onclick="addToBrief('${mod.title}')">${translations.ui?.[lang]?.addToBrief || 'Dodaj do briefu +'}</a>
+                            <a href="brief.html" class="btn-text" onclick="addToBrief('${cleanTitle}')">${translations.ui?.[lang]?.addToBrief || 'Dodaj do briefu +'}</a>
                         </div>
                     </div>
-                `).join('')}
+                `}).join('')}
             </div>
         </div>
     `).join('');
@@ -511,3 +523,81 @@ window.selectPackage = selectPackage;
 window.closeNav = closeNav;
 window.setLanguage = setLanguage;
 window.renderContactForm = renderContactForm;
+
+// ── PARALLAX EFFECT ───────────────────────────────────────
+
+function initHeroParallax() {
+    const hero = document.getElementById('hero');
+    if (!hero) return;
+
+    const layers = [
+        { el: '.l1', strength: 20 },
+        { el: '.l2', strength: -35 },
+        { el: '.l3', strength: 15 },
+        { el: '.l4', strength: 45 },
+        { el: '.l5', strength: 25 },
+        { el: '.l6', strength: -30 },
+        { el: '.l7', strength: 20 }
+    ];
+
+    hero.addEventListener('mousemove', (e) => {
+        const { clientX, clientY } = e;
+        const centerX = window.innerWidth / 2;
+        const centerY = window.innerHeight / 2;
+
+        const moveX = (clientX - centerX) / centerX;
+        const moveY = (clientY - centerY) / centerY;
+
+        layers.forEach(layer => {
+            const elements = document.querySelectorAll(layer.el);
+            elements.forEach(el => {
+                const x = moveX * layer.strength;
+                const y = moveY * layer.strength;
+                
+                el.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+                el.style.transition = 'transform 0.4s cubic-bezier(0.23, 1, 0.32, 1)';
+            });
+        });
+    });
+}
+
+// ── PARTICLES SYSTEM ──────────────────────────────────────
+
+function initParticles() {
+    const container = document.getElementById('particlesContainer');
+    if (!container) return;
+
+    const particleCount = window.innerWidth < 768 ? 30 : 60;
+    const particles = [];
+
+    // Create particles
+    for (let i = 0; i < particleCount; i++) {
+        const p = document.createElement('div');
+        const isAccent = Math.random() > 0.8;
+        p.className = `particle ${isAccent ? 'accent' : ''}`;
+        
+        const size = Math.random() * 2 + 1;
+        const x = Math.random() * 100;
+        const y = Math.random() * 300; // Spread over multiple viewports
+        const speed = Math.random() * 0.5 + 0.1; // Parallax speed factor
+
+        p.style.width = `${size}px`;
+        p.style.height = `${size}px`;
+        p.style.left = `${x}vw`;
+        p.style.top = `${y}vh`;
+        
+        container.appendChild(p);
+        particles.push({ el: p, y, speed });
+    }
+
+    // Scroll Animation
+    window.addEventListener('scroll', () => {
+        const scrolled = window.scrollY;
+        
+        particles.forEach(p => {
+            // Apply parallax move relative to scroll
+            const yOffset = scrolled * p.speed;
+            p.el.style.transform = `translate3d(0, ${-yOffset}px, 0)`;
+        });
+    }, { passive: true });
+}

@@ -53,6 +53,16 @@ export const services = {
             { title: "Content pack startowy", desc: "10 gotowych rolek/postów, content plan na 30 dni, szablony Canva, instrukcja publikacji.", time: "3 dni", price: "499 zł" },
             { title: "Prowadzenie social media (14 dni test)", desc: "20 postów + 10 rolek + 20 Stories, content calendar, A/B testy, statystyki.", time: "14 dni", price: "999 zł" }
           ]
+        },
+        {
+          name: "🔍 SEO i Widoczność",
+          modules: [
+            { title: "Audyt SEO (Produkt wejściowy)", desc: "Technika, treści, indeksacja, błędy, konkurencja i rekomendacje wdrożeniowe.", time: "2-3 dni", price: "399-599 zł" },
+            { title: "Optymalizacja strony", desc: "Poprawa meta tagów, nagłówków, szybkości, linkowania wewnętrznego i wersji mobilnej.", time: "3-5 dni", price: "od 699 zł" },
+            { title: "Content SEO", desc: "Nowe podstrony usługowe, opisy ofert, artykuły blogowe i sekcje FAQ pod frazy sprzedażowe.", time: "3-7 dni", price: "od 499 zł" },
+            { title: "SEO lokalne", desc: "Optymalizacja pod Mapy Google i lokalne frazy (Region/Miasto).", time: "3-5 dni", price: "od 599 zł" },
+            { title: "Stała opieka miesięczna", desc: "Raporty, monitoring fraz, drobne poprawki, link building i rozwój treści.", time: "30 dni", price: "od 999 zł/mc" }
+          ]
         }
       ]
     },
@@ -77,6 +87,16 @@ export const services = {
             { title: "Sales Process", desc: "We design the path from 'lead reached out' to 'deal signed' — with follow-ups, qualification, and pipeline.", time: "5-7 days", price: "from €235" },
             { title: "Delivery Process", desc: "We define what happens after the sale: who does what, when, with which tool. No more chaos.", time: "5-10 days", price: "from €305" },
             { title: "Process Automation", desc: "We automate repetitive tasks — emails, follow-ups, reporting, data sync. Save 5-15h/week.", time: "3-7 days", price: "from €165" }
+          ]
+        },
+        {
+          name: "🔍 SEO & Visibility",
+          modules: [
+            { title: "SEO Audit (Entry Product)", desc: "Technical, content, indexing, errors, competition, and implementation recommendations.", time: "2-3 days", price: "€95-140" },
+            { title: "On-page Optimization", desc: "Improving meta tags, headers, speed, internal linking, and mobile version.", time: "3-5 days", price: "from €160" },
+            { title: "Content SEO", desc: "New service pages, offer descriptions, blog articles, and FAQ sections.", time: "3-7 days", price: "from €115" },
+            { title: "Local SEO", desc: "Optimization for Google Maps and local phrases (Region/City).", time: "3-5 days", price: "from €140" },
+            { title: "Monthly SEO Care", desc: "Reports, phrase monitoring, small fixes, link building, and content development.", time: "30 days", price: "from €235/mo" }
           ]
         }
       ]
@@ -111,7 +131,17 @@ export const services = {
         {
           name: "🤖 AI i автоматизацiя",
           modules: [
-            { title: "Чат-бот на сайт", desc: "AI-бот для цiлодобової роботи з клiєнтами.", time: "5-10 днiв", price: "вiд 300 €" }
+            { title: "Чат-бот na сайт", desc: "AI-бот dla цілодобової роботи з клієнтами.", time: "5-10 днів", price: "від 300 €" }
+          ]
+        },
+        {
+          name: "🔍 SEO та просування",
+          modules: [
+            { title: "SEO-аудит (Вхiдний продукт)", desc: "Технiка, контент, iндексацiя, помилки, конкуренцiя та рекомендацiї.", time: "2-3 днi", price: "95-140 €" },
+            { title: "Оптимiзацiя сайту", desc: "Покращення мета-тегiв, заголовкiв, швидкостi та мобiльної версiї.", time: "3-5 днiв", price: "вiд 160 €" },
+            { title: "Конtent SEO", desc: "Новi сторiнки послуг, описи пропозицiй, блог-статтi та FAQ.", time: "3-7 днiв", price: "вiд 115 €" },
+            { title: "Локальне SEO", desc: "Оптимізація під Google Карти та локальні запити (регіон/місто).", time: "3-5 днiв", price: "вiд 140 €" },
+            { title: "Щомiсячна пiдтримка", desc: "Звiти, монiторинг фраз, дрiбнi виправлення та розвиток контенту.", time: "30 днiв", price: "вiд 235 €/міс" }
           ]
         }
       ]

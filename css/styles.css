@@ -2478,3 +2478,81 @@ html[lang="uk"] .hero-subtitle {
   font-size: 0.95rem;
   line-height: 1.6;
 }
+
+/* --- PREMIUM SERVICE CARD MODS --- */
+.service-module-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  transition: all 0.4s var(--ease-out);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+}
+
+.service-module-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--border-accent);
+  background: var(--bg-card-hover);
+  box-shadow: 0 12px 40px var(--accent-glow);
+}
+
+.module-badge {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--accent);
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-bottom-left-radius: var(--radius-sm);
+  letter-spacing: 0.1em;
+  box-shadow: 0 4px 15px var(--accent-glow-strong);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* --- PARALLAX LAYERS --- */
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  will-change: transform;
+}
+
+/* --- NEXUS PARTICLE DUST --- */
+#particlesContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.4);
+  will-change: transform;
+}
+
+.particle.accent {
+  background: var(--accent-light);
+  box-shadow: 0 0 12px var(--accent-glow-strong);
+}
+
