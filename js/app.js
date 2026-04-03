@@ -571,7 +571,7 @@ function initParticles() {
     const container = document.getElementById('particlesContainer');
     if (!container) return;
 
-    const particleCount = window.innerWidth < 768 ? 30 : 60;
+    const particleCount = window.innerWidth < 768 ? 50 : 150;
     const particles = [];
 
     // Create particles
@@ -580,9 +580,9 @@ function initParticles() {
         const isAccent = Math.random() > 0.8;
         p.className = `particle ${isAccent ? 'accent' : ''}`;
         
-        const size = Math.random() * 2 + 1;
+        const size = Math.random() * 1.5 + 0.5; // Smaller, more delicate particles
         const x = Math.random() * 100;
-        const y = Math.random() * 300; // Spread over multiple viewports
+        const y = Math.random() * 400; // Spread over multiple viewports
         const speed = Math.random() * 0.5 + 0.1; // Parallax speed factor
 
         p.style.width = `${size}px`;
@@ -631,11 +631,11 @@ function initVantaClouds() {
                 minHeight: 200.00,
                 minWidth: 200.00,
                 backgroundColor: 0x050507,
-                skyColor: 0x010103,
-                cloudColor: 0x4d5ea6,
+                skyColor: 0x000005,
+                cloudColor: 0x5a6bc2,
                 cloudShadowColor: 0x000000,
-                sunColor: 0x6e36d4,
-                sunGlareColor: 0x22368c,
+                sunColor: 0x8a45f9,
+                sunGlareColor: 0x1d2d8c,
                 sunlightColor: 0x00ffff,
                 speed: 0.8
             });
