@@ -62,6 +62,9 @@ function initApp() {
     // Vanta Realistic Clouds
     initVantaClouds();
 
+    // Stars Particles System
+    initParticles();
+
 
     // Backup loader removal
     setTimeout(hideLoader, 1000);
@@ -628,12 +631,12 @@ function initVantaClouds() {
                 minHeight: 200.00,
                 minWidth: 200.00,
                 backgroundColor: 0x050507,
-                skyColor: 0x08080f,
-                cloudColor: 0x3d3d5c,
-                cloudShadowColor: 0x05050a,
-                sunColor: 0x8e82fa,
-                sunGlareColor: 0x2a2a35,
-                sunlightColor: 0x8e82fa,
+                skyColor: 0x010103,
+                cloudColor: 0x4d5ea6,
+                cloudShadowColor: 0x000000,
+                sunColor: 0x6e36d4,
+                sunGlareColor: 0x22368c,
+                sunlightColor: 0x00ffff,
                 speed: 0.8
             });
             console.log("Vanta initialized successfully!");
