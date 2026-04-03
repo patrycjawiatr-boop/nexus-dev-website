@@ -5,9 +5,9 @@ export const home = {
       h1_line1: "Zamieniamy chaos",
       h1_line2: "w Twojej firmie",
       h1_highlight: "w system, który zarabia.",
-      subtitle: "Poukładam Ci ofertę, sprzedaż, obsługę klienta i liczby — abyś przestał gasić pożary i zaczął budować.",
+      subtitle: "Poukładamy Ci ofertę, sprzedaż, obsługę klienta i liczby — abyś przestał gasić pożary i zaczął budować.",
       cta_primary: "Wyceń swój brief",
-      cta_secondary: "Zobacz, jak pracuję"
+      cta_secondary: "Zobacz, jak pracujemy"
     },
     en: {
       badge: "For businesses ready to get organized",

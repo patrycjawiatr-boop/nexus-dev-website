@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>About Us | EternaCloud</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-error": "#490013",
+              "surface-variant": "#262626",
+              "surface": "#0e0e0e",
+              "on-tertiary-container": "#19001e",
+              "surface-container-lowest": "#000000",
+              "secondary-fixed": "#65e1ff",
+              "primary-fixed-dim": "#a27cff",
+              "secondary-container": "#00687a",
+              "error": "#ff6e84",
+              "on-primary-container": "#2b006e",
+              "inverse-on-surface": "#565554",
+              "tertiary-fixed-dim": "#ef6eff",
+              "on-secondary-fixed": "#003a45",
+              "background": "#0e0e0e",
+              "on-surface": "#ffffff",
+              "on-surface-variant": "#adaaaa",
+              "inverse-primary": "#6e3bd7",
+              "primary-dim": "#8455ef",
+              "on-error-container": "#ffb2b9",
+              "surface-tint": "#ba9eff",
+              "on-tertiary-fixed": "#300038",
+              "on-tertiary-fixed-variant": "#660075",
+              "tertiary-container": "#de4bf4",
+              "on-secondary": "#004b58",
+              "primary-fixed": "#ae8dff",
+              "primary-container": "#ae8dff",
+              "secondary-fixed-dim": "#48d4f3",
+              "surface-dim": "#0e0e0e",
+              "tertiary-fixed": "#f487ff",
+              "surface-container-highest": "#262626",
+              "on-background": "#ffffff",
+              "on-secondary-container": "#ecfaff",
+              "surface-container-high": "#201f1f",
+              "error-container": "#a70138",
+              "secondary": "#53ddfc",
+              "surface-bright": "#2c2c2c",
+              "outline": "#777575",
+              "inverse-surface": "#fcf8f8",
+              "error-dim": "#d73357",
+              "outline-variant": "#494847",
+              "surface-container-low": "#131313",
+              "surface-container": "#1a1919",
+              "secondary-dim": "#40ceed",
+              "tertiary": "#ec63ff",
+              "on-primary": "#39008c",
+              "on-tertiary": "#3d0047",
+              "tertiary-dim": "#ec63ff",
+              "primary": "#ba9eff",
+              "on-secondary-fixed-variant": "#005969",
+              "on-primary-fixed": "#000000",
+              "on-primary-fixed-variant": "#370086"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        background-color: #0e0e0e;
+        color: #ffffff;
+        font-family: 'Inter', sans-serif;
+      }
+      .glass-card {
+        background: rgba(26, 25, 25, 0.6);
+        backdrop-filter: blur(20px);
+      }
+      .neon-glow-violet {
+        box-shadow: 0 0 20px rgba(139, 92, 246, 0.2);
+      }
+    </style>
+</head>
+<body class="selection:bg-primary-dim selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[90%] rounded-full bg-zinc-950/70 backdrop-blur-xl flex justify-between items-center px-8 py-3 max-w-7xl mx-auto z-50 shadow-[0_0_40px_rgba(139,92,246,0.1)]">
+<div class="text-2xl font-black tracking-tighter text-white dark:text-white font-headline">
+            EternaCloud
+        </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-zinc-400 hover:text-white transition-colors font-body text-sm" href="#">Platform</a>
+<a class="text-zinc-400 hover:text-white transition-colors font-body text-sm" href="#">Solutions</a>
+<a class="text-zinc-400 hover:text-white transition-colors font-body text-sm" href="#">Infrastructure</a>
+<a class="text-violet-400 font-semibold border-b-2 border-violet-500 pb-1 font-body text-sm" href="#">Company</a>
+<a class="text-zinc-400 hover:text-white transition-colors font-body text-sm" href="#">Pricing</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block text-zinc-400 hover:text-white transition-all duration-300 text-sm font-medium">Sign In</button>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary-container px-6 py-2 rounded-full font-bold text-sm shadow-[0_0_20px_rgba(186,158,255,0.2)] hover:scale-95 transition-all duration-200">
+                Get Started
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[921px] flex flex-col items-center justify-center pt-32 overflow-hidden px-4">
+<!-- Background elements -->
+<div class="absolute inset-0 z-0 bg-[radial-gradient(circle_at_50%_-20%,_rgba(139,92,246,0.15),_transparent_60%)]"></div>
+<div class="absolute top-[20%] left-[10%] w-96 h-96 bg-primary-dim opacity-[0.03] blur-[120px] rounded-full"></div>
+<div class="absolute bottom-[10%] right-[5%] w-96 h-96 bg-secondary opacity-[0.03] blur-[120px] rounded-full"></div>
+<div class="max-w-5xl mx-auto text-center relative z-10">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-outline-variant bg-surface-container-low mb-8">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="text-xs font-medium tracking-widest uppercase text-on-surface-variant font-label">The Future of Infrastructure</span>
+</div>
+<h1 class="text-5xl md:text-8xl font-black font-headline tracking-tighter mb-8 leading-[0.9]">
+                Defined by <span class="bg-gradient-to-br from-primary via-secondary to-tertiary bg-clip-text text-transparent">Vision</span>,<br/>
+                Driven by <span class="bg-gradient-to-br from-primary via-secondary to-tertiary bg-clip-text text-transparent">Code</span>
+</h1>
+<p class="max-w-2xl mx-auto text-lg md:text-xl text-on-surface-variant font-body leading-relaxed mb-12">
+                We are orchestrating the next generation of digital reality. A tech-noir approach to cloud infrastructure—dark, efficient, and relentlessly precise.
+            </p>
+</div>
+<div class="w-full max-w-7xl mx-auto px-4 mt-12">
+<div class="relative h-[400px] md:h-[600px] rounded-xl overflow-hidden shadow-2xl border border-white/5">
+<img alt="Global Network" class="w-full h-full object-cover grayscale opacity-60 hover:grayscale-0 transition-all duration-700" data-alt="Futuristic dark data center with purple glowing neon server racks and complex holographic neural network overlays in a tech-noir atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtIXW1hKakb4RXfZn37aPFZtBScb9KzZJKfAYh7tZhk-zBoXVAZyRZZfU1PPsG8uk3z1vw19uyGHkn8sIhNjARzz76pv3waF-brswr4vetjIeGG3_ZXUMaPasMHZIBtSqE7MJmF51aFc4S3ETEbAHAQ4ISChX-alvsA3IxZH3P-f2WB6PElrsgGVIeB9iw8j4XPosQ1oxxFOvJBSKxGYG4_Gq5hLUfRFxZXXPNdDhGAYYhyRvTVrep74hayCLssSTuWWGJZj_NESqz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</div>
+</header>
+<!-- Mission Section -->
+<section class="py-32 px-4 bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="absolute -top-20 -left-20 text-[10rem] font-black text-white/5 font-headline pointer-events-none select-none">MISSION</div>
+<h2 class="text-4xl md:text-5xl font-bold font-headline tracking-tight mb-8">
+                    Curating Next-Gen <br/><span class="text-primary">Ecosystems</span>
+</h2>
+<div class="space-y-6 text-on-surface-variant font-body text-lg leading-relaxed">
+<p>At EternaCloud, we don't just host data; we curate digital experiences. Our goal is to replace the chaotic legacy cloud with a streamlined, high-performance architecture that feels like bespoke software for every user.</p>
+<p>By blending high-end editorial aesthetics with robust engineering, we provide a platform where visionary companies can scale without compromising on visual integrity or technical excellence.</p>
+</div>
+<div class="mt-12 flex gap-8">
+<div>
+<div class="text-3xl font-black font-headline text-white">99.99%</div>
+<div class="text-sm uppercase tracking-widest text-primary font-label">Uptime Guarrantee</div>
+</div>
+<div class="w-px h-12 bg-white/10"></div>
+<div>
+<div class="text-3xl font-black font-headline text-white">2.4ms</div>
+<div class="text-sm uppercase tracking-widest text-primary font-label">Average Latency</div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div class="rounded-lg overflow-hidden h-64 mt-12 shadow-xl hover:scale-[1.02] transition-transform">
+<img alt="Hardware" class="w-full h-full object-cover" data-alt="Close-up macro of sophisticated high-tech computer circuitry with subtle purple light reflections on metallic components." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0QOSoJPasFxCkNPn46icGJfoSF1qS5FPWVG83fhl_aS-4Ddjd_m1Y1nKOwJynPGkYDpNiLYljxGiC8xBuEiJuMJ8Vh7X6mjZYt6xRkcE-NyXkPRhRgV54qzOkUXozAoqnAmzlwcVa7k_GPDYvFDgsfRhghoEYd2uDpwl99lunOuQJ3GQJ7DyFMHsiq0ID_NOZ2Viv5UqVI2ubhn0DvhEzy2aKqk1LuBucz_lykP9rzqRNQDBBkOcCOFxdiVPL74qdPBXjRvcto8BN"/>
+</div>
+<div class="rounded-lg overflow-hidden h-64 shadow-xl hover:scale-[1.02] transition-transform">
+<img alt="Server Room" class="w-full h-full object-cover" data-alt="Cinematic shot of a minimalist dark server corridor with glowing violet LED strips highlighting the geometric symmetry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgiCqMdX5ShOnEW63N9fQ4pm6jRLX_l2EEHcb0wucs_jkETqYtoXytBN7OBOrojUpd3v-hzyEOseRvJmrY9a0Kcx3bcibaFEXcCXx_bIiQ7Q-mJv6NfoUTBLfWKN8kmKO4IDfl_5rBbY6lJu6R5gPDzf98rJ126P2wiP7dyMk19q232H8ngiOjckEwKXryFep6q9aSRBZGEuKlMxmaIKcPkNEy66Gcyh_UB-s66r3wImlTnbD2LFntuJ1nLqk67KdD1oULHFAHB5zY"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Core Values Bento Box -->
+<section class="py-32 px-4">
+<div class="max-w-7xl mx-auto">
+<div class="mb-20 text-center">
+<h2 class="text-4xl font-bold font-headline mb-4">The Eterna Pillars</h2>
+<p class="text-on-surface-variant font-body">The philosophy that drives every line of code we write.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Value 1: Innovation -->
+<div class="glass-card p-10 rounded-lg flex flex-col justify-between border border-white/5 hover:border-primary/20 transition-all duration-500 group">
+<div>
+<div class="w-14 h-14 bg-surface-container-high rounded-full flex items-center justify-center mb-8 group-hover:bg-primary transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary transition-colors">bolt</span>
+</div>
+<h3 class="text-2xl font-bold font-headline mb-4">Innovation</h3>
+<p class="text-on-surface-variant font-body leading-relaxed">We reject the status quo. If a solution exists, we improve it. If it doesn't, we build it from the void.</p>
+</div>
+<div class="mt-8 pt-8 border-t border-white/5 flex justify-between items-center">
+<span class="text-xs uppercase tracking-[0.2em] font-label text-white/40">Codename: Genesis</span>
+<span class="material-symbols-outlined text-white/20">arrow_forward</span>
+</div>
+</div>
+<!-- Value 2: Precision (Center - Asymmetric highlight) -->
+<div class="bg-gradient-to-b from-surface-container-high to-surface-container-lowest p-10 rounded-lg flex flex-col justify-between border border-white/5 hover:border-secondary/20 transition-all duration-500 group relative overflow-hidden">
+<div class="absolute -right-20 -top-20 w-64 h-64 bg-secondary/5 blur-[80px] rounded-full"></div>
+<div>
+<div class="w-14 h-14 bg-surface-container-high rounded-full flex items-center justify-center mb-8 group-hover:bg-secondary transition-colors">
+<span class="material-symbols-outlined text-secondary group-hover:text-on-secondary transition-colors">target</span>
+</div>
+<h3 class="text-2xl font-bold font-headline mb-4">Precision</h3>
+<p class="text-on-surface-variant font-body leading-relaxed">Millisecond latency is a failure. Microseconds are our benchmark. Every packet routed with surgical accuracy.</p>
+</div>
+<div class="mt-8 pt-8 border-t border-white/5 flex justify-between items-center">
+<span class="text-xs uppercase tracking-[0.2em] font-label text-white/40">Standard: Zero Leak</span>
+<span class="material-symbols-outlined text-white/20">arrow_forward</span>
+</div>
+</div>
+<!-- Value 3: Integrity -->
+<div class="glass-card p-10 rounded-lg flex flex-col justify-between border border-white/5 hover:border-tertiary/20 transition-all duration-500 group">
+<div>
+<div class="w-14 h-14 bg-surface-container-high rounded-full flex items-center justify-center mb-8 group-hover:bg-tertiary transition-colors">
+<span class="material-symbols-outlined text-tertiary group-hover:text-on-tertiary transition-colors">verified_user</span>
+</div>
+<h3 class="text-2xl font-bold font-headline mb-4">Integrity</h3>
+<p class="text-on-surface-variant font-body leading-relaxed">Security is not an add-on; it's the foundation. We curate infrastructure that protects its inhabitants by default.</p>
+</div>
+<div class="mt-8 pt-8 border-t border-white/5 flex justify-between items-center">
+<span class="text-xs uppercase tracking-[0.2em] font-label text-white/40">Protocol: Obsidian</span>
+<span class="material-symbols-outlined text-white/20">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Team Section -->
+<section class="py-32 px-4 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-20">
+<div class="max-w-xl">
+<h2 class="text-4xl font-bold font-headline mb-4 tracking-tight">The Architects</h2>
+<p class="text-on-surface-variant font-body leading-relaxed">Visionaries, engineers, and curators who believe that code is an art form. Meet the leadership driving EternaCloud.</p>
+</div>
+<button class="flex items-center gap-2 text-sm font-label tracking-widest uppercase text-primary border-b border-primary/20 pb-2 hover:border-primary transition-all">
+                    View Full Directory <span class="material-symbols-outlined text-sm">trending_flat</span>
+</button>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Leader 1 -->
+<div class="group">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-6 relative">
+<img alt="CEO" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" data-alt="Professional portrait of a male tech leader in a dark turtleneck against a minimalist grey background with high-contrast shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyGxFdM_I--b42JGhAKXbtqp9doxdFbBQmE1HyuiVBBCzwoNN8E5qXwLDCfq_0IXFxY5dlpjqiRK7_09etDB_0GwdZ9k1TSL81HOQ4ulpXART39rRvwtpsQ7NsanCyZ1X0ARiqp1hBrW8Zg8sFwsSeLHO3bWkYQ2VXMmC-HnKdZ5flbnKxAInWrSdnLXuFBmKwphEJLHJUKDGkQuvtDFh5dPTGyLS_dgp_cQIetJMf-vqZLM3mDYQJumKmB8jjmy9tXgzcVZtQzVth"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="text-xl font-bold font-headline">Marcus Thorne</h4>
+<p class="text-primary text-sm font-label uppercase tracking-widest mt-1 mb-3">Founder &amp; CEO</p>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">Formerly Lead Infrastructure Architect at Nexus Systems.</p>
+</div>
+<!-- Leader 2 -->
+<div class="group">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-6 relative">
+<img alt="CTO" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" data-alt="Close-up portrait of a woman with a confident gaze, soft ambient lighting highlighting her features against a dark industrial background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqMWC1-Oc3_-gm-QQqKkIBgFazJpI9Zx0Wq5iHJunak8ePMKRAm5uqwMbz0qQaZiDk7OTZ-GmRvhtp_n3yEjgncunBJC0P263sivPu4dEcwrW0SkQRVyOS_JL-E3e_KLTmFZJE5gj-n5fT92mAy2qBnv0Q9FEDpNSFmlBzln0xxTvyJ_01mUMQpfGkPjIpDj4-FqMB6PsV1xtBJMuo13aQmiNCRMEbmWRsakM8N6TtpJ--dOzFCPzJaArcQHmjPTYQIN4uejGKUpPv"/>
+<div class="absolute inset-0 bg-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="text-xl font-bold font-headline">Elena Vance</h4>
+<p class="text-secondary text-sm font-label uppercase tracking-widest mt-1 mb-3">Chief Technology Officer</p>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">Pioneer in distributed systems and decentralized ledger tech.</p>
+</div>
+<!-- Leader 3 -->
+<div class="group">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-6 relative">
+<img alt="Design" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" data-alt="Portrait of a creative professional in a dimly lit studio, subtle blue rim lighting on shoulders against a textured dark wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCh_HuE5vZ7ydXJpO1hM0y9brmFbV0bm-8rtJea8M2VaaHOANB-6zZ_nenF4gdk1fjypkMcABus0EihyM0Gyv7vYr9KcoFO5nKPJuGTYXaXKIW36QZJ3i89at8Hyq80Zh8ljYboTGF3NVoUqYb3qxU4-lhAtkJhT3YqJoyFBnBz8n45uDRXKaUjVup60HEPh9_FSDh1W9P06SivsUGr8v9AMyP7hVQadNEVE006Gwm_zAFsC66pDDvcu5Pc99uQ4Be6HjmT7WxJ4Bs"/>
+<div class="absolute inset-0 bg-tertiary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="text-xl font-bold font-headline">Soren Kross</h4>
+<p class="text-tertiary text-sm font-label uppercase tracking-widest mt-1 mb-3">Head of Curated UX</p>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">Award-winning digital curator obsessed with technical editorial design.</p>
+</div>
+<!-- Leader 4 -->
+<div class="group">
+<div class="aspect-[4/5] rounded-xl overflow-hidden mb-6 relative">
+<img alt="Security" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-100 group-hover:scale-110" data-alt="Portrait of a female security expert with a sharp, professional look in a high-tech corporate office with glass reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCsoP7dDipLLJdHASbL1j1BInU_QI5aDJH0ela7gXICV572muaECsMSel5VC3JCf2YBPb9wfrhVbnuFI2G3pUVR-XiyiP2HztbNGOEilW3jxae74TH_SW0RRlhPiypHnloH7T7W8w_QvKivygz3Q8Ju5SQo-XzMeWcqyaY8lIX86L4mmhb9woMRsPQQE0NJvOibC_hD26X1pSsci5IoSneb_hBV6JtS6qbboqxx1Frd8N2FAlpaI8m3Ew4vz_r_n4j1zz81e9_VxHG"/>
+<div class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</div>
+<h4 class="text-xl font-bold font-headline">Dr. Aris Wu</h4>
+<p class="text-primary text-sm font-label uppercase tracking-widest mt-1 mb-3">VP of Security</p>
+<p class="text-on-surface-variant text-sm font-body leading-relaxed opacity-0 group-hover:opacity-100 transition-opacity translate-y-2 group-hover:translate-y-0 duration-300">Former cybersecurity consultant for Fortune 10 defense contractors.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-40 px-4 relative overflow-hidden">
+<div class="absolute inset-0 bg-gradient-to-r from-primary/10 via-transparent to-tertiary/10"></div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<h2 class="text-5xl md:text-7xl font-black font-headline tracking-tighter mb-8 leading-none">
+                Join the <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Future</span>
+</h2>
+<p class="text-xl text-on-surface-variant font-body mb-12 max-w-2xl mx-auto">
+                We're always looking for brilliant minds to help us build the next evolution of cloud infrastructure. Ready to redefine reality?
+            </p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-6">
+<button class="w-full sm:w-auto px-10 py-5 bg-white text-black font-bold rounded-full hover:bg-primary transition-all duration-300 transform hover:scale-105">
+                    View Open Roles
+                </button>
+<button class="w-full sm:w-auto px-10 py-5 border border-white/20 text-white font-bold rounded-full hover:bg-white/10 transition-all duration-300">
+                    Contact Partnerships
+                </button>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-zinc-950 full-width py-20 border-t border-white/5">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-2 gap-12">
+<div>
+<div class="text-xl font-bold text-white font-headline mb-6">EternaCloud</div>
+<p class="text-zinc-500 font-body text-md max-w-sm leading-relaxed">
+                    © 2024 EternaCloud. Curating the next generation of cloud infrastructure.
+                </p>
+<div class="flex gap-4 mt-8">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors" href="#">
+<img alt="GitHub" class="w-5 h-5 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA13OuO-eSiiZcFY0u-OtYc16TfLXTraoMte8ea7QhLVa0NrO6_mIGUVXLrU5vwrQXtt8ae97WYlC-Ku_WH9d3X7XQdwdutah1YkwadOM48ukUk9aNW0zG_OJy2oqBzBGRgXETAtB_AQK1OMuA5T89-6Yjj99KrOvTZvmOAfE_vNP1m8CHktMEn1L4ZnhRPZnGlcxmffXzOQwfoBvyeqJ9eizhUAZzkMNYzOVoze2763qONmmUK5KP59o9c-6vsKSU-XAtGPdIenRKB"/>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors" href="#">
+<img alt="Twitter" class="w-5 h-5 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2MjrOxIvJnSUmZCiv-34hYzjuM-GNJ_RF8l8Lcf528QiNkRu3Em9W9VpdBiebdVi0nVEhcXhx8MCfxW6GcvYZtdQUA_LSOg7Ad8FE73pA-bzBl_XB3h8BPgbwNRkoWPRmiuR8vRpLUqif-TEdtVFwzUKVCfcy6_BbFtJobLg3FDSNB2THjXFlwVOSLW-ZKovhsKrv4DQzQQOLChVhk9ZpzymeoeTJcZf2gsSdC8RhHKVOvL_n--LDh9ssCPI9n6xFFuQWLOt7sZAl"/>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white/5 transition-colors" href="#">
+<img alt="LinkedIn" class="w-5 h-5 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqmiuYmn0NplXUjqO-k934YS_ZYBDugQ2PSJdnEdI9TZXmCEjFWt7jNmS5W_K9-CPMpEKZHFHDFAXouEJmrh8OuLD2K62dM9anr6B9w7ukB6-GnyRFDdvFVRJbC5Fj2W2hy92_Hs_nSGKKDYu-10q-cgMUFCKgiKQotGMaAAFMBQMQlE3XAeBGgnrKrtWdRyLjdUrV3Js2tqRohHCBIaQuUp6jSZF6uMwMRbiZqKpUBOYdcAARk8ZK0l6RAtgs9P6JlOQ4yKUXTUBU"/>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-8">
+<div class="flex flex-col gap-4">
+<span class="text-xs font-bold uppercase tracking-widest text-zinc-400">Resource</span>
+<a class="text-zinc-500 hover:text-violet-300 transition-colors text-sm" href="#">Privacy Policy</a>
+<a class="text-zinc-500 hover:text-violet-300 transition-colors text-sm" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-xs font-bold uppercase tracking-widest text-zinc-400">System</span>
+<a class="text-zinc-500 hover:text-violet-300 transition-colors text-sm" href="#">Security</a>
+<a class="text-zinc-500 hover:text-violet-300 transition-colors text-sm" href="#">Status</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="text-xs font-bold uppercase tracking-widest text-zinc-400">Connect</span>
+<a class="text-zinc-500 hover:text-violet-300 transition-colors text-sm" href="#">Contact</a>
+<a class="text-zinc-500 hover:text-violet-300 transition-colors text-sm" href="#">Discord</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

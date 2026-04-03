@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Premium SEO Audit Dashboard</title>
+    <link rel="stylesheet" href="/specimens/seo-audit/css/base.css">
+    <link id="theme-link" rel="stylesheet" href="/specimens/seo-audit/css/indigo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Outfit:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body class="theme-indigo mode-scroll">
+    <!-- ═══ CYBER BACKGROUND TRAILS ═══ -->
+    <div class="cyber-bg-trails" aria-hidden="true">
+        <div class="trail trail-1"></div>
+        <div class="trail trail-2"></div>
+        <div class="trail trail-3"></div>
+        <div class="trail trail-4"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="nav-left">
+            <span class="logo">nexus<span>.audit</span></span>
+        </div>
+        <div class="nav-right">
+            <select id="lang-switch" class="control-select">
+                <option value="pl">PL</option>
+                <option value="en">EN</option>
+                <option value="ua">UA</option>
+            </select>
+            <select id="theme-switch" class="control-select">
+                <option value="indigo">Nexus Indigo</option>
+                <option value="luxury">Luxury Platinum</option>
+            </select>
+        </div>
+    </nav>
+
+    <main id="audit-container">
+        <section id="hero" class="snap-section">
+            <div class="hero-content">
+                <div class="badge" id="hero-badge">ROZWIĄZANIE PREMIUM</div>
+                <h1 id="hero-title">Audyt SEO & Growth</h1>
+                <p id="hero-subtitle">Analiza potencjału strony nexus.dev</p>
+                <div class="score-container">
+                    <svg viewBox="0 0 36 36" class="circular-chart">
+                        <path class="circle-bg" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <path id="score-circle" class="circle" stroke-dasharray="0, 100" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        <text x="18" y="20.35" class="percentage" id="score-text">0%</text>
+                    </svg>
+                </div>
+            </div>
+            <div class="scroll-indicator"></div>
+        </section>
+
+        <section id="metrics" class="snap-section">
+            <div class="container">
+                <h2 class="section-title" id="metrics-title">Wskaźniki Wydajności</h2>
+                <div class="metrics-grid" id="metrics-container"></div>
+            </div>
+        </section>
+
+        <section id="analysis" class="snap-section">
+            <div class="container">
+                <h2 class="section-title" id="keywords-title">Analiza Słów Kluczowych</h2>
+                <div class="analysis-card glass-card">
+                    <table id="keywords-table">
+                        <thead>
+                            <tr>
+                                <th>Fraza</th>
+                                <th>Gap Analityczny</th>
+                                <th>Potencjał</th>
+                            </tr>
+                        </thead>
+                        <tbody id="keywords-body"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section id="roadmap" class="snap-section">
+            <div class="container">
+                <h2 class="section-title" id="roadmap-title">Plan Działania 90 Dni</h2>
+                <div class="timeline" id="roadmap-container"></div>
+            </div>
+        </section>
+
+        <section id="cta" class="snap-section">
+            <div class="cta-card glass-card">
+                <div class="cube-glow"></div>
+                <h2 id="cta-text">Zatwierdź Plan i Zacznijmy Wzrost</h2>
+                <p id="cta-subtext">Przejdź do formularza briefu agencji</p>
+                <button class="btn-premium btn-glow" onclick="window.location.href='../../brief.html'">ROZPOCZNIJ WDROŻENIE</button>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="/specimens/seo-audit/js/app.js"></script>
+</body>
+</html>

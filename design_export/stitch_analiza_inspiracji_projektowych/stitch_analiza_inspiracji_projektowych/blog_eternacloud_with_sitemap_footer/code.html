@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EternaCloud | Insights from the Edge of Tomorrow</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-high": "#201f1f",
+              "on-secondary-fixed-variant": "#005969",
+              "outline-variant": "#494847",
+              "primary-dim": "#8455ef",
+              "background": "#0e0e0e",
+              "primary-fixed-dim": "#a27cff",
+              "surface-tint": "#ba9eff",
+              "primary-container": "#ae8dff",
+              "surface-variant": "#262626",
+              "inverse-surface": "#fcf8f8",
+              "tertiary-fixed-dim": "#ef6eff",
+              "on-tertiary": "#3d0047",
+              "on-primary-fixed": "#000000",
+              "outline": "#777575",
+              "inverse-primary": "#6e3bd7",
+              "tertiary-fixed": "#f487ff",
+              "on-tertiary-fixed-variant": "#660075",
+              "error-container": "#a70138",
+              "on-error-container": "#ffb2b9",
+              "secondary-fixed": "#65e1ff",
+              "on-secondary-container": "#ecfaff",
+              "secondary-fixed-dim": "#48d4f3",
+              "error": "#ff6e84",
+              "on-secondary": "#004b58",
+              "error-dim": "#d73357",
+              "surface-container-lowest": "#000000",
+              "surface-container-highest": "#262626",
+              "on-background": "#ffffff",
+              "tertiary-dim": "#ec63ff",
+              "surface-dim": "#0e0e0e",
+              "on-secondary-fixed": "#003a45",
+              "secondary": "#53ddfc",
+              "on-tertiary-container": "#19001e",
+              "inverse-on-surface": "#565554",
+              "primary": "#ba9eff",
+              "secondary-container": "#00687a",
+              "on-primary-container": "#2b006e",
+              "tertiary": "#ec63ff",
+              "on-surface-variant": "#adaaaa",
+              "surface-container-low": "#131313",
+              "secondary-dim": "#40ceed",
+              "surface-container": "#1a1919",
+              "surface-bright": "#2c2c2c",
+              "on-tertiary-fixed": "#300038",
+              "on-primary-fixed-variant": "#370086",
+              "on-primary": "#39008c",
+              "on-surface": "#ffffff",
+              "tertiary-container": "#de4bf4",
+              "primary-fixed": "#ae8dff",
+              "surface": "#0e0e0e",
+              "on-error": "#490013"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(14, 14, 14, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface-container-lowest">
+<!-- TopNavBar -->
+<nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl rounded-full border border-white/10 bg-neutral-950/60 dark:bg-black/60 backdrop-blur-xl shadow-[0_20px_50px_rgba(139,92,246,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.5)] flex justify-between items-center px-6 py-3 w-full z-50">
+<div class="text-xl font-bold tracking-tighter text-white dark:text-neutral-50 font-headline">
+            EternaCloud
+        </div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-medium tracking-tight text-neutral-400 dark:text-neutral-500 hover:text-white dark:hover:text-neutral-200 transition-all duration-300" href="#">Solutions</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-medium tracking-tight text-neutral-400 dark:text-neutral-500 hover:text-white dark:hover:text-neutral-200 transition-all duration-300" href="#">Infrastructure</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-medium tracking-tight text-neutral-400 dark:text-neutral-500 hover:text-white dark:hover:text-neutral-200 transition-all duration-300" href="#">Network</a>
+<a class="font-['Plus_Jakarta_Sans'] text-sm font-medium tracking-tight text-neutral-400 dark:text-neutral-500 hover:text-white dark:hover:text-neutral-200 transition-all duration-300" href="#">Pricing</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="font-['Plus_Jakarta_Sans'] text-sm font-medium tracking-tight text-neutral-400 dark:text-neutral-500 hover:text-white dark:hover:text-neutral-200 px-4 py-2">Sign In</button>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary-container px-6 py-2 rounded-full font-headline font-bold text-sm hover:scale-[0.98] transition-transform shadow-[0_0_20px_rgba(186,158,255,0.2)]">Get Started</button>
+</div>
+</nav>
+<main class="relative pt-32 pb-20 px-6">
+<!-- Ambient Glow Elements -->
+<div class="absolute top-0 left-1/4 w-96 h-96 bg-primary-dim/10 blur-[120px] rounded-full pointer-events-none"></div>
+<div class="absolute top-1/4 right-1/4 w-96 h-96 bg-secondary-dim/10 blur-[120px] rounded-full pointer-events-none"></div>
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto mb-20 text-center relative z-10">
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 bg-gradient-to-b from-white to-neutral-500 bg-clip-text text-transparent">
+                Insights from the Edge of Tomorrow
+            </h1>
+<p class="font-body text-on-surface-variant text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+                Deep dives into cloud infrastructure, AI scaling, and the future of decentralized networks.
+            </p>
+<div class="flex justify-center gap-4">
+<div class="h-px w-24 bg-gradient-to-r from-transparent via-primary/50 to-transparent self-center"></div>
+<span class="text-xs font-label uppercase tracking-widest text-primary font-bold">The Eterna Registry</span>
+<div class="h-px w-24 bg-gradient-to-r from-transparent via-primary/50 to-transparent self-center"></div>
+</div>
+</section>
+<!-- Featured Post Section -->
+<section class="max-w-7xl mx-auto mb-20">
+<div class="relative group rounded-xl overflow-hidden bg-surface-container-high border border-white/5 shadow-2xl">
+<div class="flex flex-col lg:flex-row min-h-[500px]">
+<div class="lg:w-3/5 relative overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="abstract 3D render of flowing violet and cyan crystalline structures representing autonomous cloud architecture with cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZ1vTLqexfveC5gs0JuhRVqJPDTzToVE2uRpj3wmSVI5nONM6rFRqDEltcQQiGdRDlRQGYFx1kRs62RBr9nWUDCefnUatT_rgf1wX0S-YzOHo04v6ZheFk3JOnhiE3TDQI80UoBN4Gqmu8F2FCU8GQyhp7ZnLqPkT0vcWJjeE5Pi9CGq1NLH0NE0VVBOCCu9rnnK45oIsKd5yc-9cHwqSRBTjqy07VspL3BPjMjgaZMOd-MxYbYX54PwCXnJNfEhAxpkB3InFeH1kU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="lg:w-2/5 p-10 flex flex-col justify-center glass-panel">
+<div class="flex items-center gap-3 mb-6">
+<span class="bg-primary/20 text-primary-fixed px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-widest">Protocol 001</span>
+<span class="text-on-surface-variant text-xs">8 min read</span>
+</div>
+<h2 class="font-headline text-3xl md:text-4xl font-bold mb-6 leading-tight">
+                            The Rise of Autonomous Cloud Architectures
+                        </h2>
+<p class="text-on-surface-variant font-body mb-8 leading-relaxed">
+                            Exploring how self-healing networks and AI-driven node allocation are redefining the cost and efficiency of global enterprise infrastructure.
+                        </p>
+<button class="w-fit flex items-center gap-2 bg-white text-black px-8 py-4 rounded-full font-headline font-bold text-sm hover:bg-neutral-200 transition-colors">
+                            Read Protocol
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Bento Article Grid -->
+<section class="max-w-7xl mx-auto mb-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Large Bento Item -->
+<div class="md:col-span-2 bg-surface-container rounded-xl p-8 border border-white/5 flex flex-col justify-between hover:bg-surface-bright transition-all group">
+<div>
+<div class="flex justify-between items-start mb-12">
+<span class="text-tertiary-dim text-xs font-bold uppercase tracking-widest">Infrastructure</span>
+<span class="material-symbols-outlined text-neutral-600 group-hover:text-primary transition-colors">hub</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4 group-hover:text-primary transition-colors">Scaling Beyond Terabytes: The New Data Frontier</h3>
+<p class="text-on-surface-variant line-clamp-3">The transition from centralized storage to distributed hash tables is not just a shift in tech, but a paradigm change in ownership.</p>
+</div>
+<div class="mt-8 flex justify-between items-center">
+<span class="text-xs text-neutral-500 font-label">5 min read</span>
+<span class="material-symbols-outlined text-xl">north_east</span>
+</div>
+</div>
+<!-- Tall Bento Item -->
+<div class="md:row-span-2 bg-surface-container-high rounded-xl overflow-hidden border border-white/5 hover:border-primary/20 transition-all flex flex-col">
+<div class="h-48 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="glowing neural network visualization with interconnected cyan points on a dark background representing artificial intelligence scaling" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJjIJVdL6usl8R2WNyICcQGsU5erUUmXAKqXVnjIconpC_jAkenVi7FmJnxuJFit1vHkoscNlkuZcaCJ36EZocRtd9_R01vCpO74untHUFSAJljoO47sZLC_ewdnczqnJ0gwUKgVd-u-_41-Djl0GFyFEGLIBuIVwwgnNQ2wQ84_gP4SDCkxvNSA1ltr0qvL0xed0hlcUXq2vw6Tg9Tfd7byC1hXTrkgu1mf5wU3XKe1MZ4YgRRcNRj6hlUkBwv16PkJiK245o3FaW"/>
+</div>
+<div class="p-8 flex-grow flex flex-col justify-between">
+<div>
+<span class="text-secondary text-xs font-bold uppercase tracking-widest block mb-4">Neural Networks</span>
+<h3 class="font-headline text-xl font-bold mb-4 leading-snug">AI Model Distillation: Making Giants Lean</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">How we compressed 70B parameter models to run on edge devices without losing cognitive precision.</p>
+</div>
+<div class="mt-8 flex justify-between items-center">
+<span class="text-xs text-neutral-500 font-label">12 min read</span>
+<button class="text-white hover:text-secondary transition-colors text-xs font-bold uppercase tracking-tighter">View Deep Dive</button>
+</div>
+</div>
+</div>
+<!-- Standard Bento Items -->
+<div class="bg-surface-container rounded-xl p-8 border border-white/5 hover:bg-surface-bright transition-all group">
+<span class="text-error text-xs font-bold uppercase tracking-widest block mb-6">Security</span>
+<h3 class="font-headline text-xl font-bold mb-4">Post-Quantum Cryptography in Production</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2">Securing the Eterna mainnet against tomorrow's compute capabilities today.</p>
+<div class="mt-6 text-xs text-neutral-500">4 min read</div>
+</div>
+<div class="bg-surface-container rounded-xl p-8 border border-white/5 hover:bg-surface-bright transition-all group">
+<span class="text-primary text-xs font-bold uppercase tracking-widest block mb-6">Network</span>
+<h3 class="font-headline text-xl font-bold mb-4">The Latency Myth: True Zero-Lag Global Systems</h3>
+<p class="text-on-surface-variant text-sm line-clamp-2">Redefining the speed of light through predictive routing algorithms.</p>
+<div class="mt-6 text-xs text-neutral-500">7 min read</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="max-w-4xl mx-auto">
+<div class="bg-gradient-to-br from-surface-container-high to-surface-container rounded-xl p-12 border border-white/5 text-center relative overflow-hidden">
+<!-- Background decoration -->
+<div class="absolute -right-20 -bottom-20 w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
+<h2 class="font-headline text-3xl font-extrabold mb-4">Stay in the Loop</h2>
+<p class="text-on-surface-variant mb-8 max-w-lg mx-auto">Receive technical dispatches and architectural updates directly to your encrypted inbox.</p>
+<div class="flex flex-col md:flex-row gap-3 max-w-md mx-auto relative z-10">
+<input class="flex-grow bg-surface-container-lowest border border-white/10 rounded-full px-6 py-3 text-sm focus:outline-none focus:border-primary transition-colors text-white placeholder:text-neutral-600" placeholder="enter protocol email..." type="email"/>
+<button class="bg-white text-black px-8 py-3 rounded-full font-headline font-bold text-sm hover:bg-primary transition-all duration-300">
+                        Join Protocol
+                    </button>
+</div>
+<p class="mt-4 text-[10px] text-neutral-600 font-label uppercase tracking-widest">No spam. Only high-bandwidth insights.</p>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-zinc-950 dark:bg-black w-full pt-20 pb-10 border-t border-white/5">
+<div class="w-full flex flex-col items-center gap-12 px-8 max-w-7xl mx-auto">
+<div class="grid grid-cols-2 md:grid-cols-5 gap-12 w-full">
+<!-- Platform -->
+<div class="flex flex-col gap-4">
+<h4 class="font-['Plus_Jakarta_Sans'] text-sm font-bold text-zinc-100 uppercase tracking-widest">Platform</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Compute</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Storage</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Networking</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Security</a></li>
+</ul>
+</div>
+<!-- Solutions -->
+<div class="flex flex-col gap-4">
+<h4 class="font-['Plus_Jakarta_Sans'] text-sm font-bold text-zinc-100 uppercase tracking-widest">Solutions</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Enterprise</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Startups</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Government</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Education</a></li>
+</ul>
+</div>
+<!-- Resources -->
+<div class="flex flex-col gap-4">
+<h4 class="font-['Plus_Jakarta_Sans'] text-sm font-bold text-zinc-100 uppercase tracking-widest">Resources</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Documentation</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">API Reference</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Community</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Blog</a></li>
+</ul>
+</div>
+<!-- Company -->
+<div class="flex flex-col gap-4">
+<h4 class="font-['Plus_Jakarta_Sans'] text-sm font-bold text-zinc-100 uppercase tracking-widest">Company</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">About</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Careers</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Press</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Partners</a></li>
+</ul>
+</div>
+<!-- Legal -->
+<div class="flex flex-col gap-4">
+<h4 class="font-['Plus_Jakarta_Sans'] text-sm font-bold text-zinc-100 uppercase tracking-widest">Legal</h4>
+<ul class="flex flex-col gap-3">
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Security</a></li>
+<li><a class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 hover:text-zinc-200 transition-colors" href="#">Status</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col items-center gap-6 w-full pt-12 border-t border-white/5">
+<div class="text-lg font-extrabold tracking-tighter text-zinc-100 font-headline uppercase">EternaCloud</div>
+<div class="font-['Plus_Jakarta_Sans'] text-xs tracking-wide font-medium text-zinc-500 text-center opacity-80 hover:opacity-100 transition-opacity">
+                    © 2024 EternaCloud. Precision Infrastructure for the Modern Era.
+                </div>
+</div>
+</div>
+</footer>
+</body></html>

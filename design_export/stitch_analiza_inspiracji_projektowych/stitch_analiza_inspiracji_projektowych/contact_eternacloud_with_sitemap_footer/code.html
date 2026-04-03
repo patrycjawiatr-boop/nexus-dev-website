@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact - EternaCloud</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary-container": "#19001e",
+              "on-error-container": "#ffb2b9",
+              "primary-container": "#ae8dff",
+              "inverse-on-surface": "#565554",
+              "on-tertiary": "#3d0047",
+              "on-secondary-container": "#ecfaff",
+              "on-primary-container": "#2b006e",
+              "surface": "#0e0e0e",
+              "on-secondary-fixed-variant": "#005969",
+              "surface-container-highest": "#262626",
+              "on-primary-fixed": "#000000",
+              "secondary-dim": "#40ceed",
+              "on-error": "#490013",
+              "tertiary-container": "#de4bf4",
+              "surface-variant": "#262626",
+              "secondary": "#53ddfc",
+              "primary-fixed-dim": "#a27cff",
+              "on-primary-fixed-variant": "#370086",
+              "outline": "#777575",
+              "primary-fixed": "#ae8dff",
+              "surface-container-low": "#131313",
+              "on-tertiary-fixed": "#300038",
+              "surface-dim": "#0e0e0e",
+              "surface-container": "#1a1919",
+              "surface-container-lowest": "#000000",
+              "inverse-primary": "#6e3bd7",
+              "on-tertiary-fixed-variant": "#660075",
+              "tertiary-dim": "#ec63ff",
+              "secondary-fixed": "#65e1ff",
+              "tertiary-fixed-dim": "#ef6eff",
+              "on-surface-variant": "#adaaaa",
+              "error": "#ff6e84",
+              "on-secondary-fixed": "#003a45",
+              "surface-bright": "#2c2c2c",
+              "on-primary": "#39008c",
+              "outline-variant": "#494847",
+              "on-background": "#ffffff",
+              "error-dim": "#d73357",
+              "error-container": "#a70138",
+              "primary": "#ba9eff",
+              "primary-dim": "#8455ef",
+              "surface-container-high": "#201f1f",
+              "background": "#0e0e0e",
+              "surface-tint": "#ba9eff",
+              "on-secondary": "#004b58",
+              "secondary-fixed-dim": "#48d4f3",
+              "secondary-container": "#00687a",
+              "tertiary": "#ec63ff",
+              "tertiary-fixed": "#f487ff",
+              "on-surface": "#ffffff",
+              "inverse-surface": "#fcf8f8"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans"],
+              "body": ["Inter"],
+              "label": ["Inter"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .mesh-gradient {
+            background-color: #0e0e0e;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(132, 85, 239, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 0%, rgba(83, 221, 252, 0.1) 0px, transparent 50%),
+                radial-gradient(at 50% 100%, rgba(236, 99, 255, 0.05) 0px, transparent 50%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary/30 selection:text-primary min-h-screen mesh-gradient">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 flex items-center justify-between px-6 py-2 max-w-7xl mx-auto bg-black/60 dark:bg-zinc-950/60 backdrop-blur-xl rounded-full mt-4 mx-6 border border-white/10 dark:border-zinc-800/20 shadow-[0_0_40px_-15px_rgba(139,92,246,0.3)] font-['Plus_Jakarta_Sans'] tracking-tight text-sm font-medium">
+<div class="flex items-center gap-8">
+<span class="text-xl font-black tracking-tighter text-white dark:text-zinc-50">EternaCloud</span>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-zinc-400 dark:text-zinc-500 hover:text-white dark:hover:text-zinc-100 hover:bg-white/5 dark:hover:bg-zinc-800/50 transition-all duration-300 rounded-full px-3 py-1" href="#">Solutions</a>
+<a class="text-zinc-400 dark:text-zinc-500 hover:text-white dark:hover:text-zinc-100 hover:bg-white/5 dark:hover:bg-zinc-800/50 transition-all duration-300 rounded-full px-3 py-1" href="#">Platform</a>
+<a class="text-zinc-400 dark:text-zinc-500 hover:text-white dark:hover:text-zinc-100 hover:bg-white/5 dark:hover:bg-zinc-800/50 transition-all duration-300 rounded-full px-3 py-1" href="#">Infrastructure</a>
+<a class="text-zinc-400 dark:text-zinc-500 hover:text-white dark:hover:text-zinc-100 hover:bg-white/5 dark:hover:bg-zinc-800/50 transition-all duration-300 rounded-full px-3 py-1" href="#">Company</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="hidden sm:block text-zinc-400 dark:text-zinc-500 hover:text-white dark:hover:text-zinc-100 transition-colors scale-95 active:scale-90 px-4 py-2">Sign In</button>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary-container px-6 py-2 rounded-full font-bold shadow-[0_0_20px_rgba(186,158,255,0.2)] scale-95 active:scale-90 transition-all">Get Started</button>
+</div>
+</nav>
+<main class="max-w-7xl mx-auto px-6 py-20">
+<!-- Hero Section -->
+<header class="text-center mb-24 max-w-3xl mx-auto">
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-on-surface to-on-surface-variant">
+                Connect with the Future
+            </h1>
+<p class="text-on-surface-variant text-lg md:text-xl leading-relaxed">
+                EternaCloud operates across 42 global availability zones, providing low-latency infrastructure for the world's most demanding digital ecosystems. Reach out to our synchronization team.
+            </p>
+</header>
+<!-- Bento Grid Main Content -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Inquiry Protocol (Contact Form) -->
+<section class="lg:col-span-7 bg-surface-container/60 backdrop-blur-2xl border border-outline-variant/20 rounded-xl p-8 lg:p-12 shadow-2xl relative overflow-hidden">
+<div class="absolute -top-24 -right-24 w-64 h-64 bg-primary/10 blur-[100px] rounded-full"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary" data-icon="terminal">terminal</span>
+<h2 class="font-headline text-2xl font-bold tracking-tight">Inquiry Protocol</h2>
+</div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-xs font-semibold uppercase tracking-widest text-on-surface-variant ml-1">Identity</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-sm px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/40 transition-all placeholder:text-outline" placeholder="Full Name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-semibold uppercase tracking-widest text-on-surface-variant ml-1">Communication Node</label>
+<input class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-sm px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/40 transition-all placeholder:text-outline" placeholder="Corporate Email" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-semibold uppercase tracking-widest text-on-surface-variant ml-1">Transmission Data</label>
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant/30 rounded-sm px-4 py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/40 transition-all placeholder:text-outline resize-none" placeholder="Detailed inquiry or project specification..." rows="5"></textarea>
+</div>
+<button class="w-full bg-primary py-4 rounded-full font-headline font-bold text-on-primary shadow-[0_0_30px_-5px_rgba(186,158,255,0.5)] hover:shadow-[0_0_40px_-5px_rgba(186,158,255,0.7)] transition-all duration-300 flex items-center justify-center gap-2 group" type="submit">
+<span>Execute Protocol</span>
+<span class="material-symbols-outlined group-hover:translate-x-1 transition-transform" data-icon="send">send</span>
+</button>
+</form>
+</div>
+</section>
+<!-- Info Side Grid -->
+<div class="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-6">
+<!-- Global Nodes -->
+<div class="bg-surface-container-high rounded-lg p-6 border border-outline-variant/10 hover:border-secondary/30 transition-colors group">
+<div class="flex items-center gap-4 mb-6">
+<div class="p-2 rounded-full bg-secondary-container/20 text-secondary">
+<span class="material-symbols-outlined" data-icon="public">public</span>
+</div>
+<h3 class="font-headline font-bold text-lg">Global Nodes</h3>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-start border-b border-outline-variant/5 pb-4">
+<div>
+<p class="text-sm font-semibold">San Francisco</p>
+<p class="text-xs text-on-surface-variant">Pacific Hub</p>
+</div>
+<span class="text-[10px] bg-secondary/10 text-secondary px-2 py-0.5 rounded-full uppercase tracking-tighter">HQ</span>
+</div>
+<div class="flex justify-between items-start border-b border-outline-variant/5 pb-4">
+<div>
+<p class="text-sm font-semibold">Zurich</p>
+<p class="text-xs text-on-surface-variant">EMEA Core</p>
+</div>
+<span class="text-[10px] bg-outline-variant/20 text-on-surface-variant px-2 py-0.5 rounded-full uppercase tracking-tighter">Active</span>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<p class="text-sm font-semibold">Singapore</p>
+<p class="text-xs text-on-surface-variant">Asia-Pacific Gateway</p>
+</div>
+<span class="text-[10px] bg-outline-variant/20 text-on-surface-variant px-2 py-0.5 rounded-full uppercase tracking-tighter">Active</span>
+</div>
+</div>
+</div>
+<!-- Digital Frequency & Direct Uplink -->
+<div class="grid grid-cols-1 gap-6">
+<div class="bg-surface-container rounded-lg p-6 border border-outline-variant/10">
+<h3 class="font-headline font-bold text-sm uppercase tracking-widest text-on-surface-variant mb-6">Direct Uplink</h3>
+<div class="space-y-4">
+<a class="flex items-center gap-3 text-on-surface hover:text-primary transition-colors" href="mailto:nexus@eternacloud.io">
+<span class="material-symbols-outlined text-xl" data-icon="alternate_email">alternate_email</span>
+<span class="text-sm font-medium">nexus@eternacloud.io</span>
+</a>
+<a class="flex items-center gap-3 text-on-surface hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="support_agent">support_agent</span>
+<span class="text-sm font-medium">L1-L3 Support Portal</span>
+</a>
+</div>
+</div>
+<div class="bg-surface-container rounded-lg p-6 border border-outline-variant/10">
+<h3 class="font-headline font-bold text-sm uppercase tracking-widest text-on-surface-variant mb-6">Digital Frequency</h3>
+<div class="flex gap-4">
+<a class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-bright border border-outline-variant/20 hover:text-primary hover:border-primary/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="brand_awareness">brand_awareness</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-bright border border-outline-variant/20 hover:text-primary hover:border-primary/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-bright border border-outline-variant/20 hover:text-primary hover:border-primary/50 transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="forum">forum</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Secondary Section: Consultation CTA -->
+<section class="mt-24 bg-gradient-to-br from-surface-container-high to-surface-container rounded-xl p-1 lg:p-px overflow-hidden relative group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/30 via-transparent to-secondary/30 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+<div class="bg-background/80 backdrop-blur-xl rounded-xl p-10 lg:p-16 flex flex-col lg:flex-row items-center justify-between gap-12 relative z-10">
+<div class="max-w-xl text-center lg:text-left">
+<h2 class="font-headline text-3xl md:text-4xl font-bold mb-4">Architecture Audit</h2>
+<p class="text-on-surface-variant text-lg">
+                        Ready to scale your enterprise cloud? Schedule a 1:1 technical consultation with our lead infrastructure architects to map your migration protocol.
+                    </p>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 shrink-0">
+<button class="bg-surface-bright border border-outline-variant/30 px-8 py-4 rounded-full font-bold hover:bg-surface-variant transition-all">
+                        Technical FAQ
+                    </button>
+<button class="bg-gradient-to-r from-primary to-secondary text-on-primary-container px-10 py-4 rounded-full font-bold shadow-[0_0_30px_rgba(186,158,255,0.3)] hover:shadow-[0_0_50px_rgba(186,158,255,0.5)] transition-all">
+                        Schedule Sync
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-20 pb-10 border-t border-white/5 bg-zinc-950 dark:bg-black font-['Plus_Jakarta_Sans']">
+<div class="w-full flex flex-col items-center gap-12 px-8 max-w-7xl mx-auto">
+<div class="w-full grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-12 text-left mb-8">
+<div>
+<h4 class="text-zinc-100 font-bold mb-6 text-sm">Platform</h4>
+<ul class="space-y-4">
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Compute</a></li>
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Storage</a></li>
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Networking</a></li>
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Security</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-zinc-100 font-bold mb-6 text-sm">Solutions</h4>
+<ul class="space-y-4">
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Enterprise</a></li>
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Startups</a></li>
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Government</a></li>
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Education</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-zinc-100 font-bold mb-6 text-sm">Resources</h4>
+<ul class="space-y-4">
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Documentation</a></li>
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">API Reference</a></li>
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Community</a></li>
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Blog</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-zinc-100 font-bold mb-6 text-sm">Company</h4>
+<ul class="space-y-4">
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">About</a></li>
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Careers</a></li>
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Press</a></li>
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Partners</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-zinc-100 font-bold mb-6 text-sm">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Security</a></li>
+<li><a class="text-xs text-zinc-500 hover:text-violet-400 transition-colors" href="#">Status</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col items-center gap-6 border-t border-white/5 pt-12 w-full">
+<div class="flex flex-col items-center gap-2">
+<span class="text-lg font-extrabold tracking-tighter text-zinc-100">EternaCloud</span>
+<p class="text-[10px] tracking-wide uppercase font-semibold text-zinc-500 max-w-md text-center leading-loose">
+                    © 2024 EternaCloud. Precision Infrastructure for the Modern Era.
+                </p>
+</div>
+<div class="opacity-20 hover:opacity-100 transition-opacity">
+<img alt="Certification Logo" class="h-8 grayscale invert" data-alt="minimalist certification logo for security compliance on a dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3PWR4Yfz-JVMDXqQbfrXGP31-4vbeA9luPA_Z2w71G3vPUn-2_P9EFazqee1oLMurQ0rxIa31ZkE-eu-V5fPMjS52wjlNQzLxbkA-As8b4DKM5cUNRl6P9ajuRKKBAZzFv58X6m-WKiBzh8bwH0rcfiJDcERIqR2HJpeTv5Efk74ueIS6ovcFGlXTwmSohA607u_l35EJ19nhM5ybWQmn_c6r61EqJkTETVjUORMBLtBkZJQi3nESKTv5SchskHUVd3CdS1HX6fCM"/>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

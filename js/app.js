@@ -59,8 +59,9 @@ function initApp() {
     // Parallax Effect
     initHeroParallax();
     
-    // Particles System
-    initParticles();
+    // Vanta Realistic Clouds
+    initVantaClouds();
+
 
     // Backup loader removal
     setTimeout(hideLoader, 1000);
@@ -600,4 +601,44 @@ function initParticles() {
             p.el.style.transform = `translate3d(0, ${-yOffset}px, 0)`;
         });
     }, { passive: true });
+}
+
+// ── VANTA CLOUDS ──────────────────────────────────────────
+
+let vantaEffect = null;
+
+function initVantaClouds() {
+    // Delay initialization slightly to guarantee DOM is parsed
+    setTimeout(() => {
+        const target = document.getElementById('vanta-background');
+        if (!target) {
+            console.error("Vanta target #vanta-background not found!");
+            return;
+        }
+        
+        try {
+            if (vantaEffect) vantaEffect.destroy();
+            
+            console.log("Starting Vanta Engine on #vanta-background...");
+            vantaEffect = VANTA.CLOUDS({
+                el: "#vanta-background",
+                mouseControls: true,
+                touchControls: true,
+                gyroControls: false,
+                minHeight: 200.00,
+                minWidth: 200.00,
+                backgroundColor: 0x050507,
+                skyColor: 0x08080f,
+                cloudColor: 0x3d3d5c,
+                cloudShadowColor: 0x05050a,
+                sunColor: 0x8e82fa,
+                sunGlareColor: 0x2a2a35,
+                sunlightColor: 0x8e82fa,
+                speed: 0.8
+            });
+            console.log("Vanta initialized successfully!");
+        } catch (e) {
+            console.error("Vanta failed to initialize:", e);
+        }
+    }, 150);
 }

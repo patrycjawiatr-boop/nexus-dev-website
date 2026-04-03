@@ -26,6 +26,11 @@
   <link rel="stylesheet" href="css/styles.css?v=11">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
   
+  <!-- Vanta.js Realistic Clouds Dependencies -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.clouds.min.js"></script>
+
+  
   <!-- Structured Data -->
   <script type="application/ld+json">
   {
@@ -50,8 +55,9 @@
   </script>
 </head>
 <body>
-  <!-- ═══ PARTICLES BACKGROUND ═══ -->
-  <div id="particlesContainer"></div>
+  <!-- ═══ VANTA BACKGROUND (FULL PAGE) ═══ -->
+  <div id="vanta-background" style="position:fixed; top:0; left:0; width:100vw; height:100vh; z-index:-2;"></div>
+
 
   <!-- ═══ PAGE LOADER ═══ -->
   <div class="page-loader" id="pageLoader">
@@ -89,20 +95,7 @@
   </nav>
 
   <!-- ═══ HERO ═══ -->
-  <section class="hero" id="hero">
-    <!-- Animated Clouds -->
-    <div class="hero-clouds">
-      <div class="parallax-layer l1"><div class="cloud-layer cloud-layer-1"></div></div>
-      <div class="parallax-layer l2"><div class="cloud-layer cloud-layer-2"></div></div>
-      <div class="parallax-layer l3"><div class="cloud-layer cloud-layer-3"></div></div>
-      <div class="parallax-layer l4"><div class="cloud-layer cloud-layer-4"></div></div>
-    </div>
-
-    <div class="hero-grid"></div>
-    <div class="parallax-layer l5"><div class="hero-orb hero-orb-1"></div></div>
-    <div class="parallax-layer l6"><div class="hero-orb hero-orb-2"></div></div>
-    <div class="parallax-layer l7"><div class="hero-orb hero-orb-3"></div></div>
-
+  <section class="hero" id="hero" style="background: transparent;">
     <div class="hero-content container">
       <div class="hero-badge" data-i18n="hero.badge">
         Dla firm, które chcą w końcu ogarnąć biznes
